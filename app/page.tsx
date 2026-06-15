@@ -17,7 +17,7 @@ const features = [
   {
     emoji: "⚡",
     title: "Pini Sync",
-    body: "Answer the same deck as a friend, then watch a cinematic reveal of how much you match.",
+    body: "Answer the same deck as a friend, then see every take side by side — where your minds click, and where you'd argue. No score.",
     bg: "bg-lilac",
   },
   {
@@ -137,9 +137,10 @@ export default function Home() {
               Pini Sync<span className="text-orange">.</span>
             </h2>
             <p className="text-cream/70 text-lg leading-relaxed mb-8 max-w-md">
-              You and a friend answer the same deck of questions separately.
-              Then — cinematic reveal. Watch your match percentage appear question by question.
-              The most honest conversation starter ever built.
+              You and a friend answer the same deck — separately. Then a reveal
+              puts every take side by side: where your minds click, and where
+              you&apos;d happily argue all night. No score. No ranking. The most
+              honest conversation starter ever built.
             </p>
             <a
               href="https://app.onpini.com"
@@ -152,19 +153,33 @@ export default function Home() {
           </div>
 
           <div className="flex-1 flex justify-center">
-            <div className="bg-amber/10 border-2 border-cream/20 rounded-3xl p-8 max-w-xs w-full text-center" style={{ boxShadow: "6px 6px 0 #fbbf24" }}>
-              <div className="font-[var(--font-fraunces)] font-black text-7xl text-amber mb-1">87%</div>
-              <div className="text-cream/50 text-xs font-black uppercase tracking-widest mb-6">Match Score</div>
-              <div className="space-y-3">
+            <div className="bg-amber/10 border-2 border-cream/20 rounded-3xl p-7 max-w-xs w-full" style={{ boxShadow: "6px 6px 0 #fbbf24" }}>
+              <p className="font-[var(--font-fraunces)] font-black text-2xl text-amber leading-tight">
+                Two minds,<br />side by side.
+              </p>
+              <p className="text-cream/45 text-[11px] font-black uppercase tracking-widest mb-5">
+                The reveal · no score
+              </p>
+              <div className="space-y-2.5">
                 {[
-                  { q: "Pineapple on pizza?", pct: 90 },
-                  { q: "Night owl or early bird?", pct: 75 },
-                  { q: "Logic over feelings?", pct: 60 },
+                  { q: "Pineapple on pizza?", you: "Yes", sam: "Yes", aligned: true },
+                  { q: "Night owl or early bird?", you: "Night owl", sam: "Night owl", aligned: true },
+                  { q: "Logic over feelings?", you: "Logic", sam: "Feelings", aligned: false },
                 ].map((item) => (
-                  <div key={item.q} className="text-left">
-                    <p className="text-xs text-cream/60 font-medium mb-1">{item.q}</p>
-                    <div className="h-1.5 rounded-full bg-cream/10 overflow-hidden">
-                      <div className="h-full rounded-full bg-amber" style={{ width: `${item.pct}%` }} />
+                  <div key={item.q} className="rounded-2xl bg-cream/5 border border-cream/15 p-2.5">
+                    <div className="flex items-center justify-between gap-1.5">
+                      <p className="text-[11px] font-bold text-cream/80 truncate">{item.q}</p>
+                      <span
+                        className={`shrink-0 px-1.5 py-0.5 rounded-full text-[8px] font-black ${
+                          item.aligned ? "bg-amber text-ink" : "bg-lilac text-ink"
+                        }`}
+                      >
+                        {item.aligned ? "🤝 same mind" : "⚡ great debate"}
+                      </span>
+                    </div>
+                    <div className="mt-1.5 flex items-center gap-1.5 text-[9px] font-black">
+                      <span className="px-2 py-0.5 rounded-full bg-orange text-cream">You · {item.you}</span>
+                      <span className="px-2 py-0.5 rounded-full bg-cream/10 border border-cream/25 text-cream/70">Sam · {item.sam}</span>
                     </div>
                   </div>
                 ))}
