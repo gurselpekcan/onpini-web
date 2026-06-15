@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import PiniSyncDemo from "@/components/PiniSyncDemo";
 import HeroBackdrop from "@/components/HeroBackdrop";
+import DeckMarquee from "@/components/DeckMarquee";
 
 const shots = [
   { src: "/screens/home.png", cap: "Your Today", alt: "OnPini home — your daily pini and the Pini Sync hub" },
@@ -155,6 +156,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Deck marquee */}
+      <DeckMarquee />
 
       {/* Pini Sync highlight */}
       <section className="border-b-[3px] border-ink py-24 bg-ink text-cream overflow-hidden relative">
