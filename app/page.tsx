@@ -1,4 +1,5 @@
 import Link from "next/link";
+import PiniSyncDemo from "@/components/PiniSyncDemo";
 
 const features = [
   {
@@ -52,8 +53,8 @@ export default function Home() {
           </h1>
 
           <p className="text-xl md:text-2xl text-ink/70 max-w-xl leading-relaxed">
-            OnPini is the social network where your <strong>takes</strong> are your profile.
-            Connect with people who think like you — or don&apos;t.
+            OnPini is the social network where your <strong>takes</strong>{" "}
+            are your profile. Connect with people who think like you — or don&apos;t.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -73,34 +74,8 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Phone mockup */}
-          <div className="mt-8 w-full max-w-xs mx-auto animate-float">
-            <div className="relative bg-ink rounded-[40px] p-3 border-4 border-ink shadow-brutal-lg">
-              <div className="bg-cream rounded-[30px] overflow-hidden aspect-[9/19] flex flex-col">
-                <div className="bg-amber/30 px-4 pt-6 pb-3">
-                  <p className="font-[var(--font-fraunces)] font-black text-2xl text-ink">
-                    Today<span className="text-orange">.</span>
-                  </p>
-                  <p className="text-xs text-ink/50 italic font-[var(--font-fraunces)]">what&apos;s your pini?</p>
-                </div>
-                <div className="flex-1 p-3 space-y-2.5">
-                  {[
-                    { q: "Mornings > nights?" },
-                    { q: "Logic over feelings?" },
-                    { q: "Pineapple on pizza?" },
-                  ].map((item) => (
-                    <div key={item.q} className="bg-paper rounded-2xl border-2 border-ink p-3 shadow-brutal-sm">
-                      <p className="text-[11px] font-bold text-ink">{item.q}</p>
-                      <div className="mt-1.5 flex gap-1.5">
-                        <div className="flex-1 h-6 rounded-full bg-amber border-2 border-ink text-[9px] font-black flex items-center justify-center">Yes</div>
-                        <div className="flex-1 h-6 rounded-full bg-peach border-2 border-ink text-[9px] font-black flex items-center justify-center">No</div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+          {/* Interactive Pini Sync demo — the flagship, playable right here */}
+          <PiniSyncDemo />
         </div>
       </section>
 

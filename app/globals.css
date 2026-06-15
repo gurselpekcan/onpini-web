@@ -53,3 +53,15 @@ body {
   50% { transform: rotate(2deg); }
 }
 .animate-wiggle { animation: wiggle 3s ease-in-out infinite; }
+
+@keyframes pop-in {
+  0%   { opacity: 0; transform: translateY(8px) scale(0.96); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+.animate-pop-in { animation: pop-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-wiggle,
+  .animate-pop-in { animation: none !important; }
+}
