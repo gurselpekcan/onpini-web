@@ -1,6 +1,14 @@
 import Link from "next/link";
+import Image from "next/image";
 import PiniSyncDemo from "@/components/PiniSyncDemo";
 import HeroBackdrop from "@/components/HeroBackdrop";
+
+const shots = [
+  { src: "/screens/home.png", cap: "Your Today", alt: "OnPini home — your daily pini and the Pini Sync hub" },
+  { src: "/screens/sync-question.png", cap: "Pini Sync, live", alt: "Two friends answering the same Pini Sync deck in real time" },
+  { src: "/screens/feed.png", cap: "The opinion feed", alt: "A poll moving through the OnPini feed" },
+  { src: "/screens/deck.png", cap: "Killer decks", alt: "A Pini Sync deck opening" },
+];
 
 const features = [
   {
@@ -112,6 +120,37 @@ export default function Home() {
                 <h3 className="font-[var(--font-fraunces)] font-black text-xl mb-2">{f.title}</h3>
                 <p className="text-ink/70 leading-relaxed">{f.body}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* See it for real */}
+      <section className="border-b-[3px] border-ink py-24 overflow-hidden">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="reveal text-center mb-12">
+            <h2 className="font-[var(--font-fraunces)] font-black text-4xl md:text-5xl mb-4">
+              See it for real<span className="text-orange">.</span>
+            </h2>
+            <p className="text-ink/60 text-lg max-w-lg mx-auto">
+              Not mockups — this is the actual app. Your takes, your syncs, your feed.
+            </p>
+          </div>
+          <div className="reveal flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory md:flex-wrap md:justify-center md:overflow-visible">
+            {shots.map((s) => (
+              <figure key={s.src} className="shrink-0 snap-center w-[230px]">
+                <div className="bg-ink rounded-[36px] p-2.5 border-4 border-ink shadow-brutal-lg">
+                  <Image
+                    src={s.src}
+                    alt={s.alt}
+                    width={1170}
+                    height={2532}
+                    sizes="230px"
+                    className="rounded-[26px] w-full h-auto"
+                  />
+                </div>
+                <figcaption className="text-center text-sm font-black text-ink/70 mt-3">{s.cap}</figcaption>
+              </figure>
             ))}
           </div>
         </div>
