@@ -1,27 +1,26 @@
 const shipped = [
   { label: "Core poll feed (Today screen)", desc: "Daily pinis, vote and see what your network thinks." },
-  { label: "Pini Sync — live co-play", desc: "Answer the same deck in real time, get a match reveal." },
+  { label: "Pini Sync — live co-play", desc: "Answer the same deck in real time, then a side-by-side reveal." },
   { label: "Pini Sync — solo & share link", desc: "Create a frozen deck, share a link, get a guest to play." },
   { label: "Friend graph & DMs", desc: "Mutual connections, inbox, conversations." },
-  { label: "Notifications & activity feed", desc: "See who voted on your pinis, who replied, who matched." },
+  { label: "Notifications & activity feed", desc: "See who voted on your pinis, who replied, who synced with you." },
   { label: "Circles (Groups)", desc: "Answer pinis together inside a private group." },
-  { label: "Profile & creator stats", desc: "Your takes, your vote patterns, your pini history." },
+  { label: "Profile & take history", desc: "Your takes, your voting history, every pini you've made." },
   { label: "Early Access launch", desc: "iOS + Android, live to real users." },
 ];
 
 const inProgress = [
   { label: "PiniSend — forwarding & remix trail", desc: "Forward a pini to a friend with your take attached. Chain reactions." },
-  { label: "For You feed improvements", desc: "Smarter ranking, creator affinity, auto-advance after voting." },
+  { label: "Friends-first feed", desc: "More takes from the people close to you, and auto-advance after you vote. No algorithm deciding for you." },
   { label: "Server-side Question of the Day", desc: "A curated daily question everyone answers — shared cultural moment." },
 ];
 
 const upcoming = [
-  { label: "VibePass — competitive layer", desc: "Leaderboards, rankings, streak mechanics that actually mean something." },
   { label: "The Pulse — 21:00 in-app event", desc: "A nightly appointment mechanic. Show up, answer together." },
-  { label: "Twin of the Day", desc: "Your highest-match person every day. Push notification, cinematic reveal." },
+  { label: "Twin of the Day", desc: "The person whose takes lined up with yours today — a nudge to go start the conversation. A name, not a score." },
   { label: "Web app", desc: "No download required. Pini from any browser." },
   { label: "Public pini discovery", desc: "Find takes from people outside your network on topics you care about." },
-  { label: "Waitlist → growth loop", desc: "Referrals, invite rewards, leaderboard for early adopters." },
+  { label: "Invite & referral rewards", desc: "Bring your people in. Rewards for the friends who actually show up." },
 ];
 
 export default function Roadmap() {
