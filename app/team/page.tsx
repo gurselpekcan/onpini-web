@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const team: {
   name: string;
   role: string;
@@ -48,26 +50,26 @@ export default function Team() {
           </div>
         </section>
       ) : (
-        /* Placeholder state while team info is being added */
+        /* Honest small-team state — beats fake skeleton placeholders */
         <section className="border-b-[3px] border-ink py-20">
-          <div className="max-w-5xl mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {["bg-amber", "bg-peach", "bg-lilac"].map((bg, i) => (
-                <div key={i} className={`${bg} rounded-3xl border-2 border-ink p-8 shadow-brutal`}>
-                  <div className="w-16 h-16 rounded-full bg-ink/10 border-2 border-ink/20 mb-5" />
-                  <div className="h-5 w-32 rounded-full bg-ink/10 mb-2" />
-                  <div className="h-3 w-20 rounded-full bg-ink/10 mb-4" />
-                  <div className="space-y-2">
-                    <div className="h-3 w-full rounded-full bg-ink/10" />
-                    <div className="h-3 w-4/5 rounded-full bg-ink/10" />
-                    <div className="h-3 w-3/5 rounded-full bg-ink/10" />
-                  </div>
-                </div>
-              ))}
+          <div className="max-w-2xl mx-auto px-6 text-center">
+            <div className="bg-cream border-2 border-ink rounded-3xl p-10 shadow-brutal">
+              <div className="text-4xl mb-4">✊</div>
+              <h2 className="font-[var(--font-fraunces)] font-black text-2xl mb-3">
+                A small crew, heads down.
+              </h2>
+              <p className="text-ink/70 leading-relaxed mb-7">
+                We&apos;re keeping it lean while we build. Faces and bios go up
+                once the dust settles — for now, just know there are real humans
+                behind every pini, and we&apos;re looking for a few more.
+              </p>
+              <Link
+                href="/careers"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-ink text-cream font-black border-2 border-ink shadow-brutal-sm hover:-translate-y-0.5 hover:shadow-brutal transition-all"
+              >
+                See open roles →
+              </Link>
             </div>
-            <p className="text-center text-ink/40 font-bold mt-8 text-sm uppercase tracking-widest">
-              Team profiles coming soon
-            </p>
           </div>
         </section>
       )}
@@ -84,12 +86,12 @@ export default function Team() {
             </p>
           </div>
           <div>
-            <a
-              href="mailto:hello@onpini.com"
+            <Link
+              href="/careers"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber text-ink font-black border-2 border-amber shadow-brutal-orange hover:-translate-y-0.5 transition-all"
             >
-              Say hello →
-            </a>
+              See open roles →
+            </Link>
           </div>
         </div>
       </section>
