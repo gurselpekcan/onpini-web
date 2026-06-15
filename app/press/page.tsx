@@ -84,7 +84,7 @@ export default function Press() {
           <h2 className="font-[var(--font-fraunces)] font-black text-3xl text-ink mb-8">
             Fast facts<span className="text-orange">.</span>
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="reveal grid grid-cols-1 sm:grid-cols-2 gap-4">
             {facts.map((f) => (
               <div key={f.k} className="bg-paper border-2 border-ink rounded-2xl p-5 shadow-brutal-sm">
                 <p className="text-xs font-black uppercase tracking-widest text-ink/50 mb-1">{f.k}</p>
@@ -150,7 +150,7 @@ export default function Press() {
           <h2 className="font-[var(--font-fraunces)] font-black text-3xl text-ink mb-8">
             Available on request<span className="text-orange">.</span>
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="reveal grid grid-cols-1 sm:grid-cols-3 gap-4">
             {[
               { t: "Founder interviews & bios", d: "Happy to put you in touch and share headshots." },
               { t: "Hi-res product screenshots", d: "App stills and the Pini Sync reveal, full resolution." },

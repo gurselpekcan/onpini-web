@@ -71,7 +71,7 @@ export default function Careers() {
           <h2 className="font-[var(--font-fraunces)] font-black text-3xl text-amber mb-10">
             Why join this early<span className="text-orange">.</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="reveal grid grid-cols-1 md:grid-cols-3 gap-6">
             {why.map((w) => (
               <div
                 key={w.title}
@@ -98,7 +98,7 @@ export default function Careers() {
             </h2>
           </div>
 
-          <div className="space-y-4">
+          <div className="reveal space-y-4">
             {roles.map((r) => (
               <div
                 key={r.title}
