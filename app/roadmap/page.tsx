@@ -51,7 +51,7 @@ export default function Roadmap() {
               Shipped
             </h2>
           </div>
-          <div className="space-y-3">
+          <div className="reveal space-y-3">
             {shipped.map((item) => (
               <div key={item.label} className="flex items-start gap-4 border border-cream/10 rounded-2xl p-5 hover:border-cream/30 transition-colors">
                 <div className="w-5 h-5 rounded-full bg-amber flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -78,7 +78,7 @@ export default function Roadmap() {
               In progress
             </h2>
           </div>
-          <div className="space-y-3">
+          <div className="reveal space-y-3">
             {inProgress.map((item) => (
               <div key={item.label} className="flex items-start gap-4 bg-paper border-2 border-ink rounded-2xl p-5 shadow-brutal-sm">
                 <div className="w-5 h-5 rounded-full bg-orange border-2 border-ink flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -103,7 +103,7 @@ export default function Roadmap() {
               Coming next
             </h2>
           </div>
-          <div className="space-y-3">
+          <div className="reveal space-y-3">
             {upcoming.map((item) => (
               <div key={item.label} className="flex items-start gap-4 border-2 border-ink/20 rounded-2xl p-5 hover:border-ink/50 hover:bg-cream/50 transition-all">
                 <div className="w-5 h-5 rounded-full border-2 border-ink/30 flex-shrink-0 mt-0.5" />

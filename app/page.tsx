@@ -1,5 +1,6 @@
 import Link from "next/link";
 import PiniSyncDemo from "@/components/PiniSyncDemo";
+import HeroBackdrop from "@/components/HeroBackdrop";
 
 const features = [
   {
@@ -33,13 +34,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden border-b-[3px] border-ink">
-        <div className="absolute inset-0 pointer-events-none select-none">
-          <div
-            className="absolute top-[-80px] right-[-80px] w-96 h-96 rounded-full opacity-60"
-            style={{ background: "radial-gradient(circle at 30% 30%, #fff, #fbbf24 40%, #f97316 80%)" }}
-          />
-          <div className="absolute bottom-[-60px] left-[-60px] w-64 h-64 rounded-full bg-peach opacity-50" />
-        </div>
+        <HeroBackdrop />
 
         <div className="relative max-w-6xl mx-auto px-6 py-24 md:py-36 flex flex-col items-center text-center gap-8">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber border-2 border-ink shadow-brutal-sm text-sm font-black uppercase tracking-widest">
@@ -62,13 +57,13 @@ export default function Home() {
               href="https://app.onpini.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-full bg-ink text-cream font-black text-lg border-2 border-ink shadow-brutal hover:-translate-y-1 hover:shadow-brutal-md transition-all"
+              className="px-8 py-4 rounded-full bg-ink text-cream font-black text-lg border-2 border-ink shadow-brutal hover:-translate-y-1 hover:shadow-brutal-md active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
             >
               Get Early Access →
             </a>
             <Link
               href="/about"
-              className="px-8 py-4 rounded-full bg-cream font-black text-lg border-2 border-ink shadow-brutal hover:-translate-y-1 hover:shadow-brutal-md transition-all"
+              className="px-8 py-4 rounded-full bg-cream font-black text-lg border-2 border-ink shadow-brutal hover:-translate-y-1 hover:shadow-brutal-md active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
             >
               Learn more
             </Link>
@@ -98,7 +93,7 @@ export default function Home() {
       {/* Features */}
       <section className="border-b-[3px] border-ink py-24">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="reveal text-center mb-16">
             <h2 className="font-[var(--font-fraunces)] font-black text-4xl md:text-5xl mb-4">
               How it works<span className="text-orange">.</span>
             </h2>
@@ -107,7 +102,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="reveal grid grid-cols-1 md:grid-cols-2 gap-6">
             {features.map((f) => (
               <div
                 key={f.title}
@@ -129,7 +124,7 @@ export default function Home() {
           style={{ background: "radial-gradient(circle, #fbbf24, #f97316)" }}
         />
         <div className="relative max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
-          <div className="flex-1">
+          <div className="reveal flex-1">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber/40 text-amber text-xs font-black uppercase tracking-widest mb-6">
               ✦ Flagship Feature
             </div>
@@ -152,7 +147,7 @@ export default function Home() {
             </a>
           </div>
 
-          <div className="flex-1 flex justify-center">
+          <div className="reveal flex-1 flex justify-center">
             <div className="bg-amber/10 border-2 border-cream/20 rounded-3xl p-7 max-w-xs w-full" style={{ boxShadow: "6px 6px 0 #fbbf24" }}>
               <p className="font-[var(--font-fraunces)] font-black text-2xl text-amber leading-tight">
                 Two minds,<br />side by side.
@@ -191,7 +186,7 @@ export default function Home() {
 
       {/* CTA */}
       <section className="py-28">
-        <div className="max-w-2xl mx-auto px-6 text-center">
+        <div className="reveal max-w-2xl mx-auto px-6 text-center">
           <h2 className="font-[var(--font-fraunces)] font-black text-4xl md:text-5xl mb-6 leading-tight">
             Your opinion matters<span className="text-orange">.</span><br />
             Now it travels.

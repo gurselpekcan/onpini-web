@@ -60,8 +60,15 @@ body {
 }
 .animate-pop-in { animation: pop-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both; }
 
+/* Scroll reveal — hidden state applies ONLY once JS has mounted (.js-anim on
+   <html>), so content is never invisible if JS is slow or disabled. */
+.reveal { transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1); }
+.js-anim .reveal { opacity: 0; transform: translateY(18px); }
+.js-anim .reveal.is-visible { opacity: 1; transform: none; }
+
 @media (prefers-reduced-motion: reduce) {
   .animate-float,
   .animate-wiggle,
   .animate-pop-in { animation: none !important; }
+  .js-anim .reveal { opacity: 1 !important; transform: none !important; }
 }
