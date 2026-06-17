@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "@/components/Logo";
 
 // NOTE TO OWNER: everything here is real and shippable. When you have them,
 // add the facts we intentionally left as "on request": founder name(s) + bio,
@@ -105,10 +106,7 @@ export default function Press() {
           {/* Logos */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
             <div className="bg-cream border-2 border-ink rounded-3xl p-8 shadow-brutal flex flex-col items-center gap-5">
-              <div className="flex items-center gap-2 font-[var(--font-fraunces)] font-black text-3xl">
-                <span className="w-3.5 h-3.5 rounded-full bg-orange inline-block" />
-                OnPini
-              </div>
+              <Logo size={44} />
               <a
                 href="/press/onpini-wordmark.svg"
                 download
@@ -118,7 +116,7 @@ export default function Press() {
               </a>
             </div>
             <div className="bg-ink border-2 border-ink rounded-3xl p-8 shadow-brutal flex flex-col items-center gap-5">
-              <div className="w-12 h-12 rounded-full bg-orange" />
+              <Logo size={48} wordmark={false} />
               <a
                 href="/press/onpini-mark.svg"
                 download
