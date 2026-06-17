@@ -9,18 +9,25 @@ function Badge({
   logo,
   top,
   bottom,
+  tone = "light",
 }: {
   href: string;
   logo: React.ReactNode;
   top: string;
   bottom: string;
+  tone?: "light" | "dark";
 }) {
+  // On dark backgrounds the ink border/shadow vanish — switch to a light border.
+  const frame =
+    tone === "dark"
+      ? "border-2 border-cream/30 hover:border-cream/60"
+      : "border-2 border-ink shadow-brutal-sm hover:shadow-brutal";
   return (
     <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-ink text-cream border-2 border-ink shadow-brutal-sm hover:-translate-y-0.5 hover:shadow-brutal active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
+      className={`inline-flex items-center gap-3 px-5 py-2.5 rounded-2xl bg-ink text-cream ${frame} hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all`}
     >
       {logo}
       <span className="flex flex-col leading-none text-left">
@@ -31,11 +38,12 @@ function Badge({
   );
 }
 
-export default function StoreBadges({ className = "" }: { className?: string }) {
+export default function StoreBadges({ className = "", tone = "light" }: { className?: string; tone?: "light" | "dark" }) {
   return (
     <div className={`flex flex-col sm:flex-row items-center gap-3 ${className}`}>
       <Badge
         href={APP_STORE_URL}
+        tone={tone}
         top="Download on the"
         bottom="App Store"
         logo={
@@ -46,6 +54,7 @@ export default function StoreBadges({ className = "" }: { className?: string }) 
       />
       <Badge
         href={PLAY_STORE_URL}
+        tone={tone}
         top="Get it on"
         bottom="Google Play"
         logo={
