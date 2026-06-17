@@ -60,13 +60,13 @@ body {
 }
 .animate-pop-in { animation: pop-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both; }
 
-/* Scroll reveal — hidden state applies ONLY once JS has mounted (.js-anim on
+/* Scroll reveal, hidden state applies ONLY once JS has mounted (.js-anim on
    <html>), so content is never invisible if JS is slow or disabled. */
 .reveal { transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.22, 1, 0.36, 1); }
 .js-anim .reveal { opacity: 0; transform: translateY(18px); }
 .js-anim .reveal.is-visible { opacity: 1; transform: none; }
 
-/* Deck marquee — content is duplicated, so -50% loops seamlessly */
+/* Deck marquee, content is duplicated, so -50% loops seamlessly */
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .animate-marquee { animation: marquee 50s linear infinite; }
 .marquee-mask {

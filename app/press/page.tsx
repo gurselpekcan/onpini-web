@@ -7,7 +7,7 @@ import Link from "next/link";
 const facts = [
   { k: "Tagline", v: "Swipe minds, not faces." },
   { k: "What it is", v: "A social network where your opinions are your profile." },
-  { k: "Flagship feature", v: "Pini Sync — answer a deck with a friend, reveal your takes side by side." },
+  { k: "Flagship feature", v: "Pini Sync, answer a deck with a friend, reveal your takes side by side." },
   { k: "Platforms", v: "iOS + Android" },
   { k: "Stage", v: "Early Access" },
   { k: "Press contact", v: "hello@onpini.com" },
@@ -36,7 +36,7 @@ export default function Press() {
             Press &amp; brand kit<span className="text-orange">.</span>
           </h1>
           <p className="text-xl text-ink/70 max-w-2xl leading-relaxed">
-            Everything you need to write about OnPini — the story, the facts, the
+            Everything you need to write about OnPini, the story, the facts, the
             logos and colours. Need something that isn&apos;t here? Email{" "}
             <a href="mailto:hello@onpini.com?subject=Press%20enquiry" className="font-black underline decoration-orange decoration-2 underline-offset-2">
               hello@onpini.com
@@ -57,7 +57,7 @@ export default function Press() {
             One-liner
           </p>
           <div className="border border-cream/15 rounded-2xl p-5 mb-8 text-cream/90 leading-relaxed select-all">
-            OnPini is a social network where your opinions — not your photos — are
+            OnPini is a social network where your opinions, not your photos, are
             your profile.
           </div>
 
@@ -67,8 +67,8 @@ export default function Press() {
           <div className="border border-cream/15 rounded-2xl p-5 text-cream/90 leading-relaxed select-all">
             OnPini flips the social model. Instead of a follower graph built on
             photos and vanity metrics, it&apos;s a friend graph built on what you
-            actually think. You answer &ldquo;pini&apos;s&rdquo; — quick takes on
-            questions that matter — and connect with people through shared (and
+            actually think. You answer &ldquo;pini&apos;s&rdquo;, quick takes on
+            questions that matter, and connect with people through shared (and
             clashing) opinions. Its flagship feature, Pini Sync, lets two friends
             answer the same deck separately, then see their takes side by side:
             no score, no ranking, just the most honest conversation starter on
@@ -172,7 +172,7 @@ export default function Press() {
             Working on a story<span className="text-orange">?</span>
           </h2>
           <p className="text-ink/60 text-lg mb-8">
-            We reply to press fast — and we love a good question.
+            We reply to press fast, and we love a good question.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a

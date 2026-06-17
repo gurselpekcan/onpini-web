@@ -12,7 +12,7 @@ export default function About() {
             Built on a simple bet<span className="text-orange">.</span>
           </h1>
           <p className="text-xl text-ink/70 max-w-2xl leading-relaxed">
-            Every social network asks the same question: <em>who are you?</em> And every one of them answers it the same way — a photo, a bio, a follower count. We think that&apos;s wrong. Who you are is what you think. What you believe. What you&apos;d argue for at 2am.
+            Every social network asks the same question: <em>who are you?</em> And every one of them answers it the same way, a photo, a bio, a follower count. We think that&apos;s wrong. Who you are is what you think. What you believe. What you&apos;d argue for at 2am.
           </p>
         </div>
       </section>
@@ -27,11 +27,11 @@ export default function About() {
             {[
               {
                 title: "They optimise for attention",
-                body: "Algorithms surface content that keeps you scrolling — not content that actually matters to you.",
+                body: "Algorithms surface content that keeps you scrolling, not content that actually matters to you.",
               },
               {
                 title: "They reward performance",
-                body: "You curate yourself. The real you — your unpopular opinions, your hot takes — gets filtered out.",
+                body: "You curate yourself. The real you, your unpopular opinions, your hot takes, gets filtered out.",
               },
               {
                 title: "They build audiences, not friendships",
@@ -59,13 +59,13 @@ export default function About() {
           </h2>
           <div className="space-y-8">
             <p className="text-lg text-ink/70 leading-relaxed max-w-2xl">
-              OnPini flips the model. Your pini&apos;s — your takes on questions that matter — <em>are</em> your profile. Not a curated highlight reel. Your actual positions.
+              OnPini flips the model. Your pini&apos;s, your takes on questions that matter, <em>are</em> your profile. Not a curated highlight reel. Your actual positions.
             </p>
             <p className="text-lg text-ink/70 leading-relaxed max-w-2xl">
               We use a friend graph, not a follower graph. Connections are mutual. You see what people close to you actually think. And you discover new people through shared takes, not shared aesthetics.
             </p>
             <p className="text-lg text-ink/70 leading-relaxed max-w-2xl">
-              Pini Sync — our flagship feature — is the most honest conversation starter ever built. You and a friend answer the same deck separately, then a cinematic reveal shows your match. No gaming it. No performance. Just alignment, or the beautiful lack of it.
+              Pini Sync, our flagship feature, is the most honest conversation starter ever built. You and a friend answer the same deck separately, then a cinematic reveal shows your match. No gaming it. No performance. Just alignment, or the beautiful lack of it.
             </p>
           </div>
         </div>

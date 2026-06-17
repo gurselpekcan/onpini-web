@@ -1,5 +1,5 @@
 // App-store download badges. NOTE TO OWNER: point these at the real listings
-// once the apps are published — swap APP_STORE_URL / PLAY_STORE_URL below.
+// once the apps are published, swap APP_STORE_URL / PLAY_STORE_URL below.
 // Until then they go to the web app (same as the other CTAs).
 const APP_STORE_URL = "https://app.onpini.com";
 const PLAY_STORE_URL = "https://app.onpini.com";
@@ -17,7 +17,7 @@ function Badge({
   bottom: string;
   tone?: "light" | "dark";
 }) {
-  // On dark backgrounds the ink border/shadow vanish — switch to a light border.
+  // On dark backgrounds the ink border/shadow vanish, switch to a light border.
   const frame =
     tone === "dark"
       ? "border-2 border-cream/30 hover:border-cream/60"

@@ -4,21 +4,21 @@ const roles = [
     tag: "Brand · Product · Motion",
     bg: "bg-amber",
     blurb:
-      "Own the look and feel end-to-end — the playful neobrutalist system, the product UI, and the small motions that make it feel alive. You'll set the visual language the whole product speaks in.",
+      "Own the look and feel end-to-end, the playful neobrutalist system, the product UI, and the small motions that make it feel alive. You'll set the visual language the whole product speaks in.",
   },
   {
     title: "Product Engineer",
     tag: "React · TypeScript · FastAPI",
     bg: "bg-lilac",
     blurb:
-      "Ship features across the whole stack, fast. The feed, Pini Sync, profiles, Circles — you'll build it and watch it go live to real users the same week.",
+      "Ship features across the whole stack, fast. The feed, Pini Sync, profiles, Circles, you'll build it and watch it go live to real users the same week.",
   },
   {
     title: "Mobile Engineer",
     tag: "React Native · Capacitor · iOS/Android",
     bg: "bg-peach",
     blurb:
-      "Make OnPini feel native on every phone. Gestures, performance, notifications — the polish people feel but can't name.",
+      "Make OnPini feel native on every phone. Gestures, performance, notifications, the polish people feel but can't name.",
   },
 ];
 
@@ -26,12 +26,12 @@ const why = [
   {
     emoji: "🛠",
     title: "Real ownership",
-    body: "We're tiny, so your work ships in days — and it's yours, not buried under six layers of sign-off.",
+    body: "We're tiny, so your work ships in days, and it's yours, not buried under six layers of sign-off.",
   },
   {
     emoji: "🔥",
     title: "Opinions are the point",
-    body: "We're building the anti-algorithm, anti-vanity-metric network. Strong takes encouraged — especially the unpopular ones.",
+    body: "We're building the anti-algorithm, anti-vanity-metric network. Strong takes encouraged, especially the unpopular ones.",
   },
   {
     emoji: "🤝",
@@ -56,7 +56,7 @@ export default function Careers() {
             <span className="text-orange italic">with us.</span>
           </h1>
           <p className="text-xl text-ink/70 max-w-2xl leading-relaxed">
-            We&apos;re a tiny team with a big idea — and we&apos;d rather tell you
+            We&apos;re a tiny team with a big idea, and we&apos;d rather tell you
             that than pretend to be a hundred people. No corporate theater, no
             endless interview loops. Just real work on a product we genuinely
             believe in. If you&apos;ve got strong takes about how the internet
