@@ -59,7 +59,7 @@ export default function About() {
           </h2>
           <div className="space-y-8">
             <p className="text-lg text-ink/70 leading-relaxed max-w-2xl">
-              OnPini flips the model. Your pinis — your takes on questions that matter — <em>are</em> your profile. Not a curated highlight reel. Your actual positions.
+              OnPini flips the model. Your pini&apos;s — your takes on questions that matter — <em>are</em> your profile. Not a curated highlight reel. Your actual positions.
             </p>
             <p className="text-lg text-ink/70 leading-relaxed max-w-2xl">
               We use a friend graph, not a follower graph. Connections are mutual. You see what people close to you actually think. And you discover new people through shared takes, not shared aesthetics.
