@@ -1,14 +1,14 @@
 import Link from "next/link";
 import StoreBadges from "@/components/StoreBadges";
+import Logo from "@/components/Logo";
 
 export default function Footer() {
   return (
     <footer className="bg-ink text-cream border-t-[3px] border-ink">
       <div className="max-w-6xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
-          <div className="flex items-center gap-2 font-[var(--font-fraunces)] font-black text-xl mb-3">
-            <span className="w-2.5 h-2.5 rounded-full bg-orange inline-block" />
-            OnPini
+          <div className="mb-3">
+            <Logo tone="cream" />
           </div>
           <p className="text-cream/70 text-sm leading-relaxed mb-5">
             The social network where your opinions are your profile.
