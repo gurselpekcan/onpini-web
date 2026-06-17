@@ -1,4 +1,5 @@
 import Link from "next/link";
+import StoreBadges from "@/components/StoreBadges";
 
 export default function Footer() {
   return (
@@ -9,9 +10,10 @@ export default function Footer() {
             <span className="w-2.5 h-2.5 rounded-full bg-orange inline-block" />
             OnPini
           </div>
-          <p className="text-cream/70 text-sm leading-relaxed">
+          <p className="text-cream/70 text-sm leading-relaxed mb-5">
             The social network where your opinions are your profile.
           </p>
+          <StoreBadges tone="dark" className="!flex-col !items-start gap-2.5" />
         </div>
 
         <div>
