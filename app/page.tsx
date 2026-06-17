@@ -138,6 +138,22 @@ export default function Home() {
             </p>
           </div>
           <div className="reveal flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory md:flex-wrap md:justify-center md:overflow-visible">
+            <figure className="shrink-0 snap-center w-[230px]">
+              <div className="bg-ink rounded-[36px] p-2.5 border-4 border-ink shadow-brutal-lg">
+                <video
+                  className="rounded-[26px] w-full h-auto block"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  poster="/reveal-poster.png"
+                >
+                  <source src="/reveal-journey.webm" type="video/webm" />
+                </video>
+              </div>
+              <figcaption className="text-center text-sm font-black text-ink/70 mt-3">▶ A real sync</figcaption>
+            </figure>
             {shots.map((s) => (
               <figure key={s.src} className="shrink-0 snap-center w-[230px]">
                 <div className="bg-ink rounded-[36px] p-2.5 border-4 border-ink shadow-brutal-lg">
