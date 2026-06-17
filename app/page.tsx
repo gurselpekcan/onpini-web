@@ -61,6 +61,14 @@ export default function Home() {
             are your profile. Connect with people who think like you — or don&apos;t.
           </p>
 
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm md:text-base font-bold text-ink/70">
+            <span className="inline-flex items-center gap-1.5">🧠 Your takes, not your looks</span>
+            <span className="text-ink/25" aria-hidden>•</span>
+            <span className="inline-flex items-center gap-1.5">🔗 Friends, not followers</span>
+            <span className="text-ink/25" aria-hidden>•</span>
+            <span className="inline-flex items-center gap-1.5">🪞 No scores, no rankings</span>
+          </div>
+
           <div className="flex flex-col sm:flex-row gap-4">
             <a
               href="https://app.onpini.com"
@@ -79,6 +87,11 @@ export default function Home() {
           </div>
 
           {/* Interactive Pini Sync demo — the flagship, playable right here */}
+          <div className="mt-6 flex flex-col items-center gap-1">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lilac border-2 border-ink shadow-brutal-sm text-xs font-black uppercase tracking-widest animate-wiggle">
+              👇 Live demo — tap to play
+            </span>
+          </div>
           <PiniSyncDemo />
         </div>
       </section>
