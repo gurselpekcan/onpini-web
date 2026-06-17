@@ -12,75 +12,137 @@ interface Q {
   sam: Choice; // the friend's pre-set take, so the reveal has something to meet
 }
 
-// A real themed deck from production: "The Loyalty Test" (Friends).
-const DECK = { title: "The Loyalty Test", emoji: "🤝", tag: "Friends" };
+interface Topic {
+  id: string;
+  title: string;
+  emoji: string;
+  tag: string;
+  bg: string;
+  share: string;
+  questions: Q[];
+}
 
-const QUESTIONS: Q[] = [
-  { q: 'The 3am "I\'m in jail" call:', emoji: "🚔", a: "Already in the car", b: "Text me tomorrow", sam: "A" },
-  { q: "You find out my partner's cheating:", emoji: "👀", a: "Tell me immediately", b: "Stay out of it", sam: "A" },
-  { q: "I bail last-minute, third time:", emoji: "🚫", a: "You call me out", b: "You let it slide", sam: "B" },
-  { q: "A wild rumour about me reaches you:", emoji: "🐍", a: "Come straight to me", b: "Wait and watch", sam: "A" },
-  { q: "I do something genuinely wrong:", emoji: "⚖️", a: "Tell me to my face", b: "Loyalty over judgment", sam: "B" },
-  { q: "I vent for an hour, no advice wanted:", emoji: "🗣️", a: "You just listen", b: "You fix it", sam: "A" },
-  { q: "I ghost the group for months:", emoji: "👻", a: "You drag me back in", b: "You give me space", sam: "A" },
+// Real cards from the production killer decks, grouped by what people actually
+// want to find out about each other.
+const TOPICS: Topic[] = [
+  {
+    id: "romance",
+    title: "Romance",
+    emoji: "💘",
+    tag: "Love & dating",
+    bg: "bg-peach",
+    share: "Do we actually agree on love? 💘 Answer this quick OnPini deck and let's find out 👀",
+    questions: [
+      { q: "Good morning text:", emoji: "🌅", a: "Me, always", b: "Whoever's up first", sam: "A" },
+      { q: "You catch feelings first:", emoji: "💓", a: "You say it", b: "You hide it", sam: "A" },
+      { q: "Putting a label on this:", emoji: "🔒", a: "I want it now", b: "Let it breathe", sam: "B" },
+      { q: "The love language you want:", emoji: "💌", a: "Words", b: "Time", sam: "B" },
+      { q: "First to text after a fight:", emoji: "📲", a: "Me, every time", b: "I wait you out", sam: "A" },
+    ],
+  },
+  {
+    id: "friends",
+    title: "Friends",
+    emoji: "🤝",
+    tag: "Ride or die",
+    bg: "bg-amber",
+    share: "How well do we actually know each other? 🤝 Answer this OnPini deck and let's see 👀",
+    questions: [
+      { q: 'The 3am "I\'m in jail" call:', emoji: "🚔", a: "Already in the car", b: "Text me tomorrow", sam: "A" },
+      { q: "I bail last-minute, third time:", emoji: "🚫", a: "You call me out", b: "You let it slide", sam: "B" },
+      { q: "I ghost the group for months:", emoji: "👻", a: "You drag me back in", b: "You give me space", sam: "A" },
+      { q: "A wild rumour about me reaches you:", emoji: "🐍", a: "Come straight to me", b: "Wait and watch", sam: "A" },
+      { q: "Protect your feelings, or hard truth?", emoji: "🪞", a: "Protect me", b: "Truth, always", sam: "B" },
+    ],
+  },
+  {
+    id: "money",
+    title: "Money",
+    emoji: "💰",
+    tag: "Where your mouth is",
+    bg: "bg-lilac",
+    share: "Would you really have my back about money? 💰 Answer this OnPini deck and let's see 👀",
+    questions: [
+      { q: "You win the lottery:", emoji: "🎰", a: "I get a cut", b: "I get a great dinner", sam: "B" },
+      { q: "I'm about to blow my savings:", emoji: "💳", a: "You say something", b: "Your money, your call", sam: "A" },
+      { q: "Group splits the bill, I barely ate:", emoji: "🧾", a: "I just split it", b: "I'd say something", sam: "B" },
+      { q: "I'm broke this month:", emoji: "🪙", a: "You spot me, no IOU", b: "You lend but track it", sam: "A" },
+      { q: "Stranded abroad, no money:", emoji: "🌍", a: "You wire it, no questions", b: "You help me figure it out", sam: "A" },
+    ],
+  },
 ];
 
-const TOTAL = QUESTIONS.length;
+const APP_URL = "https://app.onpini.com";
 const labelFor = (q: Q, c: Choice) => (c === "A" ? q.a : q.b);
 
 export default function PiniSyncDemo() {
+  const [topic, setTopic] = useState<Topic | null>(null);
   const [answers, setAnswers] = useState<Choice[]>([]);
-  const [started, setStarted] = useState(false);
   const [revealed, setRevealed] = useState(false);
   const [flash, setFlash] = useState<Choice | null>(null);
   const [instant, setInstant] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   useEffect(() => {
     setInstant(!!window.matchMedia?.("(prefers-reduced-motion: reduce)").matches);
   }, []);
 
+  const total = topic?.questions.length ?? 0;
   const idx = answers.length;
-  const done = idx === TOTAL;
+  const done = !!topic && idx === total;
 
   useEffect(() => {
     if (!done) return;
     if (instant) { setRevealed(true); return; }
-    const t = setTimeout(() => setRevealed(true), 1050);
+    const t = setTimeout(() => setRevealed(true), 1000);
     return () => clearTimeout(t);
   }, [done, instant]);
 
   const choose = (c: Choice) => {
-    setStarted(true);
-    if (instant) { setAnswers((prev) => [...prev, c]); return; }
+    if (instant) { setAnswers((p) => [...p, c]); return; }
     setFlash(c);
-    setTimeout(() => { setAnswers((prev) => [...prev, c]); setFlash(null); }, 200);
+    setTimeout(() => { setAnswers((p) => [...p, c]); setFlash(null); }, 200);
   };
-  const replay = () => { setAnswers([]); setRevealed(false); setFlash(null); };
+  const restart = () => { setTopic(null); setAnswers([]); setRevealed(false); setFlash(null); setCopied(false); };
+  const started = topic !== null;
 
-  const aligned = answers.filter((a, i) => a === QUESTIONS[i].sam).length;
+  const challenge = async () => {
+    const text = topic?.share ?? "Answer this OnPini deck and let's see how we line up 👀";
+    try {
+      if (navigator.share) { await navigator.share({ title: "OnPini", text, url: APP_URL }); return; }
+    } catch { /* user dismissed share sheet */ }
+    try {
+      await navigator.clipboard.writeText(`${text} ${APP_URL}`);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2200);
+    } catch { /* clipboard blocked */ }
+  };
+
+  const aligned = topic ? answers.filter((a, i) => a === topic.questions[i].sam).length : 0;
   const headline =
-    aligned === TOTAL ? "Two of a kind."
-    : aligned >= TOTAL - 2 ? "Mostly in sync, with a debate or two."
-    : aligned <= 2 ? "Opposites, good talk ahead."
+    aligned === total ? "Two of a kind."
+    : aligned >= total - 1 ? "Mostly in sync, one to argue about."
+    : aligned <= 1 ? "Opposites. Good talk ahead."
     : "A real mix. Plenty to talk about.";
 
-  const phase: "play" | "syncing" | "reveal" = !done ? "play" : revealed ? "reveal" : "syncing";
-  const pct = Math.round((idx / TOTAL) * 100);
+  const phase: "pick" | "play" | "syncing" | "reveal" =
+    !topic ? "pick" : !done ? "play" : revealed ? "reveal" : "syncing";
+  const pct = total ? Math.round((idx / total) * 100) : 0;
 
   return (
     <div className={`mt-8 w-full max-w-xs mx-auto ${started ? "" : "animate-float"}`}>
       <div className="relative bg-ink rounded-[40px] p-3 border-4 border-ink shadow-brutal-lg">
         <div className="bg-cream rounded-[30px] overflow-hidden aspect-[9/19] flex flex-col">
-          {/* Header, real deck identity */}
+          {/* Header */}
           <div className="bg-amber/30 px-4 pt-4 pb-3 border-b-2 border-ink/10">
             <div className="flex items-center justify-between">
               <div className="min-w-0">
                 <p className="text-[8px] font-black uppercase tracking-[0.2em] text-ink/40">Pini Sync</p>
                 <p className="font-[var(--font-fraunces)] font-black text-base text-ink leading-none truncate">
-                  {DECK.emoji} {DECK.title}
+                  {topic ? `${topic.emoji} ${topic.title}` : "Pick a vibe"}
                 </p>
                 <p className="text-[10px] text-ink/50 italic font-[var(--font-fraunces)] mt-0.5">
-                  {phase === "reveal" ? "the reveal" : phase === "syncing" ? "syncing…" : `${DECK.tag} · you & Sam`}
+                  {phase === "reveal" ? "the reveal" : phase === "syncing" ? "syncing…" : topic ? `${topic.tag} · you & Sam` : "what do you actually agree on?"}
                 </p>
               </div>
               <div className="flex -space-x-2 shrink-0">
@@ -90,23 +152,46 @@ export default function PiniSyncDemo() {
             </div>
           </div>
 
-          {/* Body */}
-          {phase === "play" && (
+          {/* PICK A VIBE */}
+          {phase === "pick" && (
+            <div className="flex-1 flex flex-col justify-center p-4 animate-pop-in">
+              <p className="text-base font-black text-ink text-center leading-snug mb-1">
+                What do you really agree on?
+              </p>
+              <p className="text-[11px] text-ink/50 text-center mb-5">Pick a deck. Answer with Sam. See where you land.</p>
+              <div className="space-y-2.5">
+                {TOPICS.map((t) => (
+                  <button
+                    key={t.id}
+                    onClick={() => setTopic(t)}
+                    className={`w-full ${t.bg} border-2 border-ink shadow-brutal-sm rounded-2xl px-4 py-3 flex items-center gap-3 text-left active:translate-x-[2px] active:translate-y-[2px] active:shadow-none hover:-translate-y-0.5 transition-all`}
+                  >
+                    <span className="text-2xl">{t.emoji}</span>
+                    <span className="leading-tight">
+                      <span className="block font-black text-ink text-sm">{t.title}</span>
+                      <span className="block text-[10px] font-bold uppercase tracking-widest text-ink/50">{t.tag}</span>
+                    </span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* PLAY */}
+          {phase === "play" && topic && (
             <div className="flex-1 flex flex-col p-3">
-              {/* progress bar */}
               <div className="mb-4">
                 <div className="h-1.5 rounded-full bg-paper border border-ink overflow-hidden">
                   <div className="h-full bg-orange transition-all duration-300" style={{ width: `${pct}%` }} />
                 </div>
                 <p className="text-[9px] font-black uppercase tracking-widest text-ink/40 mt-1.5 text-center">
-                  Card {idx + 1} of {TOTAL}
+                  Card {idx + 1} of {total}
                 </p>
               </div>
-
               <div key={idx} className="flex-1 flex flex-col justify-center animate-pop-in">
-                <div className="text-3xl text-center mb-2">{QUESTIONS[idx].emoji}</div>
+                <div className="text-3xl text-center mb-2">{topic.questions[idx].emoji}</div>
                 <p className="text-base font-black text-ink text-center leading-snug mb-5 px-1">
-                  {QUESTIONS[idx].q}
+                  {topic.questions[idx].q}
                 </p>
                 <div className="space-y-2.5">
                   {(["A", "B"] as Choice[]).map((c) => (
@@ -117,16 +202,16 @@ export default function PiniSyncDemo() {
                         c === "A" ? "bg-amber" : "bg-peach"
                       } ${flash === c ? "translate-x-[2px] translate-y-[2px] shadow-none ring-2 ring-ink" : ""}`}
                     >
-                      {c === "A" ? QUESTIONS[idx].a : QUESTIONS[idx].b}
+                      {c === "A" ? topic.questions[idx].a : topic.questions[idx].b}
                     </button>
                   ))}
                 </div>
               </div>
-
-              <p className="text-[9px] text-ink/40 text-center mt-3">Tap your take, no right answers.</p>
+              <p className="text-[9px] text-ink/40 text-center mt-3">Tap your take. No right answers.</p>
             </div>
           )}
 
+          {/* SYNCING */}
           {phase === "syncing" && (
             <div className="flex-1 flex flex-col items-center justify-center p-6 text-center animate-pop-in">
               <div className="flex -space-x-3 mb-5">
@@ -142,7 +227,8 @@ export default function PiniSyncDemo() {
             </div>
           )}
 
-          {phase === "reveal" && (
+          {/* REVEAL */}
+          {phase === "reveal" && topic && (
             <div className="flex-1 flex flex-col p-3 min-h-0">
               <p className="font-[var(--font-fraunces)] font-black text-base text-ink text-center leading-tight shrink-0">
                 {headline}
@@ -150,9 +236,8 @@ export default function PiniSyncDemo() {
               <p className="text-[10px] text-ink/55 text-center mb-2 px-1 shrink-0">
                 Where you click, and where you&apos;d argue.
               </p>
-
               <div className="space-y-1.5 flex-1 overflow-y-auto min-h-0 pr-0.5">
-                {QUESTIONS.map((q, i) => {
+                {topic.questions.map((q, i) => {
                   const mine = answers[i];
                   const ok = mine === q.sam;
                   return (
@@ -181,27 +266,32 @@ export default function PiniSyncDemo() {
                   );
                 })}
               </div>
-
               <p className="text-[9px] text-ink/55 text-center leading-snug mt-2 mb-2 px-1 shrink-0">
-                No scores. No rankings, just where two minds click, and where the good arguments start.
+                No scores, no rankings. Just where two minds click, and where the good arguments start.
               </p>
               <div className="flex items-center gap-2 shrink-0">
-                <a
-                  href="https://app.onpini.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 h-9 rounded-full bg-ink text-cream text-[11px] font-black flex items-center justify-center border-2 border-ink active:translate-y-[1px] transition-all"
-                >
-                  Play the full deck →
-                </a>
                 <button
-                  onClick={replay}
-                  aria-label="Replay the demo"
+                  onClick={challenge}
+                  className="flex-1 h-9 rounded-full bg-ink text-cream text-[11px] font-black flex items-center justify-center gap-1.5 border-2 border-ink active:translate-y-[1px] transition-all"
+                >
+                  {copied ? "Link copied! ✓" : "📨 Challenge a friend"}
+                </button>
+                <button
+                  onClick={restart}
+                  aria-label="Try another vibe"
                   className="w-9 h-9 shrink-0 rounded-full bg-cream border-2 border-ink text-sm font-black flex items-center justify-center active:translate-y-[1px] transition-all"
                 >
                   ↻
                 </button>
               </div>
+              <a
+                href={APP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[10px] font-black text-ink/50 hover:text-ink text-center mt-2 underline decoration-orange decoration-2 underline-offset-2"
+              >
+                Play the full deck in the app →
+              </a>
             </div>
           )}
         </div>
