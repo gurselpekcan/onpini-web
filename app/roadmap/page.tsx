@@ -10,17 +10,16 @@ const shipped = [
 ];
 
 const inProgress = [
-  { label: "PiniSend — forwarding & remix trail", desc: "Forward a pini to a friend with your take attached. Chain reactions." },
-  { label: "Friends-first feed", desc: "More takes from the people close to you, and auto-advance after you vote. No algorithm deciding for you." },
-  { label: "Server-side Question of the Day", desc: "A curated daily question everyone answers — shared cultural moment." },
+  { label: "Pass pinis around", desc: "New ways to send a take to a friend and keep it moving." },
+  { label: "Friends-first feed", desc: "More from the people close to you. No algorithm deciding for you." },
+  { label: "Question of the Day", desc: "One question everyone answers — a shared daily moment." },
 ];
 
+// Kept intentionally vague — direction, not a feature spec.
 const upcoming = [
-  { label: "The Pulse — 21:00 in-app event", desc: "A nightly appointment mechanic. Show up, answer together." },
-  { label: "Twin of the Day", desc: "The person whose takes lined up with yours today — a nudge to go start the conversation. A name, not a score." },
-  { label: "Web app", desc: "No download required. Pini from any browser." },
-  { label: "Public pini discovery", desc: "Find takes from people outside your network on topics you care about." },
-  { label: "Invite & referral rewards", desc: "Bring your people in. Rewards for the friends who actually show up." },
+  { label: "Deeper Pini Sync", desc: "More ways to play, and more moments with the people who matter." },
+  { label: "A daily reason to show up", desc: "Little rituals that make OnPini part of your day." },
+  { label: "Find your people", desc: "Ways to discover minds beyond your circle." },
 ];
 
 export default function Roadmap() {
