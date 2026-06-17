@@ -18,7 +18,7 @@ const DECK = { title: "The Loyalty Test", emoji: "🤝", tag: "Friends" };
 const QUESTIONS: Q[] = [
   { q: 'The 3am "I\'m in jail" call:', emoji: "🚔", a: "Already in the car", b: "Text me tomorrow", sam: "A" },
   { q: "You find out my partner's cheating:", emoji: "👀", a: "Tell me immediately", b: "Stay out of it", sam: "A" },
-  { q: "I bail last-minute — third time:", emoji: "🚫", a: "You call me out", b: "You let it slide", sam: "B" },
+  { q: "I bail last-minute, third time:", emoji: "🚫", a: "You call me out", b: "You let it slide", sam: "B" },
   { q: "A wild rumour about me reaches you:", emoji: "🐍", a: "Come straight to me", b: "Wait and watch", sam: "A" },
   { q: "I do something genuinely wrong:", emoji: "⚖️", a: "Tell me to my face", b: "Loyalty over judgment", sam: "B" },
   { q: "I vent for an hour, no advice wanted:", emoji: "🗣️", a: "You just listen", b: "You fix it", sam: "A" },
@@ -60,8 +60,8 @@ export default function PiniSyncDemo() {
   const aligned = answers.filter((a, i) => a === QUESTIONS[i].sam).length;
   const headline =
     aligned === TOTAL ? "Two of a kind."
-    : aligned >= TOTAL - 2 ? "Mostly in sync — with a debate or two."
-    : aligned <= 2 ? "Opposites — good talk ahead."
+    : aligned >= TOTAL - 2 ? "Mostly in sync, with a debate or two."
+    : aligned <= 2 ? "Opposites, good talk ahead."
     : "A real mix. Plenty to talk about.";
 
   const phase: "play" | "syncing" | "reveal" = !done ? "play" : revealed ? "reveal" : "syncing";
@@ -71,7 +71,7 @@ export default function PiniSyncDemo() {
     <div className={`mt-8 w-full max-w-xs mx-auto ${started ? "" : "animate-float"}`}>
       <div className="relative bg-ink rounded-[40px] p-3 border-4 border-ink shadow-brutal-lg">
         <div className="bg-cream rounded-[30px] overflow-hidden aspect-[9/19] flex flex-col">
-          {/* Header — real deck identity */}
+          {/* Header, real deck identity */}
           <div className="bg-amber/30 px-4 pt-4 pb-3 border-b-2 border-ink/10">
             <div className="flex items-center justify-between">
               <div className="min-w-0">
@@ -123,7 +123,7 @@ export default function PiniSyncDemo() {
                 </div>
               </div>
 
-              <p className="text-[9px] text-ink/40 text-center mt-3">Tap your take — no right answers.</p>
+              <p className="text-[9px] text-ink/40 text-center mt-3">Tap your take, no right answers.</p>
             </div>
           )}
 
@@ -148,7 +148,7 @@ export default function PiniSyncDemo() {
                 {headline}
               </p>
               <p className="text-[10px] text-ink/55 text-center mb-2 px-1 shrink-0">
-                Where you click — and where you&apos;d argue.
+                Where you click, and where you&apos;d argue.
               </p>
 
               <div className="space-y-1.5 flex-1 overflow-y-auto min-h-0 pr-0.5">
@@ -183,7 +183,7 @@ export default function PiniSyncDemo() {
               </div>
 
               <p className="text-[9px] text-ink/55 text-center leading-snug mt-2 mb-2 px-1 shrink-0">
-                No scores. No rankings — just where two minds click, and where the good arguments start.
+                No scores. No rankings, just where two minds click, and where the good arguments start.
               </p>
               <div className="flex items-center gap-2 shrink-0">
                 <a

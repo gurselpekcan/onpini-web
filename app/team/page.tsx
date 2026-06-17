@@ -82,7 +82,7 @@ export default function Team() {
               We&apos;re building something real<span className="text-orange">.</span>
             </h2>
             <p className="text-cream/60 text-lg leading-relaxed max-w-lg">
-              If you care about authentic social networks, opinion-driven design, or just have strong takes about how the internet should work — we want to hear from you.
+              If you care about authentic social networks, opinion-driven design, or just have strong takes about how the internet should work, we want to hear from you.
             </p>
           </div>
           <div>

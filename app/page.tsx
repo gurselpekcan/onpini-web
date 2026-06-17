@@ -6,7 +6,7 @@ import HeroBackdrop from "@/components/HeroBackdrop";
 import DeckMarquee from "@/components/DeckMarquee";
 
 const shots = [
-  { src: "/screens/home.png", cap: "Your Today", alt: "OnPini home — your daily pini and the Pini Sync hub" },
+  { src: "/screens/home.png", cap: "Your Today", alt: "OnPini home, your daily pini and the Pini Sync hub" },
   { src: "/screens/sync-question.png", cap: "Pini Sync, live", alt: "Two friends answering the same Pini Sync deck in real time" },
   { src: "/screens/feed.png", cap: "The opinion feed", alt: "A poll moving through the OnPini feed" },
   { src: "/screens/deck.png", cap: "Killer decks", alt: "A Pini Sync deck opening" },
@@ -22,13 +22,13 @@ const features = [
   {
     emoji: "🔗",
     title: "Friend graph, not follower graph",
-    body: "You see what people close to you actually think — not what a feed algorithm decides.",
+    body: "You see what people close to you actually think, not what a feed algorithm decides.",
     bg: "bg-peach",
   },
   {
     emoji: "⚡",
     title: "Pini Sync",
-    body: "Answer the same deck as a friend, then see every take side by side — where your minds click, and where you'd argue. No score.",
+    body: "Answer the same deck as a friend, then see every take side by side, where your minds click, and where you'd argue. No score.",
     bg: "bg-lilac",
   },
   {
@@ -59,7 +59,7 @@ export default function Home() {
 
           <p className="text-xl md:text-2xl text-ink/70 max-w-xl leading-relaxed">
             OnPini is the social network where your <strong>takes</strong>{" "}
-            are your profile. Connect with people who think like you — or don&apos;t.
+            are your profile. Connect with people who think like you, or don&apos;t.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm md:text-base font-bold text-ink/70">
@@ -87,10 +87,10 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Interactive Pini Sync demo — the flagship, playable right here */}
+          {/* Interactive Pini Sync demo, the flagship, playable right here */}
           <div className="mt-6 flex flex-col items-center gap-1">
             <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lilac border-2 border-ink shadow-brutal-sm text-xs font-black uppercase tracking-widest animate-wiggle">
-              👇 Live demo — tap to play
+              👇 Live demo · tap to play
             </span>
           </div>
           <PiniSyncDemo />
@@ -148,7 +148,7 @@ export default function Home() {
               See it for real<span className="text-orange">.</span>
             </h2>
             <p className="text-ink/60 text-lg max-w-lg mx-auto">
-              Not mockups — this is the actual app. Your takes, your syncs, your feed.
+              Not mockups, this is the actual app. Your takes, your syncs, your feed.
             </p>
           </div>
           <div className="reveal flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory md:flex-wrap md:justify-center md:overflow-visible">
@@ -189,7 +189,7 @@ export default function Home() {
               Pini Sync<span className="text-orange">.</span>
             </h2>
             <p className="text-cream/70 text-lg leading-relaxed mb-8 max-w-md">
-              You and a friend answer the same deck — separately. Then a reveal
+              You and a friend answer the same deck, separately. Then a reveal
               puts every take side by side: where your minds click, and where
               you&apos;d happily argue all night. No score. No ranking. The most
               honest conversation starter ever built.

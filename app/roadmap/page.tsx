@@ -1,7 +1,7 @@
 const shipped = [
   { label: "Core poll feed (Today screen)", desc: "Daily pini's, vote and see what your network thinks." },
-  { label: "Pini Sync — live co-play", desc: "Answer the same deck in real time, then a side-by-side reveal." },
-  { label: "Pini Sync — solo & share link", desc: "Create a frozen deck, share a link, get a guest to play." },
+  { label: "Pini Sync, live co-play", desc: "Answer the same deck in real time, then a side-by-side reveal." },
+  { label: "Pini Sync, solo & share link", desc: "Create a frozen deck, share a link, get a guest to play." },
   { label: "Friend graph & DMs", desc: "Mutual connections, inbox, conversations." },
   { label: "Notifications & activity feed", desc: "See who voted on your pini's, who replied, who synced with you." },
   { label: "Circles (Groups)", desc: "Answer pini's together inside a private group." },
@@ -12,10 +12,10 @@ const shipped = [
 const inProgress = [
   { label: "Pass pini's around", desc: "New ways to send a take to a friend and keep it moving." },
   { label: "Friends-first feed", desc: "More from the people close to you. No algorithm deciding for you." },
-  { label: "Question of the Day", desc: "One question everyone answers — a shared daily moment." },
+  { label: "Question of the Day", desc: "One question everyone answers, a shared daily moment." },
 ];
 
-// Kept intentionally vague — direction, not a feature spec.
+// Kept intentionally vague, direction, not a feature spec.
 const upcoming = [
   { label: "Deeper Pini Sync", desc: "More ways to play, and more moments with the people who matter." },
   { label: "A daily reason to show up", desc: "Little rituals that make OnPini part of your day." },
@@ -125,7 +125,7 @@ export default function Roadmap() {
               Have a feature idea?
             </h3>
             <p className="text-ink/70 mb-6 leading-relaxed">
-              We&apos;re early access. Your feedback directly shapes what we build next. Reach out — we read everything.
+              We&apos;re early access. Your feedback directly shapes what we build next. Reach out, we read everything.
             </p>
             <a
               href="mailto:hello@onpini.com"

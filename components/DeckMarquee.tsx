@@ -1,4 +1,4 @@
-// Real decks from the production killer decks — breadth + "which would I play?"
+// Real decks from the production killer decks, breadth + "which would I play?"
 const decks = [
   { t: "Pick Up At 3AM", e: "🚨", c: "Friends", bg: "bg-amber" },
   { t: "Situationship Court", e: "💘", c: "Love & dating", bg: "bg-peach" },

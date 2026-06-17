@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
  * scrolls into view (IntersectionObserver, no deps). Re-scans on route change.
  *
  * Safe by design: the hidden state lives under `.js-anim` (added here on mount),
- * so without JS — or before this runs — content renders fully visible. Honors
+ * so without JS, or before this runs, content renders fully visible. Honors
  * prefers-reduced-motion by simply not arming the effect.
  */
 export default function ScrollReveal() {

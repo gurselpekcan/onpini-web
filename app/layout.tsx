@@ -9,11 +9,11 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", style: ["normal", "italic"] });
 
 export const metadata: Metadata = {
-  title: "OnPini — your takes, your network",
+  title: "OnPini: your takes, your network",
   description: "The social network where your opinions are your profile. Swipe minds, not faces.",
   metadataBase: new URL("https://onpini.com"),
   openGraph: {
-    title: "OnPini — your takes, your network",
+    title: "OnPini: your takes, your network",
     description: "The social network where your opinions are your profile.",
     url: "https://onpini.com",
     siteName: "OnPini",
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OnPini — your takes, your network",
+    title: "OnPini: your takes, your network",
     description: "The social network where your opinions are your profile.",
   },
 };
