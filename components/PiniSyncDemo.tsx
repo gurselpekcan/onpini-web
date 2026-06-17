@@ -82,6 +82,7 @@ export default function PiniSyncDemo() {
   const [flash, setFlash] = useState<Choice | null>(null);
   const [instant, setInstant] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [showShare, setShowShare] = useState(false);
 
   useEffect(() => {
     setInstant(!!window.matchMedia?.("(prefers-reduced-motion: reduce)").matches);
@@ -103,22 +104,25 @@ export default function PiniSyncDemo() {
     setFlash(c);
     setTimeout(() => { setAnswers((p) => [...p, c]); setFlash(null); }, 200);
   };
-  const restart = () => { setTopic(null); setAnswers([]); setRevealed(false); setFlash(null); setCopied(false); };
+  const restart = () => { setTopic(null); setAnswers([]); setRevealed(false); setFlash(null); setCopied(false); setShowShare(false); };
   const started = topic !== null;
 
+  const shareText = topic?.share ?? "Answer this OnPini deck and let's see how we line up 👀";
+  const shareFull = `${shareText} ${APP_URL}`;
+  const waHref = `https://wa.me/?text=${encodeURIComponent(shareFull)}`;
+  const xHref = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(APP_URL)}`;
   const challenge = async () => {
-    const text = topic?.share ?? "Answer this OnPini deck and let's see how we line up 👀";
     try {
-      if (navigator.share) { await navigator.share({ title: "OnPini", text, url: APP_URL }); return; }
+      if (navigator.share) { await navigator.share({ title: "OnPini", text: shareText, url: APP_URL }); return; }
     } catch { /* user dismissed share sheet */ }
-    try {
-      await navigator.clipboard.writeText(`${text} ${APP_URL}`);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2200);
-    } catch { /* clipboard blocked */ }
+    setShowShare(true);
+  };
+  const copyLink = async () => {
+    try { await navigator.clipboard.writeText(shareFull); setCopied(true); setTimeout(() => setCopied(false), 2200); } catch { /* blocked */ }
   };
 
   const aligned = topic ? answers.filter((a, i) => a === topic.questions[i].sam).length : 0;
+  const debates = total - aligned;
   const headline =
     aligned === total ? "Two of a kind."
     : aligned >= total - 1 ? "Mostly in sync, one to argue about."
@@ -233,9 +237,10 @@ export default function PiniSyncDemo() {
               <p className="font-[var(--font-fraunces)] font-black text-base text-ink text-center leading-tight shrink-0">
                 {headline}
               </p>
-              <p className="text-[10px] text-ink/55 text-center mb-2 px-1 shrink-0">
-                Where you click, and where you&apos;d argue.
-              </p>
+              <div className="flex items-center justify-center gap-2 mb-2 shrink-0">
+                <span className="px-2 py-0.5 rounded-full bg-amber border border-ink text-[9px] font-black text-ink">🤝 {aligned} clicked</span>
+                <span className="px-2 py-0.5 rounded-full bg-lilac border border-ink text-[9px] font-black text-ink">⚡ {debates} to debate</span>
+              </div>
               <div className="space-y-1.5 flex-1 overflow-y-auto min-h-0 pr-0.5">
                 {topic.questions.map((q, i) => {
                   const mine = answers[i];
@@ -269,21 +274,29 @@ export default function PiniSyncDemo() {
               <p className="text-[9px] text-ink/55 text-center leading-snug mt-2 mb-2 px-1 shrink-0">
                 No scores, no rankings. Just where two minds click, and where the good arguments start.
               </p>
-              <div className="flex items-center gap-2 shrink-0">
-                <button
-                  onClick={challenge}
-                  className="flex-1 h-9 rounded-full bg-ink text-cream text-[11px] font-black flex items-center justify-center gap-1.5 border-2 border-ink active:translate-y-[1px] transition-all"
-                >
-                  {copied ? "Link copied! ✓" : "📨 Challenge a friend"}
-                </button>
-                <button
-                  onClick={restart}
-                  aria-label="Try another vibe"
-                  className="w-9 h-9 shrink-0 rounded-full bg-cream border-2 border-ink text-sm font-black flex items-center justify-center active:translate-y-[1px] transition-all"
-                >
-                  ↻
-                </button>
-              </div>
+              {!showShare ? (
+                <div className="flex items-center gap-2 shrink-0">
+                  <button
+                    onClick={challenge}
+                    className="flex-1 h-9 rounded-full bg-ink text-cream text-[11px] font-black flex items-center justify-center gap-1.5 border-2 border-ink active:translate-y-[1px] hover:-translate-y-0.5 transition-all"
+                  >
+                    📨 Challenge a friend
+                  </button>
+                  <button
+                    onClick={restart}
+                    aria-label="Try another vibe"
+                    className="w-9 h-9 shrink-0 rounded-full bg-cream border-2 border-ink text-sm font-black flex items-center justify-center active:translate-y-[1px] transition-all"
+                  >
+                    ↻
+                  </button>
+                </div>
+              ) : (
+                <div className="flex items-center gap-1.5 shrink-0 animate-pop-in">
+                  <a href={waHref} target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp" className="flex-1 h-9 rounded-full bg-[#25D366] text-ink text-[10px] font-black flex items-center justify-center border-2 border-ink active:translate-y-[1px] transition-all">WhatsApp</a>
+                  <a href={xHref} target="_blank" rel="noopener noreferrer" aria-label="Share on X" className="flex-1 h-9 rounded-full bg-ink text-cream text-[10px] font-black flex items-center justify-center border-2 border-ink active:translate-y-[1px] transition-all">X</a>
+                  <button onClick={copyLink} className="flex-1 h-9 rounded-full bg-cream text-ink text-[10px] font-black flex items-center justify-center border-2 border-ink active:translate-y-[1px] transition-all">{copied ? "Copied ✓" : "Copy"}</button>
+                </div>
+              )}
               <a
                 href={APP_URL}
                 target="_blank"
