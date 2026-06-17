@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import PiniSyncDemo from "@/components/PiniSyncDemo";
+import StoreBadges from "@/components/StoreBadges";
 import HeroBackdrop from "@/components/HeroBackdrop";
 import DeckMarquee from "@/components/DeckMarquee";
 
@@ -258,6 +259,11 @@ export default function Home() {
           >
             Get Early Access →
           </a>
+
+          <p className="text-xs font-black uppercase tracking-widest text-ink/40 mt-12 mb-4">
+            Get the app
+          </p>
+          <StoreBadges className="justify-center" />
         </div>
       </section>
     </>
