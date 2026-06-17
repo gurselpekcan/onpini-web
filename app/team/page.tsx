@@ -22,7 +22,7 @@ export default function Team() {
           </div>
           <h1 className="font-[var(--font-fraunces)] font-black text-5xl md:text-6xl leading-[0.95] mb-6">
             The humans behind<br />
-            <span className="text-orange italic">the pinis.</span>
+            <span className="text-orange italic">the pini&apos;s.</span>
           </h1>
           <p className="text-xl text-ink/70 max-w-xl leading-relaxed">
             We&apos;re a small team with a big conviction: the world needs a social network built on what people actually think, not how they look.

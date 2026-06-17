@@ -67,7 +67,7 @@ export default function Press() {
           <div className="border border-cream/15 rounded-2xl p-5 text-cream/90 leading-relaxed select-all">
             OnPini flips the social model. Instead of a follower graph built on
             photos and vanity metrics, it&apos;s a friend graph built on what you
-            actually think. You answer &ldquo;pinis&rdquo; — quick takes on
+            actually think. You answer &ldquo;pini&apos;s&rdquo; — quick takes on
             questions that matter — and connect with people through shared (and
             clashing) opinions. Its flagship feature, Pini Sync, lets two friends
             answer the same deck separately, then see their takes side by side:

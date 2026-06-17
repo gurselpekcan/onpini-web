@@ -1,16 +1,16 @@
 const shipped = [
-  { label: "Core poll feed (Today screen)", desc: "Daily pinis, vote and see what your network thinks." },
+  { label: "Core poll feed (Today screen)", desc: "Daily pini's, vote and see what your network thinks." },
   { label: "Pini Sync — live co-play", desc: "Answer the same deck in real time, then a side-by-side reveal." },
   { label: "Pini Sync — solo & share link", desc: "Create a frozen deck, share a link, get a guest to play." },
   { label: "Friend graph & DMs", desc: "Mutual connections, inbox, conversations." },
-  { label: "Notifications & activity feed", desc: "See who voted on your pinis, who replied, who synced with you." },
-  { label: "Circles (Groups)", desc: "Answer pinis together inside a private group." },
+  { label: "Notifications & activity feed", desc: "See who voted on your pini's, who replied, who synced with you." },
+  { label: "Circles (Groups)", desc: "Answer pini's together inside a private group." },
   { label: "Profile & take history", desc: "Your takes, your voting history, every pini you've made." },
   { label: "Early Access launch", desc: "iOS + Android, live to real users." },
 ];
 
 const inProgress = [
-  { label: "Pass pinis around", desc: "New ways to send a take to a friend and keep it moving." },
+  { label: "Pass pini's around", desc: "New ways to send a take to a friend and keep it moving." },
   { label: "Friends-first feed", desc: "More from the people close to you. No algorithm deciding for you." },
   { label: "Question of the Day", desc: "One question everyone answers — a shared daily moment." },
 ];
