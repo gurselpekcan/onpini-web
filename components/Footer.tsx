@@ -59,7 +59,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-cream/10 px-6 py-4 max-w-6xl mx-auto flex items-center justify-between text-xs text-cream/40">
-        <span>© {new Date().getFullYear()} OnPini. All rights reserved.</span>
+        <span>© {new Date().getFullYear()} OnPini. OnPini is a trade name of GPM Holding B.V.</span>
         <span className="flex items-center gap-1">
           <span className="w-1.5 h-1.5 rounded-full bg-orange inline-block animate-wiggle" />
           Early Access · v1.0
