@@ -22,6 +22,7 @@ export default function Footer() {
             {[
               { href: "/", label: "Home" },
               { href: "/about", label: "About" },
+              { href: "/circles", label: "Circles" },
               { href: "/team", label: "Team" },
               { href: "/roadmap", label: "Roadmap" },
               { href: "/careers", label: "Careers" },
