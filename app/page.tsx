@@ -4,6 +4,7 @@ import PiniSyncDemo from "@/components/PiniSyncDemo";
 import StoreBadges from "@/components/StoreBadges";
 import HeroBackdrop from "@/components/HeroBackdrop";
 import DeckMarquee from "@/components/DeckMarquee";
+import PiniMarquee from "@/components/PiniMarquee";
 
 const shots = [
   { src: "/screens/home.png", cap: "Your Today", alt: "OnPini home, your daily pini and the Pini Sync hub" },
@@ -96,6 +97,9 @@ export default function Home() {
           <PiniSyncDemo />
         </div>
       </section>
+
+      {/* What people pini about — moving showcase of example poll formats */}
+      <PiniMarquee />
 
       {/* Stats bar */}
       <section className="border-b-[3px] border-ink bg-amber">
