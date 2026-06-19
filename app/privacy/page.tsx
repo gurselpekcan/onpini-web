@@ -3,16 +3,16 @@ import Link from "next/link";
 export const metadata = {
   title: "Privacy Policy — OnPini",
   description:
-    "How OnPini collects, uses, protects, and monetizes data — transparently, with your consent, and never by selling your identity or messages.",
+    "How OnPini looks after your data, in plain language: what we collect, what stays completely private, and the simple controls you have over all of it.",
 };
 
-const lastUpdated = "June 14, 2026";
+const lastUpdated = "June 19, 2026";
 
 const tldr = [
-  "Your DMs and identity (name, email, phone) stay private. We never sell them.",
-  "We turn opinions into aggregated, anonymized insights (never your individual profile) and that is part of how OnPini makes money.",
-  "Anything sensitive (relationship, intimacy, money, the personality traits Pini Sync infers) is opt-in and only ever monetized in aggregate.",
-  "You control consent anytime in Settings › Privacy, and you can export or delete your data whenever you want.",
+  "Your private messages and who you are (name, email, phone) stay private. We never sell them. Full stop.",
+  "The broad patterns in what people pick — always grouped together and stripped of names — help us improve OnPini and keep it free to use.",
+  "Anything personal (relationships, values, the vibe Pini Sync picks up) is yours. We only ever use it beyond your own experience if you say yes first.",
+  "You stay in control. Adjust anything in Settings › Privacy, and export or remove your data whenever you like.",
 ];
 
 type Section = { title: string; body: string[] };
@@ -21,96 +21,96 @@ const sections: Section[] = [
   {
     title: "1. Who we are",
     body: [
-      "OnPini is operated by GPM Holding B.V., a company registered in the Netherlands (KVK 89817583). “OnPini”, “we”, “us” refer to that entity. For data-protection law (GDPR), GPM Holding B.V. is the data controller.",
-      "This policy explains what we collect, why, who we share it with, how we make money from data without selling you out, and the rights you have over all of it.",
+      "OnPini is made by GPM Holding B.V., a company registered in the Netherlands (KVK 89817583). When this policy says “OnPini”, “we”, or “us”, that is who we mean. For European data-protection law, GPM Holding B.V. is the data controller.",
+      "We wrote this the way we would explain it to a friend: what we collect, why, who we ever share things with, and the controls you have. No fine print games.",
     ],
   },
   {
-    title: "2. Information we collect",
+    title: "2. What we collect",
     body: [
-      "Information you give us: your username, email, profile details, and the things you post: the pinis you drop, your votes and reactions, comments, and the answers you give inside Pini Sync.",
-      "Information from using OnPini: app events and interactions (which screens you open, what you tap, how long a session lasts), device and crash information, and your approximate region.",
-      "Location: if you enable Radar, we use your location to show nearby activity. You can turn this off in your device settings at any time.",
-      "We do not read or scan the content of your direct messages.",
+      "The things you give us: your username, email, profile details, and the things you create — the pinis you drop, your votes and reactions, comments, and the answers you give inside Pini Sync.",
+      "The basics of how you use the app: which screens you open, what you tap, and how long a visit lasts, plus device and crash information and your approximate region. This is what lets us spot what is working and fix what is not.",
+      "Location, only if you turn on Radar: we use it to show nearby activity, and you can switch it off in your device settings whenever you want.",
+      "One thing we want to be clear about: we do not read or scan the contents of your direct messages.",
     ],
   },
   {
-    title: "3. Sensitive and special-category data",
+    title: "3. The personal stuff, handled with care",
     body: [
-      "Some OnPini features, especially Pini Sync, ask about relationships, intimacy, money, and values, and we infer personality signals (for example how someone leans on loyalty, honesty, or attachment) to make the experience feel personal. Under GDPR some of this counts as special-category data.",
-      "We treat it accordingly. Inferred personality and relationship signals are used to personalize your experience, and we ask for your explicit, separate consent before using them for anything beyond running the app.",
-      "We never sell or share this sensitive data at an individual level. If it ever informs a partner insight, it does so only in aggregated, anonymized form that cannot be traced back to you. You can withdraw this consent at any time in Settings › Privacy.",
+      "Some Pini Sync decks get personal — relationships, intimacy, values — and the app picks up on the vibe of your answers to make the experience feel like yours. Under European law, some of this is treated as a special, more protected kind of information, and we treat it that way too.",
+      "Here is the simple version: we use it to give you your own experience, and that is it — unless you specifically tell us otherwise. Before any of it is ever used beyond your own experience, we ask you separately and clearly, and the answer stays no until you say yes.",
+      "We never hand this kind of information to anyone in a way that points back to you. If it ever helps shape a broader, grouped insight, it does so only after being combined with many other people and stripped of anything identifying. You can change your mind anytime in Settings › Privacy.",
     ],
   },
   {
-    title: "4. How we use your data",
+    title: "4. How we use what we collect",
     body: [
-      "To run OnPini: build your feed, surface people and topics you care about, fight spam and abuse, send notifications, and improve the product.",
-      "Pini Sync never produces a compatibility score or ranking. It shows your answers and a friend's side by side, where you align and where you'd argue. There is no “match percentage.”",
-      "With your consent, we use limited signals to show more relevant ads inside the app, and we use aggregated patterns to understand what the OnPini community thinks.",
+      "To run OnPini: build your feed, surface people and topics you might like, keep spam and bad actors out, send the notifications you ask for, and keep making the app better.",
+      "A quick note on Pini Sync: it never gives you a compatibility score or a ranking. It simply shows your answers next to a friend’s — where you line up and where you would happily argue. There is no “match percentage.”",
+      "With your permission, we use a few signals to make the ads inside the app feel more relevant than random, and we look at broad, grouped patterns to understand what the OnPini community is thinking.",
     ],
   },
   {
-    title: "5. Sharing and monetization",
+    title: "5. Keeping OnPini running and free",
     body: [
-      "Opinion data is valuable, and we are direct about that. Here is exactly where the line sits.",
-      "We never sell your direct messages or your identifying information (name, email, phone, exact location).",
-      "We do share aggregated, anonymized insights with research and brand partners, for example “50% of users picked option A.” Every shared insight is built from a minimum number of responses so it can never single you out.",
-      "With your consent, we share limited advertising signals with ad partners. Under laws like CCPA/CPRA, some of this may be classified as a “sale” or “share,” and you can opt out anytime via Settings › Privacy.",
-      "We also share data with the service providers that help us run OnPini (see Analytics and providers below), under contracts that limit them to working on our behalf.",
+      "Running a social network costs real money, and we would rather be open about how we cover that than tuck it away somewhere you would never look.",
+      "First, the things we will never do: we will never sell your direct messages, and we will never sell your identifying details (your name, email, phone, or exact location). Those are yours.",
+      "What we do share is the bigger picture — aggregated, anonymized insights, like “half of voters leaned one way,” shared with research and brand partners who help support OnPini. Every one of these is built from enough responses that it could never be traced back to any single person.",
+      "With your permission, we also share limited advertising signals with partners so the ads you see are more relevant. Some privacy laws (such as California’s CCPA/CPRA) describe certain kinds of this sharing using specific legal terms, and you will always find a clear way to opt out — see “Your choices” below.",
+      "We also rely on a handful of trusted providers to keep the lights on (see “The help we rely on”), each held to contracts that limit them to working on our behalf.",
     ],
   },
   {
-    title: "6. Analytics and providers",
+    title: "6. The help we rely on",
     body: [
-      "We measure how OnPini is used so we can make it better. Product analytics are processed through PostHog and our own servers. These record events and interactions, not the content of your messages.",
-      "We use additional trusted providers for hosting, infrastructure, crash reporting, and push notifications. Each is bound by contract to protect your data and use it only to provide their service to us.",
-      "Analytics and personalization are governed by your consent choices in Settings › Privacy. Turning a category off stops that processing.",
+      "To understand how OnPini is used so we can keep improving it, we work with product-analytics tools, including PostHog, alongside our own servers. These record actions and interactions within the app, never the contents of your messages.",
+      "We also use trusted providers for hosting, infrastructure, crash reporting, and notifications. Each is bound by contract to protect your information and use it only to provide their service to us.",
+      "What flows to any of this is governed by the choices you make in Settings › Privacy. Switch a category off and that processing stops.",
     ],
   },
   {
-    title: "7. Your choices and rights",
+    title: "7. Your choices",
     body: [
-      "You can edit your profile, manage cookie and ad consent, opt out of personalized ads, withdraw consent for sensitive-data processing, request a copy of your data, or delete your account at any time from Settings › Privacy.",
-      "EU/UK users have GDPR rights: access, rectification, erasure, portability, restriction, and objection. Where we rely on consent, you can withdraw it at any time.",
-      "California residents have CCPA/CPRA rights, including “Do Not Sell or Share My Personal Information” and the right not to be discriminated against for exercising them.",
+      "You can edit your profile, manage cookie and ad preferences, opt out of personalized ads, change your mind on the personal-topics setting, ask for a copy of your data, or close your account at any time from Settings › Privacy.",
+      "In the EU and UK you have full GDPR rights: access, correction, deletion, portability, restriction, and objection. Where we rely on your permission, you can withdraw it at any point.",
+      "If you are in California, you have CCPA/CPRA rights, including the option labeled “Do Not Sell or Share My Personal Information,” and the right not to be treated differently for using any of these choices.",
     ],
   },
   {
-    title: "8. Data retention",
+    title: "8. How long we keep things",
     body: [
-      "We keep your account data while your account is active. When you delete your account, we purge your personal data within 30 days, except where we are legally required to keep it (for example fraud, abuse, or financial records).",
-      "Aggregated, anonymized insights that can no longer identify you may be retained, because they are no longer personal data.",
+      "We hold on to your account information while your account is active. When you close it, we remove your personal data within 30 days, apart from the few things the law requires us to keep for a while (for example, records tied to fraud, abuse, or finances).",
+      "Grouped, anonymized insights that can no longer identify you may stay with us, since at that point they are no longer personal information.",
     ],
   },
   {
-    title: "9. Children's privacy",
+    title: "9. Younger users",
     body: [
-      "OnPini is for users 13 and older. We do not knowingly collect data from children under 13. If you believe a child has signed up, email privacy@onpini.com and we will remove the account.",
+      "OnPini is for people 13 and older. We do not knowingly collect information from children under 13. If you think a child has signed up, email privacy@onpini.com and we will take care of it.",
     ],
   },
   {
-    title: "10. Data security",
+    title: "10. Keeping your data safe",
     body: [
-      "We use industry-standard encryption in transit and at rest, along with access controls. Direct messages are encrypted end-to-end where supported. No system is perfectly secure, but we work hard to protect you.",
+      "We use up-to-date encryption while your data travels and while it rests, along with access controls. Direct messages are end-to-end encrypted where supported. No system is ever perfectly secure, but protecting you is something we take seriously every day.",
     ],
   },
   {
-    title: "11. International transfers",
+    title: "11. Where your data lives",
     body: [
-      "OnPini operates internationally, so your data may be processed outside your home country. Where we transfer personal data out of the EEA or UK, we rely on appropriate safeguards such as the European Commission's Standard Contractual Clauses.",
+      "OnPini works across borders, so your information may be handled outside your home country. When we move personal data out of the EEA or UK, we rely on recognized safeguards such as the European Commission’s Standard Contractual Clauses.",
     ],
   },
   {
-    title: "12. Changes to this policy",
+    title: "12. Updates to this policy",
     body: [
-      "We will update this policy as OnPini evolves. When we make material changes, we will let you know in the app or by email before they take effect.",
+      "OnPini will keep growing, and this policy will grow with it. Whenever we make a meaningful change, we will let you know in the app or by email before it takes effect, so nothing happens behind your back.",
     ],
   },
   {
-    title: "13. Contact",
+    title: "13. Talk to us",
     body: [
-      "Questions, requests, or concerns? Email privacy@onpini.com. EU/UK users may also reach our Data Protection Officer at dpo@onpini.com.",
+      "Questions, requests, or anything on your mind? Email privacy@onpini.com. In the EU or UK, you can also reach our Data Protection Officer at dpo@onpini.com.",
       "GPM Holding B.V., Netherlands · KVK 89817583.",
     ],
   },
@@ -127,11 +127,12 @@ export default function Privacy() {
             Privacy
           </div>
           <h1 className="font-[var(--font-fraunces)] font-black text-5xl md:text-6xl leading-[0.95] mb-6">
-            Your opinions are gold<span className="text-orange">.</span> We treat them that way<span className="text-orange">.</span>
+            Your data, in plain language<span className="text-orange">.</span>
           </h1>
           <p className="text-xl text-ink/70 max-w-2xl leading-relaxed">
-            Most apps bury how they make money from your data. We are not going to.
-            Here is exactly what we collect, what we never touch, and how consent puts you in control.
+            No jargon, no surprises. Here is what we collect, what stays
+            completely private, and the simple controls you have over all of it.
+            Take your time, or skip to the short version just below.
           </p>
           <p className="text-sm text-ink/50 mt-6 font-bold uppercase tracking-widest">
             Last updated {lastUpdated}
