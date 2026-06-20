@@ -103,7 +103,7 @@ export default function Team() {
             Try what we built<span className="text-orange">.</span>
           </h2>
           <a
-            href="https://app.onpini.com"
+            href="https://web.onpini.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-ink text-cream font-black text-lg border-2 border-ink shadow-brutal hover:-translate-y-1 hover:shadow-brutal-md transition-all"

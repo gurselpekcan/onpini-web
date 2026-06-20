@@ -72,7 +72,7 @@ const TOPICS: Topic[] = [
   },
 ];
 
-const APP_URL = "https://app.onpini.com";
+const APP_URL = "https://web.onpini.com";
 const labelFor = (q: Q, c: Choice) => (c === "A" ? q.a : q.b);
 
 export default function PiniSyncDemo() {
