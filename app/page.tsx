@@ -73,7 +73,7 @@ export default function Home() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="https://app.onpini.com"
+              href="https://web.onpini.com"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-full bg-ink text-cream font-black text-lg border-2 border-ink shadow-brutal hover:-translate-y-1 hover:shadow-brutal-md active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
@@ -199,7 +199,7 @@ export default function Home() {
               honest conversation starter ever built.
             </p>
             <a
-              href="https://app.onpini.com"
+              href="https://web.onpini.com"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-amber text-ink font-black border-2 border-amber shadow-brutal-orange hover:-translate-y-0.5 transition-all"
@@ -256,7 +256,7 @@ export default function Home() {
             Join the early access community. Be part of something that&apos;s actually different.
           </p>
           <a
-            href="https://app.onpini.com"
+            href="https://web.onpini.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-10 py-5 rounded-full bg-ink text-cream font-black text-xl border-2 border-ink shadow-brutal-lg hover:-translate-y-1 transition-all"

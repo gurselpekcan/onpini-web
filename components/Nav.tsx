@@ -36,7 +36,7 @@ export default function Nav() {
         </nav>
 
         <a
-          href="https://app.onpini.com"
+          href="https://web.onpini.com"
           target="_blank"
           rel="noopener noreferrer"
           className="px-5 py-2 rounded-full bg-ink text-cream text-sm font-black border-2 border-ink shadow-brutal-sm hover:shadow-brutal hover:-translate-y-0.5 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
