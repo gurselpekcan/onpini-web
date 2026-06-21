@@ -28,7 +28,7 @@ function BoardRow({ emoji, name, cat }: { emoji: string; name: string; cat: stri
       <span className="font-black text-cream truncate flex-1">{name}</span>
       <span className="hidden sm:inline text-[10px] font-black uppercase tracking-widest text-cream/40 shrink-0">{cat}</span>
       <a
-        href="https://app.onpini.com"
+        href="https://web.onpini.com"
         target="_blank"
         rel="noopener noreferrer"
         className="shrink-0 text-[11px] font-black bg-amber text-ink rounded-full px-3 py-1 border-2 border-amber hover:-translate-y-0.5 transition-transform whitespace-nowrap"

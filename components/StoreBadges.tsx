@@ -1,8 +1,8 @@
 // App-store download badges. NOTE TO OWNER: point these at the real listings
 // once the apps are published, swap APP_STORE_URL / PLAY_STORE_URL below.
 // Until then they go to the web app (same as the other CTAs).
-const APP_STORE_URL = "https://app.onpini.com";
-const PLAY_STORE_URL = "https://app.onpini.com";
+const APP_STORE_URL = "https://web.onpini.com";
+const PLAY_STORE_URL = "https://web.onpini.com";
 
 function Badge({
   href,

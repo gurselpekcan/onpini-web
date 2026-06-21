@@ -116,7 +116,7 @@ export default function Circles() {
                     <span aria-hidden>🪑</span> Circle Host: <span className="text-amber">open</span>
                   </span>
                   <a
-                    href="https://app.onpini.com"
+                    href="https://web.onpini.com"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[11px] font-black bg-amber text-ink rounded-full px-3 py-1 border-2 border-amber hover:-translate-y-0.5 transition-all"
@@ -161,7 +161,7 @@ export default function Circles() {
           </div>
 
           <a
-            href="https://app.onpini.com"
+            href="https://web.onpini.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-ink text-cream font-black text-lg border-2 border-ink shadow-brutal hover:-translate-y-1 hover:shadow-brutal-md active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
@@ -203,7 +203,7 @@ export default function Circles() {
             you spark. The seats are open right now — grab one before someone else does.
           </p>
           <a
-            href="https://app.onpini.com"
+            href="https://web.onpini.com"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-ink text-cream font-black text-lg border-2 border-ink shadow-brutal hover:-translate-y-1 hover:shadow-brutal-md active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
