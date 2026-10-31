@@ -136,3 +136,12 @@ html.lenis, html.lenis body { height: auto; }
 .b-bulbs { position: relative; padding: 24px; border-radius: 30px; background-color: #262626; background-image: radial-gradient(circle, #fff7c2 0 4px, #fde047 5px, transparent 7px), radial-gradient(circle, #fff7c2 0 4px, #fde047 5px, transparent 7px), radial-gradient(circle, #fff7c2 0 4px, #fde047 5px, transparent 7px), radial-gradient(circle, #fff7c2 0 4px, #fde047 5px, transparent 7px); background-size: 30px 24px, 30px 24px, 24px 30px, 24px 30px; background-position: 0 0, 0 100%, 0 0, 100% 0; background-repeat: repeat-x, repeat-x, repeat-y, repeat-y; box-shadow: 0 0 60px rgb(253 224 71 / .32); animation: b-glow 2.4s ease-in-out infinite alternate; }
 @keyframes b-glow { from { box-shadow: 0 0 34px rgb(253 224 71 / .2); } to { box-shadow: 0 0 74px rgb(253 224 71 / .46); } }
 @media (prefers-reduced-motion: reduce) { .b-beam, .b-bulbs { animation: none; } }
+
+/* The last screen of the home page: the scroll stops here, a second scroll reaches the footer. */
+.b-hardstop { height: 270vh; }
+@media (pointer: coarse) and (prefers-reduced-motion: no-preference) {
+  html:has(.b-hardstop) { scroll-snap-type: y proximity; }
+  .b-hardstop { height: 340vh; }
+  .b-hardstop { scroll-snap-align: end; scroll-snap-stop: always; }
+  .b-hardstop + footer { scroll-snap-align: end; }
+}

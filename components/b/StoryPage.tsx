@@ -140,7 +140,6 @@ export default function StoryPage({ card, decks }: { card: Card; decks: string[]
           <p className="text-[1.1rem] sm:text-xl font-medium mt-10 sm:mt-14">
             {t("story.end.door")} <a href="mailto:hello@onpini.app" dir="ltr" className="inline-flex items-center min-h-11 font-bold underline underline-offset-4">hello@onpini.app</a>
           </p>
-          <p id="credits" className="text-sm opacity-60 mt-5">{t("story.note")} {t("story.credit")}</p>
         </Scene>
       </motion.main>
       <JoinBand medium="b_story" />

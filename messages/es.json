@@ -87,11 +87,11 @@
     "pages": "Páginas",
     "connect": "Contacto",
     "careers": "Empleo",
-    "rights": "OnPini es un nombre comercial de GPM Holding B.V.",
+    "rights": "OnPini es un nombre comercial y un servicio de GPM Holding B.V.",
     "privacy": "Privacidad",
     "terms": "Términos",
     "early": "Acceso anticipado",
-    "credits": "Créditos"
+    "city": "La Haya"
   },
   "end": {
     "title": "¿En quién has pensado?",
@@ -217,8 +217,6 @@
   "story": {
     "metaTitle": "Nuestra historia: por qué creamos OnPini",
     "metaDesc": "Todos conectados. Nadie conoce a nadie. Unos graduados universitarios de Países Bajos y Alemania crearon lo contrario: un juego social con una regla.",
-    "note": "OnPini (una sola palabra) es un nombre comercial de GPM Holding B.V. en La Haya, Países Bajos. No tiene relación con PiniOn ni con otras apps de nombre parecido.",
-    "credit": "Emojis animados: Noto Emoji Animation de Google, CC BY 4.0.",
     "nl": "Países Bajos",
     "de": "Alemania",
     "tag": "Nuestra historia",
@@ -360,9 +358,8 @@
     "metaDesc": "Preguntas de verdad para hacerle a la gente que te importa, sacadas de nuestros mazos. Ligeras al principio, sinceras al final.",
     "title": "¿A quién tienes",
     "accent": "que preguntarle?",
-    "line": "Elige a tu persona. Responde unas cuantas. Luego deja que pregunte el juego.",
-    "tap": "Toca tu respuesta. Desliza para la siguiente.",
-    "nudge": "Llevas {n} respondidas. ¿Qué diría {person}?",
+    "line": "Elige a tu persona. Róbate unas cuantas. Luego deja que pregunte el juego.",
+    "tap": "Desliza para la siguiente.",
     "more": "¿Tienes a otra persona en mente?",
     "endTitle": "No lo preguntes en voz alta.",
     "endLine": "Envíale un mazo {to} y échale la culpa al juego.",
@@ -600,7 +597,7 @@
       "first": "Alguien de tu nicho va a llegar primero. Que seas tú."
     },
     "close": {
-      "title": "Tu estrella te espera.",
+      "title": "Tu público te espera.",
       "line": "Un DM. Nosotros nos encargamos del resto.",
       "note": "Gratis para ti y tus fans. OnPini es para gente a partir de 16 años."
     },

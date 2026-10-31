@@ -8,7 +8,6 @@ import type { QuestionPage } from "@/lib/siteContent";
 import { Arrow, JoinBand, pressJoin } from "./Bits";
 import Shell, { Footer } from "./Chrome";
 import Emoji from "./Emoji";
-import { haptic } from "./haptic";
 import { joinHref } from "./join";
 
 const PEOPLE: Record<string, { color: string; emoji: string }> = {
@@ -72,16 +71,13 @@ export function QuestionsIndex({ slugs }: { slugs: string[] }) {
 export function QuestionsPageView({ page, others }: { page: QuestionPage; others: string[] }) {
   const { t, lang } = useI18n();
   const { color, emoji } = person(page.slug);
-  const who = t(`qp.${page.slug}.person`);
   const heading = t(`qp.${page.slug}.heading`);
   const to = t(`qp.${page.slug}.to`);
   const total = page.q.length;
   const medium = `b_q_${page.slug}`;
   const deck = useRef<HTMLOListElement>(null);
   const [on, setOn] = useState(0);
-  const [picked, setPicked] = useState<Record<number, "a" | "b">>({});
   const [store, setStore] = useState("");
-  const answered = Object.keys(picked).length;
   const joinLink = store || appLink("signup", lang, medium);
   useEffect(() => setStore(joinHref(navigator.userAgent)), []);
 
@@ -102,14 +98,6 @@ export function QuestionsPageView({ page, others }: { page: QuestionPage; others
     Array.from(list.children).forEach((c) => seen.observe(c));
     return () => seen.disconnect();
   }, []);
-
-  const pick = (i: number, side: "a" | "b") => {
-    if (!picked[i]) {
-      haptic();
-      setTimeout(() => go(i + 1), 420);
-    }
-    setPicked((p) => ({ ...p, [i]: side }));
-  };
 
   return (
     <Shell>
@@ -134,9 +122,7 @@ export function QuestionsPageView({ page, others }: { page: QuestionPage; others
                 <h2 className="b-h text-[clamp(1.75rem,7.4vw,2.35rem)] leading-[1.06] mt-3 mb-5">{c.q}</h2>
                 <div className="grid gap-2 mt-auto">
                   {(["a", "b"] as const).map((side) => (
-                    <motion.button key={side} type="button" whileTap={{ scale: 0.97 }} aria-pressed={picked[i] === side} onClick={() => pick(i, side)} animate={{ backgroundColor: picked[i] === side ? "#111111" : "#f4f4f1", color: picked[i] === side ? "#ffffff" : "#111111", opacity: picked[i] && picked[i] !== side ? 0.5 : 1 }} transition={{ duration: 0.14 }} className="min-h-[60px] rounded-[18px] px-4 py-2.5 font-bold text-[1.05rem] leading-tight">
-                      {c[side]}
-                    </motion.button>
+                    <p key={side} style={{ background: color }} className="flex items-center justify-center text-center min-h-[60px] rounded-[18px] px-4 py-2.5 font-bold text-[1.05rem] leading-tight">{c[side]}</p>
                   ))}
                 </div>
               </li>
@@ -159,9 +145,9 @@ export function QuestionsPageView({ page, others }: { page: QuestionPage; others
           </div>
 
           <div className="flex justify-center px-4 mt-4 min-h-[60px] items-center text-center">
-            {answered >= 3 ? (
+            {on >= 3 ? (
               <motion.a key="nudge" href={joinLink} onClick={(e) => pressJoin(e)} initial={{ opacity: 0, y: 12, scale: 0.96 }} animate={{ opacity: 1, y: 0, scale: 1 }} transition={{ type: "spring", stiffness: 320, damping: 22 }} className="inline-flex items-center gap-2 min-h-[56px] rounded-full bg-[#111] text-white font-bold px-5 py-2 leading-tight">
-                {t("questions.nudge", { n: answered, person: who })} <Arrow />
+                {t("questions.endLine", { to })} <Arrow />
               </motion.a>
             ) : (
               <p className="font-semibold">{t("questions.tap")}</p>

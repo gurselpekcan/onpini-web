@@ -87,11 +87,11 @@
     "pages": "Pagina’s",
     "connect": "Contact",
     "careers": "Werken bij",
-    "rights": "OnPini is een handelsnaam van GPM Holding B.V.",
+    "rights": "OnPini is een handelsnaam en dienst van GPM Holding B.V.",
     "privacy": "Privacy",
     "terms": "Voorwaarden",
     "early": "Early Access",
-    "credits": "Credits"
+    "city": "Den Haag"
   },
   "end": {
     "title": "Aan wie moest je denken?",
@@ -217,8 +217,6 @@
   "story": {
     "metaTitle": "Ons verhaal: waarom we OnPini hebben gebouwd",
     "metaDesc": "Iedereen is verbonden, niemand kent elkaar. Een paar afgestudeerden uit Nederland en Duitsland bouwden het tegenovergestelde: een game met één regel.",
-    "note": "OnPini (één woord) is een handelsnaam van GPM Holding B.V. in Den Haag, Nederland. Het heeft niets te maken met PiniOn of andere apps met een vergelijkbare naam.",
-    "credit": "Geanimeerde emoji: Noto Emoji Animation van Google, CC BY 4.0.",
     "nl": "Nederland",
     "de": "Duitsland",
     "tag": "Ons verhaal",
@@ -360,9 +358,8 @@
     "metaDesc": "Echte vragen voor de mensen om wie je geeft, uit onze decks. Licht aan het begin, eerlijk aan het eind.",
     "title": "Wie moet jij",
     "accent": "iets vragen?",
-    "line": "Kies je persoon. Beantwoord er een paar. Laat de game daarna de vragen stellen.",
-    "tap": "Tik je antwoord aan. Swipe voor de volgende.",
-    "nudge": "Je hebt er {n} beantwoord. Wat zou {person} zeggen?",
+    "line": "Kies je persoon. Steel er een paar. Laat de game daarna de vragen stellen.",
+    "tap": "Swipe voor de volgende.",
     "more": "Denk je nog aan iemand anders?",
     "endTitle": "Vraag het niet hardop.",
     "endLine": "Stuur een deck naar {to} en geef de game de schuld.",
@@ -600,7 +597,7 @@
       "first": "Iemand in jouw niche wordt de eerste. Zorg dat jij het bent."
     },
     "close": {
-      "title": "Je ster staat klaar.",
+      "title": "Je publiek wacht.",
       "line": "Eén DM. Wij doen de rest.",
       "note": "Gratis voor jou en je fans. OnPini is voor mensen van 16 jaar en ouder."
     },

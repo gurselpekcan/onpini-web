@@ -87,11 +87,11 @@
     "pages": "Pages",
     "connect": "Connect",
     "careers": "Careers",
-    "rights": "OnPini is a trade name of GPM Holding B.V.",
+    "rights": "OnPini is a trade name and service of GPM Holding B.V.",
     "privacy": "Privacy",
     "terms": "Terms",
     "early": "Early Access",
-    "credits": "Credits"
+    "city": "The Hague"
   },
   "end": {
     "title": "Who came to mind?",
@@ -217,8 +217,6 @@
   "story": {
     "metaTitle": "Our story: why we built OnPini",
     "metaDesc": "Everyone’s connected. Nobody knows anybody. A few university grads from the Netherlands and Germany built the opposite: a social game with one rule.",
-    "note": "OnPini (one word) is a trade name of GPM Holding B.V. in The Hague, the Netherlands. It is not related to PiniOn or other similarly named apps.",
-    "credit": "Animated emoji: Noto Emoji Animation by Google, CC BY 4.0.",
     "nl": "Netherlands",
     "de": "Germany",
     "tag": "Our story",
@@ -360,9 +358,8 @@
     "metaDesc": "Real questions to ask the people you care about, from our decks. Light at the start, honest by the end.",
     "title": "Who do you need",
     "accent": "to ask?",
-    "line": "Pick your person. Answer a few. Then let the game do the asking.",
-    "tap": "Tap your answer. Swipe for the next one.",
-    "nudge": "You’ve answered {n}. What would {person} say?",
+    "line": "Pick your person. Steal a few. Then let the game do the asking.",
+    "tap": "Swipe for the next one.",
     "more": "Someone else on your mind?",
     "endTitle": "Don’t ask out loud.",
     "endLine": "Send a deck to {to}, and blame the game.",
@@ -600,7 +597,7 @@
       "first": "Someone in your niche gets to be first. Make it you."
     },
     "close": {
-      "title": "Your star’s waiting.",
+      "title": "Your audience is waiting.",
       "line": "One DM. We take it from there.",
       "note": "Free for you and your fans. OnPini is for people of 16 and older."
     },

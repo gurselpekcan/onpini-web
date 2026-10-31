@@ -87,11 +87,11 @@
     "pages": "Seiten",
     "connect": "Kontakt",
     "careers": "Jobs",
-    "rights": "OnPini ist ein Handelsname der GPM Holding B.V.",
+    "rights": "OnPini ist ein Handelsname und Dienst der GPM Holding B.V.",
     "privacy": "Datenschutz",
     "terms": "Nutzungsbedingungen",
     "early": "Early Access",
-    "credits": "Credits"
+    "city": "Den Haag"
   },
   "end": {
     "title": "Wer fällt dir ein?",
@@ -217,8 +217,6 @@
   "story": {
     "metaTitle": "Unsere Story: warum wir OnPini gebaut haben",
     "metaDesc": "Alle sind vernetzt. Wirklich kennt sich keiner. Uni-Absolventen aus den Niederlanden und Deutschland bauten das Gegenteil: ein Social Game mit einer Regel.",
-    "note": "OnPini (ein Wort) ist ein Handelsname der GPM Holding B.V. in Den Haag, Niederlande. Es hat nichts mit PiniOn oder anderen ähnlich benannten Apps zu tun.",
-    "credit": "Animierte Emojis: Noto Emoji Animation von Google, CC BY 4.0.",
     "nl": "Niederlande",
     "de": "Deutschland",
     "tag": "Unsere Geschichte",
@@ -360,9 +358,8 @@
     "metaDesc": "Echte Fragen an die Menschen, die dir wichtig sind, aus unseren Decks. Am Anfang leicht, am Ende ehrlich.",
     "title": "Wen musst du",
     "accent": "mal fragen?",
-    "line": "Wähl deine Person. Beantworte ein paar. Dann lass das Spiel fragen.",
-    "tap": "Tipp deine Antwort an. Wisch zur nächsten.",
-    "nudge": "Du hast {n} beantwortet. Was würde {person} sagen?",
+    "line": "Wähl deine Person. Klau dir ein paar. Dann lass das Spiel fragen.",
+    "tap": "Wisch zur nächsten.",
     "more": "Noch jemand im Kopf?",
     "endTitle": "Frag nicht laut.",
     "endLine": "Schick ein Deck an {to} und schieb’s aufs Spiel.",
@@ -600,7 +597,7 @@
       "first": "Irgendwer aus deiner Nische ist zuerst da. Warum nicht du?"
     },
     "close": {
-      "title": "Dein Stern wartet.",
+      "title": "Dein Publikum wartet.",
       "line": "Eine DM. Den Rest machen wir.",
       "note": "Für dich und deine Fans kostenlos. OnPini ist für Menschen ab 16."
     },

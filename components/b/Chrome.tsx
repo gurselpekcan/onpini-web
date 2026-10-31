@@ -9,6 +9,9 @@ import Logo from "@/components/Logo";
 import { LANGS, LANG_NAMES, appLink, useI18n, type Lang } from "@/lib/i18n";
 import { Arrow } from "./Bits";
 
+/** The page's smooth scroller, for the one place that has to hold it still. */
+export const scroller: { lenis: Lenis | null } = { lenis: null };
+
 const STORED = "onpini-site-lang";
 
 const useMenu = () => {
@@ -251,11 +254,10 @@ export function Footer() {
       </div>
       <div className="border-t border-[#fef3c7]/15">
         <div className="max-w-6xl mx-auto px-5 sm:px-10 py-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-[#fef3c7]/75 leading-relaxed">
-          <span>© {new Date().getFullYear()} OnPini. {t("footer.rights")} · KVK 89817583</span>
+          <span>© {new Date().getFullYear()} OnPini. {t("footer.rights")} · {t("footer.city")} · KVK 89817583</span>
           <span className="flex items-center gap-4 shrink-0">
             <a href={`https://web.onpini.com/privacy?lang=${lang}`} className="inline-flex items-center min-h-10 hover:text-white">{t("footer.privacy")}</a>
             <a href={`https://web.onpini.com/terms?lang=${lang}`} className="inline-flex items-center min-h-10 hover:text-white">{t("footer.terms")}</a>
-            <Link href={`${href("/story")}#credits`} className="inline-flex items-center min-h-10 hover:text-white">{t("footer.credits")}</Link>
             <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-[#f97316]" aria-hidden="true" />{t("footer.early")}</span>
           </span>
         </div>
@@ -272,6 +274,7 @@ export default function Shell({ children, bare = false }: { children: React.Reac
     started.current = true;
     // Smooth scrolling for mouse and trackpad; phones keep their own native scroll.
     const lenis = new Lenis({ lerp: 0.1, anchors: true });
+    scroller.lenis = lenis;
     let raf = requestAnimationFrame(function loop(t) {
       lenis.raf(t);
       raf = requestAnimationFrame(loop);
@@ -279,6 +282,7 @@ export default function Shell({ children, bare = false }: { children: React.Reac
     return () => {
       cancelAnimationFrame(raf);
       lenis.destroy();
+      scroller.lenis = null;
       started.current = false;
     };
   }, [bare]);

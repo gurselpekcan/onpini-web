@@ -6,7 +6,7 @@ import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
 import { appLink, useI18n } from "@/lib/i18n";
 import type { Card, TeamDeck } from "@/lib/siteContent";
 import { Arrow, JoinBig, Pop, StoreBadges, pressJoin } from "./Bits";
-import Shell, { Footer } from "./Chrome";
+import Shell, { Footer, scroller } from "./Chrome";
 import Emoji from "./Emoji";
 import { haptic } from "./haptic";
 import Pit, { type PitItem } from "./Pit";
@@ -120,16 +120,67 @@ function PlayBand({ decks }: { decks: TeamDeck[] }) {
   );
 }
 
+/**
+ * The last screen of the page is the one to land on, and only a second, deliberate scroll reaches
+ * the footer. On a phone the screen stays pinned for a stretch of scrolling (Wipe's height) and CSS
+ * snapping stops at its end (b.css), because pulling a fling back by script fights the browser.
+ * The mouse and trackpad get held here.
+ */
+function useHardStop(ref: React.RefObject<HTMLElement | null>) {
+  useEffect(() => {
+    if (window.matchMedia("(prefers-reduced-motion: reduce), (pointer: coarse)").matches) return;
+    const stopAt = () => (ref.current ? ref.current.getBoundingClientRect().bottom + window.scrollY - document.documentElement.clientHeight : Infinity);
+    let armed = window.scrollY < stopAt() - 40;
+    let holding = false;
+    let lastWheel = 0;
+    const hold = () => {
+      holding = true;
+      const from = performance.now();
+      scroller.lenis?.scrollTo(stopAt(), { immediate: true, force: true });
+      scroller.lenis?.stop();
+      window.scrollTo({ top: stopAt(), behavior: "instant" });
+      // Trackpads keep sending momentum: stay still until it has died down, but never for long.
+      const tick = () => {
+        const now = performance.now();
+        if (now - from < 650 || (now - lastWheel < 160 && now - from < 1600)) return void requestAnimationFrame(tick);
+        scroller.lenis?.start();
+        holding = false;
+      };
+      requestAnimationFrame(tick);
+    };
+    const onScroll = () => {
+      if (holding) return;
+      const y = window.scrollY;
+      const at = stopAt();
+      if (y < at - 40) armed = true;
+      else if (armed && y >= at - 1) {
+        armed = false;
+        hold();
+      }
+    };
+    const onWheel = () => { lastWheel = performance.now(); };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("wheel", onWheel, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("wheel", onWheel);
+      scroller.lenis?.start();
+    };
+  }, [ref]);
+}
+
 function Wipe() {
   const { t } = useI18n();
   const ref = useRef<HTMLElement>(null);
-  const { scrollYProgress: p } = useScroll({ target: ref, offset: ["start start", "end end"] });
+  useHardStop(ref);
+  // The reveal takes the first 90vh of scrolling, whatever the section's height after it.
+  const { scrollYProgress: p } = useScroll({ target: ref, offset: ["start start", "start -90vh"] });
   const clip = useTransform(p, [0.1, 0.72], ["circle(0% at 50% 50%)", "circle(120% at 50% 50%)"]);
   const out = useTransform(p, [0, 0.4], [1, 0.8]);
   const emoji = useTransform(p, [0.66, 0.82], [0, 1]);
   const riseY = useTransform(p, [0.66, 0.82], [18, 0]);
   return (
-    <section ref={ref} className="relative scrolly" style={{ height: "190vh" }}>
+    <section ref={ref} className="relative scrolly b-hardstop">
       <div className="b-stage bg-white">
         <motion.h2 style={{ scale: out, fontSize: wordFit(t("wipe.awkward"), "clamp(3.6rem,17vw,13rem)") }} className="b-h text-center leading-[.92] px-3">{t("wipe.awkward")}</motion.h2>
         <motion.div style={{ clipPath: clip }} className="absolute inset-0 grid grid-rows-[minmax(0,1fr)_auto_minmax(auto,1fr)] justify-items-center bg-[#f97316] px-4">
