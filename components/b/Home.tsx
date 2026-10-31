@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
 import { appLink, useI18n } from "@/lib/i18n";
-import type { TeamDeck } from "@/lib/siteContent";
+import type { Card, TeamDeck } from "@/lib/siteContent";
 import { Arrow, JoinBig, Pop, StoreBadges, pressJoin } from "./Bits";
 import Shell, { Footer } from "./Chrome";
 import Emoji from "./Emoji";
@@ -271,7 +271,7 @@ const CASES: { color: string; emoji: string; to: string; label: string }[] = [
   { color: "#fb923c", emoji: "1f525", to: "/decks/sports", label: "genres.sports.eyebrow" },
 ];
 
-function UseCases({ cards }: { cards: string[] }) {
+function UseCases({ cards }: { cards: Card[] }) {
   const { t, raw, href } = useI18n();
   const items = raw<{ who: string; pain: string; win: string }[]>("cases.items");
   const [on, setOn] = useState(0);
@@ -312,16 +312,21 @@ function UseCases({ cards }: { cards: string[] }) {
           <li key={c.who} data-i={i} className="b-case">
             <div className="max-w-6xl mx-auto px-5 sm:px-10 grid lg:grid-cols-[1.35fr_1fr] gap-5 lg:gap-14 items-center h-full">
               <div className="relative">
-                <Emoji code={CASES[i].emoji} size={84} className="block mb-2 lg:mb-4" />
-                <p className="b-h text-[clamp(2.7rem,11.5vw,5.8rem)] leading-[.98]">{c.pain}</p>
+                <Emoji code={CASES[i].emoji} size={64} className="block mb-1.5 lg:mb-4" />
+                <p className="b-h text-[clamp(2.4rem,10.4vw,5.4rem)] leading-[.98]">{c.pain}</p>
               </div>
               <div>
                 <div className={`rounded-[26px] bg-white p-5 sm:p-7 shadow-[0_18px_44px_rgba(0,0,0,.16)] ${i % 2 ? "rotate-[1.5deg]" : "rotate-[-1.5deg]"}`}>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/icon.svg" alt="" width={36} height={36} loading="lazy" className="w-9 h-9 mb-3" />
-                  <p className="b-h text-[clamp(1.5rem,6vw,2.1rem)] leading-[1.08]">{cards[i]}</p>
+                  <p className="b-h text-[clamp(1.5rem,6vw,2.1rem)] leading-[1.08]">{cards[i].q}</p>
+                  <div className="grid grid-cols-2 gap-2 mt-4">
+                    {(["a", "b"] as const).map((side) => (
+                      <p key={side} className="flex items-center justify-center text-center min-h-[58px] rounded-[16px] bg-[#f97316] text-[#111] px-2.5 py-2 font-bold text-[15px] leading-tight">{cards[i][side]}</p>
+                    ))}
+                  </div>
                 </div>
-                <p className="b-h text-[clamp(1.5rem,6.2vw,2.2rem)] leading-[1.05] mt-5">{c.win}</p>
+                <p className="b-h text-[clamp(1.5rem,6.2vw,2.2rem)] leading-[1.05] mt-4">{c.win}</p>
                 <Link href={href(CASES[i].to)} className="inline-flex items-center gap-2 min-h-[52px] mt-3 rounded-full bg-[#111] text-white font-bold px-5 py-2 leading-tight">{t(CASES[i].label)} <Arrow /></Link>
               </div>
             </div>
@@ -339,7 +344,7 @@ function UseCases({ cards }: { cards: string[] }) {
   );
 }
 
-export default function Home({ decks, tabDecks, cases }: { decks: TeamDeck[]; tabDecks: Record<string, string[]>; cases: string[] }) {
+export default function Home({ decks, tabDecks, cases }: { decks: TeamDeck[]; tabDecks: Record<string, string[]>; cases: Card[] }) {
   const { raw } = useI18n();
   const { scrollY } = useScroll();
   const heroUp = useTransform(scrollY, [0, 600], [0, -70]);

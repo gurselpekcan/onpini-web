@@ -561,17 +561,17 @@
       {
         "who": "Deine Mama",
         "pain": "Jeden Sonntag am Telefon: erst das Wetter, dann deine Cousine.",
-        "win": "Jetzt habt ihr endlich was zu bereden."
+        "win": "Der Sonntagsanruf wird plötzlich spannend."
       },
       {
         "who": "Dein Papa",
         "pain": "Er sagt „alles gut“ und reicht das Handy an deine Mama weiter.",
-        "win": "Eine Karte beantwortet er."
+        "win": "Reden will er nicht. Tippen schon."
       },
       {
         "who": "Dein Schatz",
         "pain": "Ihr beendet gegenseitig eure Sätze. Eure Antworten nicht.",
-        "win": "Date Night? Läuft."
+        "win": "Date Night wird jetzt gefährlich."
       },
       {
         "who": "Dein Crush",
@@ -581,7 +581,7 @@
       {
         "who": "Ein erstes Date",
         "pain": "Der Small Talk ist schon durch, bevor die Drinks kommen.",
-        "win": "Spiel vorher eine Runde. Dann gehst du mit Vorsprung rein."
+        "win": "Find’s raus, bevor die Rechnung kommt."
       },
       {
         "who": "Fernbeziehung",
@@ -591,17 +591,17 @@
       {
         "who": "Deine Bestie",
         "pain": "Du hast jede Story schon gehört. Zweimal.",
-        "win": "Jetzt hol dir eine, die du noch nicht kennst."
+        "win": "Jetzt erfährst du, was deine Bestie wirklich dachte."
       },
       {
         "who": "Der Gruppenchat",
         "pain": "Den ganzen Tag Memes. Seit Monaten hat niemand was Echtes gesagt.",
-        "win": "Ein Deck. Alle dabei."
+        "win": "Ein Deck. Keiner ist sicher."
       },
       {
         "who": "Deine Geschwister",
         "pain": "Gleiches Haus. Komplett andere Kindheit.",
-        "win": "Vergleicht eure Versionen. Endlich."
+        "win": "Zeit für ein Geständnis."
       },
       {
         "who": "Dein neuer Sitznachbar",
@@ -610,12 +610,12 @@
       },
       {
         "who": "Deine WG",
-        "pain": "Der Kuchen ist weg. Keiner war’s.",
-        "win": "Klärt die WG-Regeln vor dem nächsten Kuchen."
+        "pain": "Am Kühlschrank hängt ein Zettel. Keiner war’s.",
+        "win": "Klärt das vor dem nächsten Zettel."
       },
       {
         "who": "Dein Team",
-        "pain": "Darüber streitet ihr seit Jahren.",
+        "pain": "Verloren. Und ihr redet immer noch drüber.",
         "win": "Beide Antworten versiegelt. Kein Zurück."
       }
     ]

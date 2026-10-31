@@ -561,17 +561,17 @@
       {
         "who": "Tu mamá",
         "pain": "Cada domingo, la misma llamada: el clima y luego tu prima.",
-        "win": "Ahora sí hay de qué hablar."
+        "win": "La llamada del domingo se pone interesante."
       },
       {
         "who": "Tu papá",
         "pain": "Dice «bien» y le pasa el teléfono a tu mamá.",
-        "win": "A una carta sí te contesta."
+        "win": "Hablar, no habla. Pero elegir, elige."
       },
       {
         "who": "Tu pareja",
         "pain": "Le terminas las frases. Sus respuestas, ni idea.",
-        "win": "Plan de esta noche: resuelto."
+        "win": "Plan de esta noche: peligroso."
       },
       {
         "who": "Tu crush",
@@ -581,7 +581,7 @@
       {
         "who": "Una primera cita",
         "pain": "Te quedas sin tema antes de que lleguen las bebidas.",
-        "win": "Juega una ronda antes. Llega con ventaja."
+        "win": "Descúbrelo antes de que llegue la cuenta."
       },
       {
         "who": "Amor a distancia",
@@ -591,17 +591,17 @@
       {
         "who": "Tu mejor amigo",
         "pain": "Ya le has oído todas sus historias. Dos veces.",
-        "win": "Ahora sácale una que no conozcas."
+        "win": "Ahora averigua qué pensaba de verdad."
       },
       {
         "who": "El chat de grupo",
         "pain": "Memes todo el día. Hace meses que nadie dice nada de verdad.",
-        "win": "Un mazo. Todos dentro."
+        "win": "Un mazo. Nadie se salva."
       },
       {
         "who": "Tu hermano o hermana",
         "pain": "La misma casa. Una infancia totalmente distinta.",
-        "win": "Compara versiones. Por fin."
+        "win": "Hora de confesar."
       },
       {
         "who": "Alguien nuevo en clase",
@@ -610,12 +610,12 @@
       },
       {
         "who": "Tus roomies",
-        "pain": "Alguien se comió la tarta. Nadie dice ni pío.",
-        "win": "Deja claras las reglas de la casa antes de la próxima."
+        "pain": "Hay una nota en la nevera. Nadie la firma.",
+        "win": "Resuélvelo antes de la próxima nota."
       },
       {
         "who": "Tu equipo",
-        "pain": "Llevas años discutiendo esto.",
+        "pain": "Perdiste. Y sigues con el tema.",
         "win": "Las dos respuestas selladas. Sin vuelta atrás."
       }
     ]

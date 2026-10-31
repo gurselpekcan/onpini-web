@@ -561,17 +561,17 @@
       {
         "who": "Je moeder",
         "pain": "Elke zondag aan de telefoon: eerst het weer, dan je nicht.",
-        "win": "Eindelijk iets om echt over te praten."
+        "win": "Ineens wil je zondag wél bellen."
       },
       {
         "who": "Je vader",
         "pain": "Hij zegt ‘goed hoor’ en geeft de telefoon aan je moeder.",
-        "win": "Op een kaart geeft hij wel antwoord."
+        "win": "Praten doet hij niet. Tikken wel."
       },
       {
         "who": "Je partner",
         "pain": "Jullie maken elkaars zinnen af. Elkaars antwoorden niet.",
-        "win": "Date night? Geregeld."
+        "win": "Date night wordt ineens gevaarlijk."
       },
       {
         "who": "Je crush",
@@ -581,7 +581,7 @@
       {
         "who": "Een eerste date",
         "pain": "De smalltalk is op voordat de drankjes er zijn.",
-        "win": "Speel eerst een ronde. Dan loop je binnen met een voorsprong."
+        "win": "Zoek het uit voordat de rekening komt."
       },
       {
         "who": "Liefde op afstand",
@@ -591,17 +591,17 @@
       {
         "who": "Je bestie",
         "pain": "Je hebt elk verhaal al gehoord. Twee keer.",
-        "win": "Tijd voor eentje dat je nog niet kent."
+        "win": "Nu hoor je wat je bestie er écht van vond."
       },
       {
         "who": "De groepsapp",
         "pain": "De hele dag memes. Al maanden zegt niemand iets echts.",
-        "win": "Eén deck. Iedereen doet mee."
+        "win": "Eén deck. Niemand is veilig."
       },
       {
         "who": "Je broer of zus",
         "pain": "Zelfde huis. Totaal andere jeugd.",
-        "win": "Vergelijk jullie versies. Eindelijk."
+        "win": "Tijd om op te biechten."
       },
       {
         "who": "Een nieuwe klasgenoot",
@@ -610,12 +610,12 @@
       },
       {
         "who": "Je huisgenoten",
-        "pain": "Iemand heeft de taart opgegeten. Niemand zegt iets.",
-        "win": "Spreek de huisregels af vóór de volgende taart."
+        "pain": "Er hangt een briefje op de koelkast. Niemand zet er z’n naam onder.",
+        "win": "Los het op vóór het volgende briefje."
       },
       {
         "who": "Je teamgenoten",
-        "pain": "Hier discussiëren jullie al jaren over.",
+        "pain": "Verloren. En het gaat er nog steeds over.",
         "win": "Beide antwoorden verzegeld. Geen weg terug."
       }
     ]

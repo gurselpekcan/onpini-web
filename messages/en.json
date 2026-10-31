@@ -561,17 +561,17 @@
       {
         "who": "Your mom",
         "pain": "Every Sunday call: the weather, then your cousin.",
-        "win": "Now there’s something to actually talk about."
+        "win": "Sunday’s call just got interesting."
       },
       {
         "who": "Your dad",
         "pain": "He says ‘fine’ and passes the phone to your mom.",
-        "win": "He’ll answer a card."
+        "win": "He won’t talk. He’ll tap."
       },
       {
         "who": "Your partner",
         "pain": "You finish each other’s sentences. Not each other’s answers.",
-        "win": "Date night, sorted."
+        "win": "Date night just got dangerous."
       },
       {
         "who": "Your crush",
@@ -581,7 +581,7 @@
       {
         "who": "A first date",
         "pain": "Small talk runs out before the drinks arrive.",
-        "win": "Play a round first. Walk in with a head start."
+        "win": "Find out before the bill comes."
       },
       {
         "who": "Long distance",
@@ -591,17 +591,17 @@
       {
         "who": "Your best friend",
         "pain": "You’ve heard every story. Twice.",
-        "win": "Now get one you haven’t."
+        "win": "Now find out what they really thought."
       },
       {
         "who": "The group chat",
         "pain": "Memes all day. Nobody’s said anything real in months.",
-        "win": "One deck. Everyone’s in."
+        "win": "One deck. Nobody’s safe."
       },
       {
         "who": "Your sibling",
         "pain": "Same house. Completely different childhood.",
-        "win": "Compare notes. Finally."
+        "win": "Time to confess."
       },
       {
         "who": "A new classmate",
@@ -610,12 +610,12 @@
       },
       {
         "who": "Your roommates",
-        "pain": "Someone ate the cake. Nobody’s talking.",
-        "win": "Settle the house rules before the next one."
+        "pain": "There’s a note on the fridge. Nobody’s signing it.",
+        "win": "Settle it before the next note."
       },
       {
         "who": "Your teammates",
-        "pain": "You’ve argued about this for years.",
+        "pain": "You lost. You’re still talking about it.",
         "win": "Both answers sealed. No backing down."
       }
     ]
