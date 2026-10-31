@@ -34,23 +34,27 @@ function AppShot({ name, alt, tilt = 0 }: { name: string; alt: string; tilt?: nu
 
 
 /** Two sealed cards fly in, meet and flip open as you scroll. */
-/** The whole idea in one tap: two sealed cards and one button. */
+/** The whole idea in one tap: one question, two sealed answers, one button. */
 function RevealDemo({ card }: { card: Card }) {
   const { t } = useI18n();
   const [open, setOpen] = useState(false);
   return (
-    <section className="relative z-10 bg-[#0c0c0c] text-white px-4 sm:px-10 py-12 sm:py-20">
-      <div className="max-w-xl mx-auto text-center">
-        <h2 className="b-h text-[clamp(2.4rem,10vw,4.4rem)] leading-[1]">{t("how.meet.title")} <span className="block text-[#f97316]">{t("how.meet.accent")}</span></h2>
-        <p className="b-h text-[1.45rem] sm:text-3xl mt-4 mb-5 leading-[1.08] [text-wrap:balance]">{card.q}</p>
-        <div className="grid grid-cols-2 gap-2.5 text-start" style={{ perspective: 900 }} dir="ltr">
+    <section className="relative z-10 bg-[#0c0c0c] text-white px-4 sm:px-10 py-14 sm:py-24">
+      <div className="max-w-xl mx-auto">
+        <h2 className="b-h text-center text-[clamp(2.1rem,8vw,3.6rem)] leading-[1]">{t("how.meet.title")} <span className="text-[#f97316]">{t("how.meet.accent")}</span></h2>
+        <div className="rounded-[24px] bg-white text-[#111] p-5 sm:p-7 mt-7 rotate-[-1deg] shadow-[0_18px_44px_rgba(0,0,0,.4)]">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/icon.svg" alt="" width={36} height={36} loading="lazy" className="w-9 h-9 mb-3" />
+          <p className="b-h text-[clamp(1.9rem,7.6vw,2.8rem)] leading-[1.05] [text-wrap:balance]">{card.q}</p>
+        </div>
+        <div className="grid grid-cols-2 gap-2.5 mt-3 text-start" style={{ perspective: 900 }} dir="ltr">
           <FlipCard big who={t("how.meet.you")} text={card.b} tone="#fde047" open={open} delay={0} />
           <FlipCard big who={t("how.meet.them")} text={card.a} tone="#fb923c" open={open} delay={0.16} />
         </div>
         {open ? (
-          <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="text-xl sm:text-2xl font-medium leading-tight mt-5 min-h-[72px] flex items-center justify-center">{t("how.meet.end")}</motion.p>
+          <motion.p initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }} className="text-center text-xl sm:text-2xl font-medium leading-tight mt-5 min-h-[72px] flex items-center justify-center">{t("how.meet.end")}</motion.p>
         ) : (
-          <motion.button type="button" whileTap={{ scale: 0.97 }} onClick={() => { haptic(20); goldBurst(0.5, 0.55); setOpen(true); }} className="w-full min-h-[72px] rounded-[22px] mt-5 bg-gradient-to-r from-[#f59e0b] via-[#fde68a] to-[#f59e0b] text-[#111] font-bold text-[1.2rem]">{t("how.meet.open")}</motion.button>
+          <motion.button type="button" whileTap={{ scale: 0.97 }} onClick={() => { haptic(20); goldBurst(0.5, 0.55); setOpen(true); }} className="w-full min-h-[72px] rounded-[22px] mt-3 bg-gradient-to-r from-[#f59e0b] via-[#fde68a] to-[#f59e0b] text-[#111] font-bold text-[1.2rem]">{t("how.meet.open")}</motion.button>
         )}
       </div>
     </section>

@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const paths = [
     "",
     "/how-it-works",
+    "/creators",
     "/story",
     "/decks",
     ...c.genres.map((g) => `/decks/${g.slug}`),

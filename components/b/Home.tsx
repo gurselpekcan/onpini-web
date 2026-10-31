@@ -120,111 +120,6 @@ function PlayBand({ decks }: { decks: TeamDeck[] }) {
   );
 }
 
-const TABS = [
-  { id: "friends", c: "#c4b5fd", e: "1faf6" }, { id: "crushes", c: "#fb923c", e: "1f633" }, { id: "loves", c: "#fda4af", e: "1f60d" }, { id: "family", c: "#fde047", e: "1f979" },
-  { id: "group", c: "#7dd3fc", e: "1f602" }, { id: "communities", c: "#86efac", e: "1f525" }, { id: "idols", c: "#f9a8d4", e: "1f92f" },
-];
-
-function YourPeople({ tabDecks }: { tabDecks: Record<string, string[]> }) {
-  const { t } = useI18n();
-  const played = usePlayed();
-  const [tab, setTab] = useState(0);
-  const track = useRef<HTMLDivElement>(null);
-  const tabs = useRef<HTMLDivElement>(null);
-  // While a tap is scrolling the cards, the cards it passes shouldn't move the tabs.
-  const tapLock = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const drag = useRef<{ x: number; left: number } | null>(null);
-
-  // Measured on screen, so it works the same left to right and right to left.
-  const offCentre = (el: HTMLElement, box: HTMLElement) => {
-    const a = el.getBoundingClientRect();
-    const b = box.getBoundingClientRect();
-    return a.left + a.width / 2 - (b.left + b.width / 2);
-  };
-  const showTab = (i: number) => {
-    const strip = tabs.current;
-    const button = strip?.children[i] as HTMLElement | undefined;
-    if (strip && button) strip.scrollBy({ left: offCentre(button, strip), behavior: "smooth" });
-  };
-  const nearest = () => {
-    const el = track.current;
-    if (!el) return 0;
-    let best = 0;
-    let gap = Infinity;
-    Array.from(el.children).forEach((card, i) => {
-      const d = Math.abs(offCentre(card as HTMLElement, el));
-      if (d < gap) { gap = d; best = i; }
-    });
-    return best;
-  };
-  const goTo = (i: number) => {
-    const el = track.current;
-    const card = el?.children[i] as HTMLElement | undefined;
-    if (!el || !card) return;
-    if (tapLock.current) clearTimeout(tapLock.current);
-    tapLock.current = setTimeout(() => { tapLock.current = null; }, 650);
-    setTab(i);
-    showTab(i);
-    el.scrollBy({ left: offCentre(card, el), behavior: "smooth" });
-  };
-  const onScroll = () => {
-    if (tapLock.current) return;
-    const i = nearest();
-    if (i !== tab) {
-      setTab(i);
-      showTab(i);
-    }
-  };
-  const onDown = (e: React.PointerEvent) => {
-    if (e.pointerType !== "mouse" || !track.current) return;
-    drag.current = { x: e.clientX, left: track.current.scrollLeft };
-    track.current.classList.add("b-dragging");
-    track.current.setPointerCapture(e.pointerId);
-  };
-  const onMove = (e: React.PointerEvent) => {
-    if (drag.current && track.current) track.current.scrollLeft = drag.current.left - (e.clientX - drag.current.x);
-  };
-  const onUp = () => {
-    if (!drag.current || !track.current) return;
-    drag.current = null;
-    track.current.classList.remove("b-dragging");
-    goTo(nearest());
-  };
-  useEffect(() => () => {
-    if (tapLock.current) clearTimeout(tapLock.current);
-  }, []);
-
-  return (
-    <section id="people" className="relative z-10 bg-white pt-14 sm:pt-24 pb-16 sm:pb-28 scroll-mt-4 overflow-hidden">
-      <div className="px-5 sm:px-10 max-w-6xl mx-auto">
-        {played && <p className="inline-block rounded-full bg-[#111] text-white text-sm font-semibold px-4 py-2 mb-5">{t("people.back", { same: played.same, total: played.total })}</p>}
-        <h2 className="b-h text-[clamp(2.7rem,11.4vw,6.2rem)] leading-[.98]"><Pop text={t("people.title")} /><Pop text={t("people.accent")} className="mt-2 text-[#f97316]" /></h2>
-      </div>
-      <div ref={tabs} className="b-snap b-snap-tight mt-6 lg:!justify-center" role="tablist">
-        {TABS.map((p, i) => (
-          <button key={p.id} type="button" role="tab" id={`people-tab-${i}`} aria-selected={i === tab} aria-controls={`people-card-${i}`} onClick={() => goTo(i)} className="relative shrink-0 min-h-[48px] px-4 rounded-full font-semibold text-[15px]">
-            {i === tab && <motion.span layoutId="people-tab" className="absolute inset-0 rounded-full bg-[#111]" transition={{ type: "spring", stiffness: 480, damping: 34 }} />}
-            <span className={`relative ${i === tab ? "text-white" : ""}`}>{t(`people.tabs.${p.id}.id`)}</span>
-          </button>
-        ))}
-      </div>
-      <div ref={track} onScroll={onScroll} onPointerDown={onDown} onPointerMove={onMove} onPointerUp={onUp} onPointerCancel={onUp} className="b-people mt-3" tabIndex={0}>
-        {TABS.map((p, i) => (
-          <motion.article key={p.id} id={`people-card-${i}`} role="tabpanel" aria-labelledby={`people-tab-${i}`} animate={{ scale: i === tab ? 1 : 0.96, opacity: i === tab ? 1 : 0.72 }} transition={{ type: "spring", stiffness: 260, damping: 26 }} style={{ background: p.c }} className="b-people-card">
-            <Emoji code={p.e} size={72} />
-            <h3 className="b-h text-[clamp(2.2rem,9.4vw,4.2rem)] mt-3 text-balance">{t(`people.tabs.${p.id}.title`)}</h3>
-            <p className="text-[1.1rem] sm:text-xl leading-snug mt-3 max-w-xl">{t(`people.tabs.${p.id}.line`)}</p>
-            <ul className="flex flex-wrap gap-1.5 mt-auto pt-6">
-              {(tabDecks[p.id] ?? []).map((d) => <li key={d} className="rounded-full bg-white/70 px-3.5 py-2 text-sm font-semibold">{d}</li>)}
-            </ul>
-          </motion.article>
-        ))}
-      </div>
-    </section>
-  );
-}
-
-/** "Asking is awkward." A flame circle grows from the middle and turns the page over. */
 function Wipe() {
   const { t } = useI18n();
   const ref = useRef<HTMLElement>(null);
@@ -274,6 +169,7 @@ const CASES: { color: string; emoji: string; to: string; label: string }[] = [
 function UseCases({ cards }: { cards: Card[] }) {
   const { t, raw, href } = useI18n();
   const items = raw<{ who: string; pain: string; win: string }[]>("cases.items");
+  const played = usePlayed();
   const [on, setOn] = useState(0);
   const deck = useRef<HTMLUListElement>(null);
   const chips = useRef<HTMLDivElement>(null);
@@ -300,7 +196,8 @@ function UseCases({ cards }: { cards: Card[] }) {
     if (row && chip) row.scrollTo({ left: chip.offsetLeft - (row.clientWidth - chip.offsetWidth) / 2, behavior: "smooth" });
   }, [on]);
   return (
-    <motion.section animate={{ backgroundColor: CASES[on].color }} initial={false} transition={{ duration: 0.35 }} className="relative z-10 pt-14 sm:pt-24 pb-8 sm:pb-14 overflow-hidden">
+    <motion.section id="people" animate={{ backgroundColor: CASES[on].color }} initial={false} transition={{ duration: 0.35 }} className="relative z-10 pt-14 sm:pt-24 pb-8 sm:pb-14 overflow-hidden">
+      {played && <p className="max-w-6xl mx-auto px-5 sm:px-10 mb-3"><span className="inline-block rounded-full bg-[#111] text-white text-sm font-semibold px-4 py-2">{t("people.back", { same: played.same, total: played.total })}</span></p>}
       <h2 className="b-h text-[clamp(1.9rem,8vw,3.6rem)] leading-[1] px-5 sm:px-10 max-w-6xl mx-auto">{t("cases.title")} {t("cases.accent")}</h2>
       <div ref={chips} className="b-snap b-snap-tight relative !gap-1.5 !px-5 sm:!px-10 mt-5 lg:!justify-start max-w-6xl mx-auto" role="group" aria-label={t("cases.accent")}>
         {items.map((c, i) => (
@@ -344,7 +241,7 @@ function UseCases({ cards }: { cards: Card[] }) {
   );
 }
 
-export default function Home({ decks, tabDecks, cases }: { decks: TeamDeck[]; tabDecks: Record<string, string[]>; cases: Card[] }) {
+export default function Home({ decks, cases }: { decks: TeamDeck[]; cases: Card[] }) {
   const { raw } = useI18n();
   const { scrollY } = useScroll();
   const heroUp = useTransform(scrollY, [0, 600], [0, -70]);
@@ -366,7 +263,6 @@ export default function Home({ decks, tabDecks, cases }: { decks: TeamDeck[]; ta
         <Pit items={items} phoneCount={8} className="!bottom-9 sm:!bottom-14" />
       </section>
       <PlayBand decks={decks} />
-      <YourPeople tabDecks={tabDecks} />
       <UseCases cards={cases} />
       <Wipe />
       <Footer />

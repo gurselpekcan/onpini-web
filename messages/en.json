@@ -11,7 +11,8 @@
     "home": "Home",
     "support": "Support",
     "language": "Language",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "creators": "For Creators"
   },
   "join": {
     "label": "Join OnPini, free",
@@ -74,45 +75,6 @@
     "button": "Play this deck"
   },
   "people": {
-    "title": "Everyone you know has a side you’ve never seen.",
-    "accent": "The more you play, the more you see.",
-    "tabs": {
-      "friends": {
-        "id": "Friends",
-        "title": "You’d pick up at 3AM. You still don’t know this.",
-        "line": "Loyalty, envy, the things you’ve never said. Send it to your day-ones."
-      },
-      "crushes": {
-        "id": "Crushes",
-        "title": "Flirt without saying a word.",
-        "line": "Skip three more weeks of ‘haha’. Their answers are right there."
-      },
-      "loves": {
-        "id": "Loves",
-        "title": "Years together. Still something new.",
-        "line": "From the last fry to forever. Rounds that go as deep as you two dare."
-      },
-      "family": {
-        "id": "Family",
-        "title": "Say it without making it a thing.",
-        "line": "Your parents, your sister, your grandad. One family, many versions of it."
-      },
-      "group": {
-        "id": "Group chats",
-        "title": "One deck. The whole chat. Everyone’s in.",
-        "line": "Everybody answers, then the group reveal starts the conversation."
-      },
-      "communities": {
-        "id": "Communities",
-        "title": "Your club. Your class. Your crew.",
-        "line": "Start a group, drop one link, and see what your people really think."
-      },
-      "idols": {
-        "id": "Idols",
-        "title": "Where do you stand in your fandom?",
-        "line": "Decks written for fans: the real debates, nothing official."
-      }
-    },
     "back": "Same on {same} of {total} with the OnPini team. Now think about your people."
   },
   "wipe": {
@@ -132,7 +94,7 @@
     "credits": "Credits"
   },
   "end": {
-    "title": "Someone came to mind.",
+    "title": "Who came to mind?",
     "line": "Go on. Send it."
   },
   "playPage": {
@@ -255,74 +217,59 @@
   "story": {
     "metaTitle": "Our story: why we built OnPini",
     "metaDesc": "Everyone’s connected. Nobody knows anybody. A few university grads from the Netherlands and Germany built the opposite: a social game with one rule.",
-    "why": {
-      "title": "Don’t follow them.",
-      "accent": "Know them.",
-      "items": [
-        {
-          "t": "You get the real answer.",
-          "d": "Nothing shows until you’ve both picked. Nobody can copy you."
-        },
-        {
-          "t": "Nobody has to bring it up.",
-          "d": "The hard question was never the problem. Being the one who asks it was. Now the game asks."
-        },
-        {
-          "t": "Your profile plays for you.",
-          "d": "Answer once. People play your decks against your answers while you sleep. The more you play, the more of you there is to discover."
-        },
-        {
-          "t": "Ask once. Keep the answer.",
-          "d": "Every deck you two play stays. Months later it’s still there, right when you need it."
-        }
-      ]
+    "note": "OnPini (one word) is a trade name of GPM Holding B.V. in The Hague, the Netherlands. It is not related to PiniOn or other similarly named apps.",
+    "credit": "Animated emoji: Noto Emoji Animation by Google, CC BY 4.0.",
+    "nl": "Netherlands",
+    "de": "Germany",
+    "tag": "Our story",
+    "title": "Everyone’s connected.",
+    "accent": "Nobody knows anybody.",
+    "past": [
+      {
+        "w": "Friended.",
+        "l": "We added everyone."
+      },
+      {
+        "w": "Followed.",
+        "l": "We watched everyone."
+      },
+      {
+        "w": "Swiped.",
+        "l": "We judged everyone."
+      }
+    ],
+    "never": "Never known.",
+    "neverLine": "Every app gave us more people. None gave us more of a person.",
+    "turn": {
+      "one": "So a few university grads from the Netherlands and Germany went after the part every app skipped: what people actually think.",
+      "two": "The hard question was never the problem. Being the one who asks it was.",
+      "title": "So we handed it to a game."
     },
-    "who": {
-      "nl": "Netherlands",
-      "de": "Germany",
-      "title": "Everyone’s connected.",
-      "line": "So a few university grads from the Netherlands and Germany built the opposite.",
+    "rule": {
+      "tag": "One rule",
+      "title": "Show yours. See theirs.",
+      "line": "No lurking. No guessing. You answer, they answer, you both know.",
+      "you": "You",
+      "them": "Them",
       "one": "Most apps want more of your attention.",
-      "two": "We want you to go talk to each other.",
-      "accent": "Nobody knows anybody.",
-      "ruleTag": "One rule",
-      "rule": "Show yours. See theirs.",
-      "ruleLine": "No lurking. No guessing. You answer, they answer, you both know."
+      "two": "We want you to go talk to each other."
+    },
+    "keep": {
+      "title": "Ask once. Keep the answer.",
+      "line": "Every deck you play stays. Months later, it’s still there, right when you need it.",
+      "title2": "Then your profile plays for you.",
+      "line2": "The more you play, the more of you there is. People play your decks against your answers while you sleep."
     },
     "mission": {
-      "tag": "Our mission",
+      "tag": "Where this goes",
       "title": "Nobody you love gets to stay a mystery.",
-      "line": "That’s what we’re here for. It starts with two people and one deck. The more you play, the more you know, and the more of you there is to find."
+      "line": "It starts with two people and one deck. Then your whole crew. Then the creators you follow. We’re building the place where what you think is who you are."
     },
-    "note": "OnPini (one word) is a trade name of GPM Holding B.V. in The Hague, the Netherlands. It is not related to PiniOn or other similarly named apps.",
-    "inside": {
-      "title": "What’s inside.",
-      "stats": [
-        {
-          "n": "61",
-          "l": "decks"
-        },
-        {
-          "n": "5,660",
-          "l": "questions"
-        },
-        {
-          "n": "5",
-          "l": "languages"
-        },
-        {
-          "n": "€0",
-          "l": "to play"
-        }
-      ]
-    },
-    "invest": {
-      "tag": "For investors",
-      "title": "The door’s open.",
-      "line": "We’re building the social game for people who actually know each other. Early enough to matter. Real enough to play tonight.",
-      "cta": "Ask for the deck"
-    },
-    "credit": "Animated emoji: Noto Emoji Animation by Google, CC BY 4.0."
+    "end": {
+      "title": "Don’t follow them.",
+      "accent": "Know them.",
+      "door": "Investor, brand or press? The door’s open."
+    }
   },
   "decks": {
     "metaTitle": "Question decks for love, family, friends and fans | OnPini",
@@ -606,5 +553,119 @@
         "win": "Both answers sealed. No backing down."
       }
     ]
+  },
+  "creators": {
+    "metaTitle": "OnPini for creators: let your fans play you",
+    "metaDesc": "Answer one deck, and every fan gets a one-on-one with you. We write your deck in your voice. One founding creator per niche, per country.",
+    "tag": "The star room",
+    "title": "They’ve watched everything.",
+    "accent": "Now let them play you.",
+    "line": "Answer one deck. Every fan gets a one-on-one with you, and finds out where they really stand. Comments can’t do that.",
+    "cta": "Claim your deck",
+    "door": {
+      "title": "Your name on the door.",
+      "ask": "Whose deck is this?",
+      "placeholder": "Your name or @handle",
+      "note": "We write it in your voice. You approve every card before anyone sees it.",
+      "reserved": "Reserved for a star",
+      "deck": "The {name} Deck",
+      "yours": "Your deck"
+    },
+    "effort": {
+      "title": "You do one thing.",
+      "accent": "We do the rest.",
+      "items": [
+        "You answer ten cards. That’s it.",
+        "We write your deck, in your voice.",
+        "We put it in five languages.",
+        "We measure your before and after, and hand you the numbers.",
+        "You talk straight to the founders."
+      ]
+    },
+    "video": {
+      "title": "Boost your engagement.",
+      "accent": "Swap likes for answers.",
+      "likeT": "Like",
+      "likeD": "One tap, and they’re gone.",
+      "answersT": "Answers",
+      "answersD": "From every fan who plays a round.",
+      "why": [
+        {
+          "t": "They pick a side.",
+          "d": "Then they say why in your comments."
+        },
+        {
+          "t": "They bring someone.",
+          "d": "Your deck goes to a best friend or a partner."
+        },
+        {
+          "t": "They come back.",
+          "d": "New rounds, new reasons to return."
+        }
+      ]
+    },
+    "wall": {
+      "title": "One star per niche.",
+      "accent": "Per country.",
+      "line": "We take one founding creator for each niche, in each country. Once a spot’s gone, it’s gone. Founding stars get the first decks and the first say in what we build next: reveal videos, going live, your dashboard.",
+      "countryAsk": "Where are your fans?",
+      "countryPick": "Pick your country",
+      "countries": [
+        "Netherlands",
+        "Belgium",
+        "Germany",
+        "Austria",
+        "Switzerland",
+        "United Kingdom",
+        "Ireland",
+        "United States",
+        "Spain",
+        "Mexico",
+        "Morocco",
+        "Egypt",
+        "Saudi Arabia",
+        "United Arab Emirates",
+        "Another country"
+      ],
+      "nicheAsk": "What’s your niche?",
+      "open": "Open",
+      "niches": [
+        "Couples",
+        "Friends and comedy",
+        "Podcasts",
+        "Students",
+        "Football and sports",
+        "Family and parents",
+        "Reality TV",
+        "Film and anime",
+        "Dating",
+        "Gaming"
+      ],
+      "claimBoth": "Claim {niche}, {country}",
+      "first": "Someone in your niche gets to be first. Make it you.",
+      "taken": "Taken"
+    },
+    "close": {
+      "title": "Your star’s waiting.",
+      "line": "One email. We’ll take it from there.",
+      "note": "Free for you and your fans. OnPini is for people of 16 and older."
+    },
+    "form": {
+      "name": "Your name or @handle",
+      "email": "Your email",
+      "link": "Where are your fans? (optional)",
+      "linkHint": "instagram.com/yourname",
+      "sending": "Sending…",
+      "note": "We use this to reply about your spot. A spot is yours once we confirm it.",
+      "doneTitle": "Your spot is requested.",
+      "doneLine": "We’ll reply to {email} to confirm it.",
+      "errCountry": "Pick your country first.",
+      "errNiche": "Pick your niche.",
+      "errName": "Tell us your name or handle.",
+      "errEmail": "Please check your email address.",
+      "errTaken": "Someone just took that spot. Pick another niche.",
+      "errLimit": "That’s a lot of tries. Please try again in a while.",
+      "errServer": "That didn’t go through. Please try again, or email hello@onpini.app."
+    }
   }
 }

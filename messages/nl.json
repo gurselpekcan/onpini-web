@@ -11,7 +11,8 @@
     "home": "Home",
     "support": "Hulp",
     "language": "Taal",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "creators": "Voor creators"
   },
   "join": {
     "label": "Doe gratis mee",
@@ -74,45 +75,6 @@
     "button": "Speel dit deck"
   },
   "people": {
-    "title": "Iedereen die je kent heeft een kant die je nog nooit hebt gezien.",
-    "accent": "Hoe meer je speelt, hoe meer je ziet.",
-    "tabs": {
-      "friends": {
-        "id": "Vrienden",
-        "title": "Om 3 uur ’s nachts neem je op. Dit weet je nog steeds niet.",
-        "line": "Loyaliteit, jaloezie, alles wat je nooit hebt gezegd. Stuur het naar je oudste vrienden."
-      },
-      "crushes": {
-        "id": "Crushes",
-        "title": "Flirten zonder een woord te zeggen.",
-        "line": "Scheelt weer drie weken ‘haha’. Hun antwoorden staan er gewoon."
-      },
-      "loves": {
-        "id": "Liefde",
-        "title": "Jaren samen. Nog steeds iets nieuws.",
-        "line": "Van het laatste frietje tot voor altijd. Rondes die zo diep gaan als jullie durven."
-      },
-      "family": {
-        "id": "Familie",
-        "title": "Zeg het zonder dat het een ding wordt.",
-        "line": "Je ouders, je zus, je opa. Eén familie, iedereen zijn eigen versie."
-      },
-      "group": {
-        "id": "Groepsapps",
-        "title": "Eén deck. De hele groep. Iedereen doet mee.",
-        "line": "Iedereen antwoordt, daarna zet de groepsreveal het gesprek op gang."
-      },
-      "communities": {
-        "id": "Community’s",
-        "title": "Je club. Je klas. Je crew.",
-        "line": "Start een groep, deel één link en zie wat je mensen écht denken."
-      },
-      "idols": {
-        "id": "Idolen",
-        "title": "Waar sta jij in je fandom?",
-        "line": "Decks geschreven voor fans: de echte discussies, niets officieels."
-      }
-    },
     "back": "{same} van de {total} hetzelfde als het OnPini-team. Denk nu eens aan je eigen mensen."
   },
   "wipe": {
@@ -132,7 +94,7 @@
     "credits": "Credits"
   },
   "end": {
-    "title": "Je dacht net aan iemand.",
+    "title": "Aan wie moest je denken?",
     "line": "Kom op. Stuur het."
   },
   "playPage": {
@@ -255,74 +217,59 @@
   "story": {
     "metaTitle": "Ons verhaal: waarom we OnPini hebben gebouwd",
     "metaDesc": "Iedereen is verbonden, niemand kent elkaar. Een paar afgestudeerden uit Nederland en Duitsland bouwden het tegenovergestelde: een game met één regel.",
-    "why": {
-      "title": "Volg ze niet.",
-      "accent": "Leer ze kennen.",
-      "items": [
-        {
-          "t": "Je krijgt het echte antwoord.",
-          "d": "Er is niks te zien tot jullie allebei hebben gekozen. Niemand kan afkijken."
-        },
-        {
-          "t": "Niemand hoeft erover te beginnen.",
-          "d": "De moeilijke vraag was nooit het probleem. Degene zijn die hem stelt wel. Nu vraagt de game het."
-        },
-        {
-          "t": "Je profiel speelt voor je.",
-          "d": "Eén keer antwoorden. Mensen spelen jouw decks tegen jouw antwoorden terwijl jij slaapt. Hoe meer je speelt, hoe meer er van jou te ontdekken valt."
-        },
-        {
-          "t": "Eén keer vragen. Het antwoord blijft.",
-          "d": "Elk deck dat jullie samen spelen blijft staan. Maanden later is het er nog, precies wanneer je het nodig hebt."
-        }
-      ]
+    "note": "OnPini (één woord) is een handelsnaam van GPM Holding B.V. in Den Haag, Nederland. Het heeft niets te maken met PiniOn of andere apps met een vergelijkbare naam.",
+    "credit": "Geanimeerde emoji: Noto Emoji Animation van Google, CC BY 4.0.",
+    "nl": "Nederland",
+    "de": "Duitsland",
+    "tag": "Ons verhaal",
+    "title": "Iedereen is verbonden.",
+    "accent": "Niemand kent elkaar.",
+    "past": [
+      {
+        "w": "Toegevoegd.",
+        "l": "We voegden iedereen toe."
+      },
+      {
+        "w": "Gevolgd.",
+        "l": "We bekeken iedereen."
+      },
+      {
+        "w": "Geswipet.",
+        "l": "We beoordeelden iedereen."
+      }
+    ],
+    "never": "Nooit gekend.",
+    "neverLine": "Elke app gaf ons meer mensen. Geen enkele bracht ons dichter bij iemand.",
+    "turn": {
+      "one": "Dus doken een paar afgestudeerden uit Nederland en Duitsland in het deel dat elke app oversloeg: wat mensen echt denken.",
+      "two": "De moeilijke vraag was nooit het probleem. Degene zijn die hem stelt wel.",
+      "title": "Dus gaven we hem door aan een game."
     },
-    "who": {
-      "nl": "Nederland",
-      "de": "Duitsland",
-      "title": "Iedereen is verbonden.",
-      "line": "Dus bouwden een paar afgestudeerden uit Nederland en Duitsland het tegenovergestelde.",
+    "rule": {
+      "tag": "Eén regel",
+      "title": "Eerst jij. Dan zij.",
+      "line": "Niet stiekem kijken. Niet gokken. Jij antwoordt, zij antwoorden, jullie weten het allebei.",
+      "you": "Jij",
+      "them": "Zij",
       "one": "De meeste apps willen meer van je aandacht.",
-      "two": "Wij willen dat jullie met elkaar gaan praten.",
-      "accent": "Niemand kent elkaar.",
-      "ruleTag": "Eén regel",
-      "rule": "Eerst jij. Dan zij.",
-      "ruleLine": "Niet stiekem kijken. Niet gokken. Jij antwoordt, zij antwoorden, jullie weten het allebei."
+      "two": "Wij willen dat jullie met elkaar gaan praten."
+    },
+    "keep": {
+      "title": "Eén keer vragen. Het antwoord blijft.",
+      "line": "Elk deck dat je speelt blijft staan. Maanden later is het er nog, precies wanneer je het nodig hebt.",
+      "title2": "En dan speelt je profiel voor je.",
+      "line2": "Hoe meer je speelt, hoe meer er van jou te ontdekken valt. Mensen spelen jouw decks tegen jouw antwoorden terwijl jij slaapt."
     },
     "mission": {
-      "tag": "Onze missie",
+      "tag": "Waar dit heen gaat",
       "title": "Niemand van wie je houdt blijft een raadsel.",
-      "line": "Daar zijn we voor. Het begint met twee mensen en één deck. Hoe meer je speelt, hoe meer je weet, en hoe meer er van jou te vinden is."
+      "line": "Het begint met twee mensen en één deck. Dan je hele crew. Dan de creators die je volgt. Bij ons ben je wat je denkt."
     },
-    "note": "OnPini (één woord) is een handelsnaam van GPM Holding B.V. in Den Haag, Nederland. Het heeft niets te maken met PiniOn of andere apps met een vergelijkbare naam.",
-    "inside": {
-      "title": "Wat erin zit.",
-      "stats": [
-        {
-          "n": "61",
-          "l": "decks"
-        },
-        {
-          "n": "5.660",
-          "l": "vragen"
-        },
-        {
-          "n": "5",
-          "l": "talen"
-        },
-        {
-          "n": "€0",
-          "l": "om te spelen"
-        }
-      ]
-    },
-    "invest": {
-      "tag": "Voor investeerders",
-      "title": "De deur staat open.",
-      "line": "We bouwen de sociale game voor mensen die elkaar echt kennen. Vroeg genoeg om het verschil te maken. Echt genoeg om vanavond te spelen.",
-      "cta": "Vraag het deck aan"
-    },
-    "credit": "Geanimeerde emoji: Noto Emoji Animation van Google, CC BY 4.0."
+    "end": {
+      "title": "Volg ze niet.",
+      "accent": "Leer ze kennen.",
+      "door": "Investeerder, merk of pers? De deur staat open."
+    }
   },
   "decks": {
     "metaTitle": "Vragenspel voor stellen, familie, vrienden en fans | OnPini",
@@ -606,5 +553,119 @@
         "win": "Beide antwoorden verzegeld. Geen weg terug."
       }
     ]
+  },
+  "creators": {
+    "metaTitle": "OnPini voor creators: laat je fans tegen jou spelen",
+    "metaDesc": "Beantwoord één deck en elke fan krijgt een één-op-één met jou. Wij schrijven je deck in jouw stijl. Eén founding creator per niche, per land.",
+    "tag": "Backstage",
+    "title": "Ze hebben alles al gezien.",
+    "accent": "Nu mogen ze tegen jou spelen.",
+    "line": "Beantwoord één deck. Elke fan krijgt een één-op-één met jou en ontdekt waar die echt staat. Dat kunnen comments niet.",
+    "cta": "Claim je deck",
+    "door": {
+      "title": "Jouw naam op de deur.",
+      "ask": "Van wie is dit deck?",
+      "placeholder": "Je naam of @handle",
+      "note": "We schrijven het zoals jij praat. Jij keurt elke kaart goed voordat iemand hem ziet.",
+      "reserved": "Gereserveerd",
+      "deck": "Het {name}-deck",
+      "yours": "Jouw deck"
+    },
+    "effort": {
+      "title": "Jij doet één ding.",
+      "accent": "Wij de rest.",
+      "items": [
+        "Jij beantwoordt tien kaarten. Meer niet.",
+        "Wij schrijven je deck, zoals jij praat.",
+        "Wij brengen het uit in vijf talen.",
+        "Wij meten het verschil tussen voor en na, en jij krijgt de cijfers.",
+        "Jij praat rechtstreeks met de oprichters."
+      ]
+    },
+    "video": {
+      "title": "Boost je engagement.",
+      "accent": "Ruil likes in voor antwoorden.",
+      "likeT": "Like",
+      "likeD": "Eén tik, en ze zijn weg.",
+      "answersT": "Antwoorden",
+      "answersD": "Van elke fan die een ronde speelt.",
+      "why": [
+        {
+          "t": "Ze kiezen een kant.",
+          "d": "Daarna zeggen ze in je comments waarom."
+        },
+        {
+          "t": "Ze nemen iemand mee.",
+          "d": "Je deck gaat naar een bestie of een partner."
+        },
+        {
+          "t": "Ze komen terug.",
+          "d": "Nieuwe rondes, nieuwe redenen."
+        }
+      ]
+    },
+    "wall": {
+      "title": "Eén ster per niche.",
+      "accent": "Per land.",
+      "line": "We nemen één founding creator per niche, in elk land. Weg is weg. Founding stars krijgen de eerste decks en praten als eerste mee over wat we hierna bouwen: reveal-video's, live gaan, jouw dashboard.",
+      "countryAsk": "Waar zitten je fans?",
+      "countryPick": "Kies je land",
+      "countries": [
+        "Nederland",
+        "België",
+        "Duitsland",
+        "Oostenrijk",
+        "Zwitserland",
+        "Verenigd Koninkrijk",
+        "Ierland",
+        "Verenigde Staten",
+        "Spanje",
+        "Mexico",
+        "Marokko",
+        "Egypte",
+        "Saoedi-Arabië",
+        "Verenigde Arabische Emiraten",
+        "Ander land"
+      ],
+      "nicheAsk": "Wat is je niche?",
+      "open": "Vrij",
+      "niches": [
+        "Koppels",
+        "Vrienden en comedy",
+        "Podcasts",
+        "Studenten",
+        "Voetbal en sport",
+        "Familie en ouders",
+        "Reality-tv",
+        "Film en anime",
+        "Dating",
+        "Gaming"
+      ],
+      "claimBoth": "Claim {niche}, {country}",
+      "first": "Iemand in jouw niche wordt de eerste. Zorg dat jij het bent.",
+      "taken": "Bezet"
+    },
+    "close": {
+      "title": "Je ster staat klaar.",
+      "line": "Eén mail. Daarna nemen wij het over.",
+      "note": "Gratis voor jou en je fans. OnPini is voor mensen van 16 jaar en ouder."
+    },
+    "form": {
+      "name": "Je naam of @handle",
+      "email": "Je e-mailadres",
+      "link": "Waar zitten je fans? (optioneel)",
+      "linkHint": "instagram.com/jouwnaam",
+      "sending": "Versturen…",
+      "note": "We gebruiken dit om je te mailen over je plek. Een plek is pas van jou als we die bevestigen.",
+      "doneTitle": "Je plek is aangevraagd.",
+      "doneLine": "We mailen naar {email} om je plek te bevestigen.",
+      "errCountry": "Kies eerst je land.",
+      "errNiche": "Kies je niche.",
+      "errName": "Vul je naam of handle in.",
+      "errEmail": "Check je e-mailadres even.",
+      "errTaken": "Iemand heeft die plek net geclaimd. Kies een andere niche.",
+      "errLimit": "Dat zijn veel pogingen. Probeer het straks nog eens.",
+      "errServer": "Dat lukte niet. Probeer het nog eens, of mail naar hello@onpini.app."
+    }
   }
 }

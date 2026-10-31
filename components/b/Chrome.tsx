@@ -15,8 +15,7 @@ const useMenu = () => {
   const { t, href } = useI18n();
   return [
     { href: href(""), label: t("nav.home") },
-    { href: href("/decks"), label: t("nav.decks") },
-    { href: href("/how-it-works"), label: t("nav.how") },
+    { href: href("/creators"), label: t("nav.creators") },
     { href: href("/story"), label: t("nav.story") },
   ];
 };
@@ -223,7 +222,7 @@ export function Footer() {
   const { t, href, lang } = useI18n();
   const [faq, setFaq] = useState(false);
   const closeFaq = useCallback(() => setFaq(false), []);
-  const pages = [["", "nav.home"], ["/decks", "nav.decks"], ["/questions", "nav.questions"], ["/how-it-works", "nav.how"], ["/story", "nav.story"]];
+  const pages = [["", "nav.home"], ["/decks", "nav.decks"], ["/questions", "nav.questions"], ["/how-it-works", "nav.how"], ["/creators", "nav.creators"], ["/story", "nav.story"]];
   return (
     <footer id="footer" className="relative z-10 bg-[#111] text-[#fef3c7]">
       <div className="max-w-6xl mx-auto px-5 sm:px-10 pt-12 pb-8 grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-9">

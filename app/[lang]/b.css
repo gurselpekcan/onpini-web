@@ -16,7 +16,7 @@
 .b-curtain { border-radius: 36px 36px 0 0; margin-top: -36px; }
 @media (min-width: 640px) { .b-curtain { border-radius: 56px 56px 0 0; margin-top: -56px; } }
 
-.b-nav { display: flex; align-items: center; gap: .15rem; width: 100%; max-width: 48rem; padding: .3rem .35rem .3rem .8rem; border-radius: 999px; background: rgb(255 255 255 / .94); box-shadow: 0 0 0 1.5px #111, 0 8px 24px rgba(0,0,0,.1); }
+.b-nav { display: flex; align-items: center; gap: .15rem; width: 100%; max-width: 54rem; padding: .3rem .35rem .3rem .8rem; border-radius: 999px; background: rgb(255 255 255 / .94); box-shadow: 0 0 0 1.5px #111, 0 8px 24px rgba(0,0,0,.1); }
 .b-nav-play { display: inline-flex; align-items: center; min-height: 42px; padding: 0 1.15rem; border-radius: 999px; background: #111; color: #fff; font-size: 14px; font-weight: 700; transition: background-color .2s; }
 .b-nav-play:hover { background: #f97316; color: #111; }
 .b-preview { min-height: 34px; padding: 0 .85rem; border-radius: 999px; border: 1.5px dashed #a3a3a3; background: #fff; font-size: 12px; font-weight: 600; color: #525252; }
@@ -78,11 +78,6 @@ html.lenis, html.lenis body { height: auto; }
 .b-strike { background: linear-gradient(#111, #111) no-repeat 0 56%; background-size: 0% 3px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
 
 /* The people cards: swipe them, drag them, or use the tabs. Native scrolling, so it feels like the phone. */
-.b-people { --card: min(86vw, 46rem); display: flex; gap: .75rem; overflow-x: auto; scroll-snap-type: x mandatory; padding-inline: calc((100% - var(--card)) / 2); padding-block: .25rem; scrollbar-width: none; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; cursor: grab; }
-.b-people::-webkit-scrollbar { display: none; }
-.b-people.b-dragging { scroll-snap-type: none; cursor: grabbing; user-select: none; }
-.b-people-card { flex: 0 0 var(--card); scroll-snap-align: center; scroll-snap-stop: always; min-height: 27rem; padding: 1.5rem; border-radius: 30px; display: flex; flex-direction: column; }
-@media (min-width: 640px) { .b-people-card { min-height: 24rem; padding: 2.5rem; } }
 .b-store { display: inline-flex; align-items: center; gap: .65rem; min-height: 58px; padding: .5rem 1.15rem; border-radius: 16px; background: #111; color: #fff; box-shadow: 0 0 0 1.5px rgb(255 255 255 / .22); transition: transform .18s cubic-bezier(.2,1.4,.4,1); }
 .b-store:hover { transform: translateY(-2px) scale(1.02); }
 .b-store:active { transform: scale(.97); }
@@ -132,3 +127,12 @@ html.lenis, html.lenis body { height: auto; }
 .b-cases { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
 .b-cases::-webkit-scrollbar { display: none; }
 .b-case { flex: none; width: 100%; scroll-snap-align: center; scroll-snap-stop: always; }
+
+/* Creators, the star room: stage lights and a mirror of bulbs. */
+.b-beam { position: absolute; top: -30%; width: 46rem; height: 150%; pointer-events: none; background: linear-gradient(180deg, rgb(253 224 71 / .24), transparent 72%); clip-path: polygon(44% 0, 56% 0, 100% 100%, 0 100%); transform-origin: 50% 0; animation: b-sweep 9s ease-in-out infinite alternate; }
+.b-beam-a { inset-inline-end: -8rem; --from: 14deg; --to: 34deg; }
+.b-beam-b { inset-inline-end: 22%; --from: -6deg; --to: 12deg; animation-duration: 12s; opacity: .7; }
+@keyframes b-sweep { from { transform: rotate(var(--from)); } to { transform: rotate(var(--to)); } }
+.b-bulbs { position: relative; padding: 24px; border-radius: 30px; background-color: #262626; background-image: radial-gradient(circle, #fff7c2 0 4px, #fde047 5px, transparent 7px), radial-gradient(circle, #fff7c2 0 4px, #fde047 5px, transparent 7px), radial-gradient(circle, #fff7c2 0 4px, #fde047 5px, transparent 7px), radial-gradient(circle, #fff7c2 0 4px, #fde047 5px, transparent 7px); background-size: 30px 24px, 30px 24px, 24px 30px, 24px 30px; background-position: 0 0, 0 100%, 0 0, 100% 0; background-repeat: repeat-x, repeat-x, repeat-y, repeat-y; box-shadow: 0 0 60px rgb(253 224 71 / .32); animation: b-glow 2.4s ease-in-out infinite alternate; }
+@keyframes b-glow { from { box-shadow: 0 0 34px rgb(253 224 71 / .2); } to { box-shadow: 0 0 74px rgb(253 224 71 / .46); } }
+@media (prefers-reduced-motion: reduce) { .b-beam, .b-bulbs { animation: none; } }

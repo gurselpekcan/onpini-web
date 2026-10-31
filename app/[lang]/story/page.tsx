@@ -2,7 +2,7 @@ import StoryPage from "@/components/b/StoryPage";
 import type { Lang } from "@/lib/langs";
 import { breadcrumbs, jsonLd } from "@/lib/schema";
 import { meta, pageUrl } from "@/lib/seo";
-import { messagesFor } from "@/lib/siteContent";
+import { contentFor, messagesFor } from "@/lib/siteContent";
 
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   const lang = (await params).lang as Lang;
@@ -13,6 +13,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
   const lang = (await params).lang as Lang;
   const m = messagesFor(lang);
+  const c = contentFor(lang);
   const about = {
     "@context": "https://schema.org",
     "@type": "AboutPage",
@@ -25,7 +26,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(about)} />
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(breadcrumbs(lang, [[m.nav.story, "/story"]]))} />
-      <StoryPage />
+      <StoryPage card={c.questions.find((p) => p.slug === "partner")!.q[4]} decks={[c.team[0].title, ...c.marquee.slice(0, 5)]} />
     </>
   );
 }

@@ -25,7 +25,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(SCHEMA).replace(/</g, "\\u003c") }} />
-      <Home decks={c.team} tabDecks={c.tabDecks} cases={c.samples.cases} />
+      <Home decks={c.team} cases={c.samples.cases} />
     </>
   );
 }

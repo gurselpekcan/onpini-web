@@ -51,7 +51,7 @@ const nextConfig: NextConfig = {
     return {
       beforeFiles: [
         { source: "/", destination: "/en" },
-        { source: "/:first(play|decks|questions|how-it-works|story|support)", destination: "/en/:first" },
+        { source: "/:first(play|decks|questions|how-it-works|creators|story|support)", destination: "/en/:first" },
         { source: "/:first(decks|questions)/:rest", destination: "/en/:first/:rest" },
       ],
       afterFiles: [],

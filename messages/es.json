@@ -11,7 +11,8 @@
     "home": "Inicio",
     "support": "Soporte",
     "language": "Idioma",
-    "faq": "Dudas"
+    "faq": "Dudas",
+    "creators": "Para creadores"
   },
   "join": {
     "label": "Únete gratis",
@@ -74,45 +75,6 @@
     "button": "Jugar este mazo"
   },
   "people": {
-    "title": "Todos los que conoces tienen un lado que nunca has visto.",
-    "accent": "Cuanto más juegas, más ves.",
-    "tabs": {
-      "friends": {
-        "id": "Amigos",
-        "title": "Le contestas a las 3 de la madrugada. Y aún no sabes esto.",
-        "line": "Lealtad, envidia, lo que nunca se dijo. Envíaselo a tus amigos de siempre."
-      },
-      "crushes": {
-        "id": "Crushes",
-        "title": "Liga sin decir ni una palabra.",
-        "line": "Sáltate otras tres semanas de «jaja». Sus respuestas están ahí mismo."
-      },
-      "loves": {
-        "id": "Amores",
-        "title": "Años juntos. Y aún hay algo nuevo.",
-        "line": "Del último bocado al para siempre. Rondas que llegan tan hondo como te atrevas."
-      },
-      "family": {
-        "id": "Familia",
-        "title": "Dilo sin hacer un drama.",
-        "line": "Tus padres, tu hermana, tu abuelo. Una familia, muchas versiones."
-      },
-      "group": {
-        "id": "Chats de grupo",
-        "title": "Un mazo. Todo el chat. Todos dentro.",
-        "line": "Todos responden y luego la revelación de grupo arranca la conversación."
-      },
-      "communities": {
-        "id": "Comunidades",
-        "title": "Tu club. Tu clase. Tu gente.",
-        "line": "Crea un grupo, suelta un enlace y mira qué piensa de verdad tu gente."
-      },
-      "idols": {
-        "id": "Ídolos",
-        "title": "¿De qué lado estás en tu fandom?",
-        "line": "Mazos escritos para fans: los debates de verdad, nada oficial."
-      }
-    },
     "back": "Iguales en {same} de {total} con el equipo de OnPini. Ahora piensa en tu gente."
   },
   "wipe": {
@@ -132,7 +94,7 @@
     "credits": "Créditos"
   },
   "end": {
-    "title": "Ya tienes a alguien en mente.",
+    "title": "¿En quién has pensado?",
     "line": "Anda. Envíalo."
   },
   "playPage": {
@@ -255,74 +217,59 @@
   "story": {
     "metaTitle": "Nuestra historia: por qué creamos OnPini",
     "metaDesc": "Todos conectados. Nadie conoce a nadie. Unos graduados universitarios de Países Bajos y Alemania crearon lo contrario: un juego social con una regla.",
-    "why": {
-      "title": "No los sigas.",
-      "accent": "Conócelos.",
-      "items": [
-        {
-          "t": "Te llevas la respuesta real.",
-          "d": "No se ve nada hasta que eligen los dos. Nadie te puede copiar."
-        },
-        {
-          "t": "Nadie tiene que sacar el tema.",
-          "d": "La pregunta difícil nunca fue el problema. El problema era ser quien la hace. Ahora la hace el juego."
-        },
-        {
-          "t": "Tu perfil juega por ti.",
-          "d": "Responde una vez. La gente juega tus mazos contra tus respuestas mientras duermes. Cuanto más juegas, más hay de ti por descubrir."
-        },
-        {
-          "t": "Pregunta una vez. Quédate con la respuesta.",
-          "d": "Cada mazo que juegas con alguien se queda. Meses después sigue ahí, justo cuando lo necesitas."
-        }
-      ]
+    "note": "OnPini (una sola palabra) es un nombre comercial de GPM Holding B.V. en La Haya, Países Bajos. No tiene relación con PiniOn ni con otras apps de nombre parecido.",
+    "credit": "Emojis animados: Noto Emoji Animation de Google, CC BY 4.0.",
+    "nl": "Países Bajos",
+    "de": "Alemania",
+    "tag": "Nuestra historia",
+    "title": "Todos conectados.",
+    "accent": "Nadie conoce a nadie.",
+    "past": [
+      {
+        "w": "Agregados.",
+        "l": "Agregamos a todo el mundo."
+      },
+      {
+        "w": "Seguidos.",
+        "l": "Miramos a todo el mundo."
+      },
+      {
+        "w": "Deslizados.",
+        "l": "Juzgamos a todo el mundo."
+      }
+    ],
+    "never": "Conocidos, nunca.",
+    "neverLine": "Todas las apps nos dieron más personas. Ninguna nos dio más de cada una.",
+    "turn": {
+      "one": "Así que unos graduados universitarios de Países Bajos y Alemania fuimos directos a lo que todas las apps se saltaron: lo que la gente piensa de verdad.",
+      "two": "La pregunta difícil nunca fue el problema. El problema era ser quien la hace.",
+      "title": "Así que se la pasamos a un juego."
     },
-    "who": {
-      "nl": "Países Bajos",
-      "de": "Alemania",
-      "title": "Todos conectados.",
-      "line": "Así que unos graduados universitarios de Países Bajos y Alemania crearon lo contrario.",
+    "rule": {
+      "tag": "Una regla",
+      "title": "Muestra tus cartas. Mira las suyas.",
+      "line": "Sin espiar. Sin adivinar. Tú respondes, la otra persona también, y ya lo sabéis los dos.",
+      "you": "Tú",
+      "them": "Tu persona",
       "one": "Casi todas las apps quieren más de tu atención.",
-      "two": "Nosotros queremos que vayas a hablar con tu gente.",
-      "accent": "Nadie conoce a nadie.",
-      "ruleTag": "Una regla",
-      "rule": "Muestra tus cartas. Mira las suyas.",
-      "ruleLine": "Sin espiar. Sin adivinar. Tú respondes, la otra persona también, y ya lo sabéis los dos."
+      "two": "Nosotros queremos que vayas a hablar con tu gente."
+    },
+    "keep": {
+      "title": "Pregunta una vez. Quédate con la respuesta.",
+      "line": "Cada mazo que juegas se queda. Meses después sigue ahí, justo cuando lo necesitas.",
+      "title2": "Y luego tu perfil juega por ti.",
+      "line2": "Cuanto más juegas, más hay de ti por descubrir. La gente juega tus mazos contra tus respuestas mientras duermes."
     },
     "mission": {
-      "tag": "Nuestra misión",
+      "tag": "Adónde vamos",
       "title": "Nadie a quien quieras debería seguir siendo un misterio.",
-      "line": "Para eso estamos aquí. Empieza con dos personas y un mazo. Cuanto más juegas, más sabes, y más hay de ti por encontrar."
+      "line": "Empieza con dos personas y un mazo. Luego, todo tu grupo. Luego, los creadores que sigues. Estamos construyendo el lugar donde eres lo que piensas."
     },
-    "note": "OnPini (una sola palabra) es un nombre comercial de GPM Holding B.V. en La Haya, Países Bajos. No tiene relación con PiniOn ni con otras apps de nombre parecido.",
-    "inside": {
-      "title": "Qué hay dentro.",
-      "stats": [
-        {
-          "n": "61",
-          "l": "mazos"
-        },
-        {
-          "n": "5.660",
-          "l": "preguntas"
-        },
-        {
-          "n": "5",
-          "l": "idiomas"
-        },
-        {
-          "n": "0 €",
-          "l": "por jugar"
-        }
-      ]
-    },
-    "invest": {
-      "tag": "Para inversores",
-      "title": "La puerta está abierta.",
-      "line": "Estamos creando el juego social para gente que se conoce de verdad. Lo bastante pronto para marcar la diferencia. Lo bastante real para jugar esta noche.",
-      "cta": "Pide el pitch deck"
-    },
-    "credit": "Emojis animados: Noto Emoji Animation de Google, CC BY 4.0."
+    "end": {
+      "title": "No los sigas.",
+      "accent": "Conócelos.",
+      "door": "¿Inversor, marca o prensa? La puerta está abierta."
+    }
   },
   "decks": {
     "metaTitle": "Juegos de preguntas para pareja, familia y amigos | OnPini",
@@ -606,5 +553,119 @@
         "win": "Las dos respuestas selladas. Sin vuelta atrás."
       }
     ]
+  },
+  "creators": {
+    "metaTitle": "OnPini para creadores: que tus fans jueguen contigo",
+    "metaDesc": "Responde un mazo y cada fan tendrá un mano a mano contigo. Escribimos tu mazo con tu voz. Un creador fundador por nicho y por país.",
+    "tag": "El camerino",
+    "title": "Ya lo han visto todo.",
+    "accent": "Ahora les toca jugar contigo.",
+    "line": "Responde un mazo. Cada fan tiene su mano a mano contigo y descubre hasta qué punto coincide de verdad. Eso no lo hace ningún comentario.",
+    "cta": "Reclama tu mazo",
+    "door": {
+      "title": "Tu nombre en la puerta.",
+      "ask": "¿De quién es este mazo?",
+      "placeholder": "Tu nombre o @usuario",
+      "note": "Lo escribimos con tu voz. Tú apruebas cada carta antes de que nadie la vea.",
+      "reserved": "Solo para estrellas",
+      "deck": "El mazo de {name}",
+      "yours": "Tu mazo"
+    },
+    "effort": {
+      "title": "Tú haces una cosa.",
+      "accent": "Nosotros, todo lo demás.",
+      "items": [
+        "Respondes diez cartas. Y ya está.",
+        "Escribimos tu mazo, con tu voz.",
+        "Lo ponemos en cinco idiomas.",
+        "Medimos tu antes y tu después, y te damos los números.",
+        "Hablas directamente con los fundadores."
+      ]
+    },
+    "video": {
+      "title": "Dispara tu engagement.",
+      "accent": "Cambia likes por respuestas.",
+      "likeT": "Like",
+      "likeD": "Un toque y se van.",
+      "answersT": "Respuestas",
+      "answersD": "De cada fan que juega una ronda.",
+      "why": [
+        {
+          "t": "Eligen bando.",
+          "d": "Luego cuentan por qué en tus comentarios."
+        },
+        {
+          "t": "Traen a alguien.",
+          "d": "Le pasan tu mazo a su mejor amigo o a su pareja."
+        },
+        {
+          "t": "Vuelven.",
+          "d": "Nuevas rondas, nuevos motivos para volver."
+        }
+      ]
+    },
+    "wall": {
+      "title": "Una estrella por nicho.",
+      "accent": "Por país.",
+      "line": "Elegimos a un creador fundador por cada nicho, en cada país. Cuando un lugar se ocupa, se acabó. Las estrellas fundadoras tienen los primeros mazos y la primera palabra en lo que viene después: vídeos del reveal, lives, tu panel.",
+      "countryAsk": "¿Dónde están tus fans?",
+      "countryPick": "Elige tu país",
+      "countries": [
+        "Países Bajos",
+        "Bélgica",
+        "Alemania",
+        "Austria",
+        "Suiza",
+        "Reino Unido",
+        "Irlanda",
+        "Estados Unidos",
+        "España",
+        "México",
+        "Marruecos",
+        "Egipto",
+        "Arabia Saudí",
+        "Emiratos Árabes Unidos",
+        "Otro país"
+      ],
+      "nicheAsk": "¿Cuál es tu nicho?",
+      "open": "Libre",
+      "niches": [
+        "Parejas",
+        "Amigos y humor",
+        "Podcasts",
+        "Estudiantes",
+        "Fútbol y deporte",
+        "Familia y padres",
+        "Reality shows",
+        "Cine y anime",
+        "Citas",
+        "Gaming"
+      ],
+      "claimBoth": "Reclama {niche}, {country}",
+      "first": "Alguien de tu nicho va a llegar primero. Que seas tú.",
+      "taken": "Ocupado"
+    },
+    "close": {
+      "title": "Tu estrella te espera.",
+      "line": "Un email. Del resto nos ocupamos nosotros.",
+      "note": "Gratis para ti y tus fans. OnPini es para gente a partir de 16 años."
+    },
+    "form": {
+      "name": "Tu nombre o @usuario",
+      "email": "Tu email",
+      "link": "¿Dónde están tus fans? (opcional)",
+      "linkHint": "instagram.com/tunombre",
+      "sending": "Enviando…",
+      "note": "Lo usamos para responderte sobre tu lugar. El lugar es tuyo cuando te lo confirmemos.",
+      "doneTitle": "Ya tenemos tu solicitud.",
+      "doneLine": "Te escribiremos a {email} para confirmar tu lugar.",
+      "errCountry": "Primero elige tu país.",
+      "errNiche": "Elige tu nicho.",
+      "errName": "Dinos tu nombre o usuario.",
+      "errEmail": "Revisa tu dirección de email.",
+      "errTaken": "Alguien acaba de quedarse con ese lugar. Elige otro nicho.",
+      "errLimit": "Son muchos intentos. Vuelve a probar dentro de un rato.",
+      "errServer": "No ha funcionado. Inténtalo de nuevo o escribe a hello@onpini.app."
+    }
   }
 }

@@ -9,6 +9,7 @@ OnPini (one word) is a trade name of GPM Holding B.V. in The Hague, the Netherla
 - [How it works](https://onpini.app/how-it-works): decks, the reveal, profiles and polls
 - [Decks](https://onpini.app/decks): question decks by genre, such as love, family, friends and fandoms
 - [Questions](https://onpini.app/questions): real cards to ask a partner, crush, best friend, group chat, parents or siblings
+- [Creators](https://onpini.app/creators): how creators answer a deck once and let every fan play it
 - [Our story](https://onpini.app/story): who built it and the mission
 - [Support](https://onpini.app/support): help and contact
 

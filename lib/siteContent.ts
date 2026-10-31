@@ -21,7 +21,6 @@ export interface Content {
   team: TeamDeck[];
   questions: QuestionPage[];
   genres: Genre[];
-  tabDecks: Record<string, string[]>;
   samples: { forgive: Card; met: Card; poll: Card; deal: string[]; opinion: Card; cases: Card[] };
   marquee: string[];
 }
