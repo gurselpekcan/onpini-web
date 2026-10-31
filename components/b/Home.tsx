@@ -322,7 +322,7 @@ function UseCases({ cards }: { cards: Card[] }) {
                   <p className="b-h text-[clamp(1.5rem,6vw,2.1rem)] leading-[1.08]">{cards[i].q}</p>
                   <div className="grid grid-cols-2 gap-2 mt-4">
                     {(["a", "b"] as const).map((side) => (
-                      <p key={side} className="flex items-center justify-center text-center min-h-[58px] rounded-[16px] bg-[#f97316] text-[#111] px-2.5 py-2 font-bold text-[15px] leading-tight">{cards[i][side]}</p>
+                      <p key={side} style={{ background: CASES[i].color }} className="flex items-center justify-center text-center min-h-[58px] rounded-[16px] text-[#111] px-2.5 py-2 font-bold text-[15px] leading-tight">{cards[i][side]}</p>
                     ))}
                   </div>
                 </div>
