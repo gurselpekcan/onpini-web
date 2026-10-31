@@ -1,0 +1,623 @@
+{
+  "nav": {
+    "menu": "Menü",
+    "close": "Schließen",
+    "decks": "Decks",
+    "questions": "Fragen",
+    "how": "So geht’s",
+    "story": "Über uns",
+    "join": "Mitmachen",
+    "signin": "Anmelden",
+    "investors": "Investoren",
+    "home": "Start",
+    "support": "Support",
+    "language": "Sprache",
+    "faq": "FAQ"
+  },
+  "join": {
+    "label": "Gratis mitmachen",
+    "app": "App holen, gratis",
+    "soon": "Demnächst:",
+    "download": "Laden im",
+    "getIt": "Jetzt bei"
+  },
+  "hero": {
+    "top": "Was denkt",
+    "who": [
+      "dein Crush",
+      "deine Bestie",
+      "dein Schatz",
+      "dein Bruder",
+      "dein Gruppenchat",
+      "deine Mama",
+      "deine WG"
+    ],
+    "bottom": "wirklich?",
+    "punch": "Frag nicht. Spiel.",
+    "sub": "OnPini ist das Social Game, bei dem ihr beide blind antwortet und dann seht, wo ihr auseinanderliegt.",
+    "ask": "Lust, es rauszufinden?",
+    "yes": "Ja, lass mich rein",
+    "try": "Erst mal testen",
+    "metaTitle": "OnPini: das Fragespiel für dich und deine Leute"
+  },
+  "pit": {
+    "hero": [
+      "Was sind wir eigentlich?",
+      "Liebe oder Respekt?",
+      "Bin ich dir manchmal zu viel?",
+      "Hast du schon gegessen?",
+      "Würden wir uns heute noch anfreunden?",
+      "Wer hat angefangen?",
+      "„Mal sehen“ hieß nein, oder?",
+      "Einen Monat auf deinem Sofa?",
+      "Können wir heute Abend reden?",
+      "Ist das jetzt offiziell?"
+    ],
+    "genres": [
+      "Liebe & Dating",
+      "Fandoms",
+      "Freunde",
+      "Party & Spicy",
+      "Familie",
+      "In den News",
+      "Who’s Who",
+      "Sport",
+      "Musik",
+      "Filme & Serien",
+      "Geld",
+      "Gaming",
+      "Reisen"
+    ]
+  },
+  "playBand": {
+    "title": "Spiel gegen das OnPini-Team.",
+    "sub": "Probier’s aus, bevor du es jemandem schickst. Wir haben schon geantwortet: Wähl ein Deck und sieh, wo wir auseinanderliegen. Fünf Karten, ohne Anmeldung.",
+    "button": "Dieses Deck spielen"
+  },
+  "people": {
+    "title": "Alle, die du kennst, haben eine Seite, die du noch nie gesehen hast.",
+    "accent": "Je mehr du spielst, desto mehr siehst du.",
+    "tabs": {
+      "friends": {
+        "id": "Freunde",
+        "title": "Um 3 Uhr nachts gehst du ran. Und das hier weißt du trotzdem nicht.",
+        "line": "Loyalität, Neid, alles, was ihr euch nie gesagt habt. Schick’s an deine ältesten Freunde."
+      },
+      "crushes": {
+        "id": "Crushes",
+        "title": "Flirten, ohne ein Wort zu sagen.",
+        "line": "Spar dir noch drei Wochen „haha“. Die Antworten liegen direkt vor dir."
+      },
+      "loves": {
+        "id": "Liebe",
+        "title": "Jahre zusammen. Und immer noch was Neues.",
+        "line": "Von der letzten Pommes bis zum Für-immer. Runden, die so tief gehen, wie ihr euch traut."
+      },
+      "family": {
+        "id": "Familie",
+        "title": "Sag es, ohne ein Drama draus zu machen.",
+        "line": "Deine Eltern, deine Schwester, dein Opa. Eine Familie, viele Versionen davon."
+      },
+      "group": {
+        "id": "Gruppenchats",
+        "title": "Ein Deck. Der ganze Chat. Alle dabei.",
+        "line": "Alle antworten, dann sorgt der Gruppen-Reveal für Gesprächsstoff."
+      },
+      "communities": {
+        "id": "Communities",
+        "title": "Dein Verein. Deine Klasse. Deine Crew.",
+        "line": "Starte eine Gruppe, teil einen Link und sieh, was deine Leute wirklich denken."
+      },
+      "idols": {
+        "id": "Idole",
+        "title": "Wo stehst du in deinem Fandom?",
+        "line": "Decks für Fans geschrieben: die echten Debatten, nichts Offizielles."
+      }
+    },
+    "back": "Mit dem OnPini-Team bei {same} von {total} gleich. Jetzt denk an deine Leute."
+  },
+  "wipe": {
+    "awkward": "Fragen ist unangenehm.",
+    "easy": "Schicken ist easy.",
+    "line": "Niemand muss damit anfangen. Das macht das Spiel."
+  },
+  "footer": {
+    "tagline": "Das Social Game für die Leute, die du kennst.",
+    "pages": "Seiten",
+    "connect": "Kontakt",
+    "careers": "Jobs",
+    "rights": "OnPini ist ein Handelsname der GPM Holding B.V.",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "early": "Early Access",
+    "credits": "Credits"
+  },
+  "end": {
+    "title": "Du denkst gerade an jemanden.",
+    "line": "Na los. Schick’s ab."
+  },
+  "playPage": {
+    "metaTitle": "Spiel gegen das OnPini-Team | OnPini",
+    "pick": "Wähl ein Deck.",
+    "pickSub": "Das OnPini-Team hat schon geantwortet. Unsere Antworten bleiben versiegelt, bis du durch bist.",
+    "close": "Schließen",
+    "change": "Deck wechseln",
+    "sealed": "Das OnPini-Team hat geantwortet. Versiegelt.",
+    "bothIn": "Beide haben geantwortet.",
+    "notSeen": "Keiner von euch hat was gesehen. Noch.",
+    "open": "Aufdecken",
+    "you": "Du",
+    "team": "OnPini-Team",
+    "teamWhy": "Team:",
+    "same": "Gleich.",
+    "split": "Hier seid ihr verschieden.",
+    "next": "Nächste Karte",
+    "seeEnd": "Zum Ergebnis",
+    "score": "Bei {same} von {total} gleich. Gleiche Antwort, schön. Andere Antwort, noch besser.",
+    "endTitle": "Das waren nur wir. Stell dir jetzt jemanden vor, der dir wichtig ist.",
+    "who": "Wer fällt dir ein?",
+    "next2": "Sieh, was sonst noch drin ist",
+    "again": "Noch ein Deck spielen",
+    "tags": {
+      "crushes": "Crushes",
+      "friends": "Freunde",
+      "fans": "Fans",
+      "housemates": "WG",
+      "family": "Familie"
+    },
+    "cardOf": "Karte {n} von {total}"
+  },
+  "chips": {
+    "friend": "Bestie",
+    "crush": "Crush",
+    "partner": "Schatz",
+    "group": "Gruppenchat",
+    "sibling": "Geschwister",
+    "mom": "Mama",
+    "dad": "Papa",
+    "classmate": "Sitznachbar"
+  },
+  "how": {
+    "metaTitle": "So funktioniert OnPini: erst zeigen, dann sehen",
+    "metaDesc": "Beantworte ein Deck mit Fragen, schick den Link und sieh, wo ihr übereinstimmt und wo nicht. Keiner sieht etwas, bis ihr beide geantwortet habt.",
+    "title": "Erst zeigen.",
+    "accent": "Dann sehen.",
+    "line": "Du antwortest. Dein Gegenüber antwortet. Aufgedeckt wird erst, wenn ihr beide durch seid. Das ist der ganze Trick.",
+    "meet": {
+      "title": "Keiner von euch hat was gesehen.",
+      "accent": "Noch.",
+      "you": "Du",
+      "them": "Deine Bestie",
+      "open": "Aufdecken",
+      "end": "Kein Gewinner. Kein Urteil. Nur ein richtig gutes Gespräch. Und es bleibt: Komm zurück, wann immer du willst."
+    },
+    "ways": {
+      "title": "Zu zweit. Zu zehnt. Die ganze Party.",
+      "accent": "Gleicher Kick.",
+      "items": [
+        {
+          "t": "Nur ihr zwei",
+          "d": "Schick einen Link. Die andere Person antwortet im Browser, ohne Download. Ein kostenloses Konto öffnet den Reveal."
+        },
+        {
+          "t": "Euer ganzer Chat",
+          "d": "Deine Besties, deine Klasse, dein Team. Euer eigener Raum. Alle spielen, dann geht der Chat ab."
+        },
+        {
+          "t": "Die ganze Party",
+          "d": "Alle scannen. Niemand braucht die App. Der Host drückt auf Start."
+        }
+      ]
+    },
+    "profile": {
+      "title": "Dein Profil",
+      "accent": "spielt für dich.",
+      "line": "Einmal antworten, und es bleibt auf deiner Seite. Leute spielen gegen deine Antworten, während du schläfst.",
+      "line2": "Je mehr du spielst, desto mehr gibt es von dir zu entdecken. Öffentlich, Freunde oder Nur ich: Du entscheidest, Deck für Deck."
+    },
+    "poll": {
+      "title": "Nur eine Frage?",
+      "accent": "Mach ’ne Umfrage.",
+      "steps": [
+        "Frag, was du willst.",
+        "Teil den Link, wo du willst.",
+        "Alle stimmen mit einem Tipp ab. Sieh zu, wie sich die Meinungen teilen."
+      ]
+    },
+    "faqTitle": "Was du dich wahrscheinlich gerade fragst.",
+    "faq": [
+      [
+        "Was ist OnPini?",
+        "OnPini ist das Social Game, das du mit den Leuten spielst, die du kennst. Ihr beantwortet blind dasselbe Deck mit Fragen und seht dann, wo ihr übereinstimmt und wo ihr auseinanderliegt. Es ist keine Dating-App."
+      ],
+      [
+        "Für wen ist das?",
+        "Freunde, Paare, Crushes, Familie, Mitschüler, Gruppenchats und Fans. Du musst mindestens 16 sein."
+      ],
+      [
+        "Ist es kostenlos?",
+        "Ja. Du spielst kostenlos, direkt im Browser."
+      ],
+      [
+        "Muss die andere Person etwas herunterladen?",
+        "Nein. Dein Link öffnet sich in ihrem Browser, und sie kann sofort antworten. Ein kostenloses Konto öffnet den ganzen Reveal."
+      ],
+      [
+        "Wer sieht meine Antworten?",
+        "Die Leute, mit denen du spielst, sobald sie geantwortet haben. Bis dahin sieht keiner von euch etwas. Deine Decks stehen auch auf deiner Seite: Ab 18 starten sie auf Öffentlich, also können alle auf OnPini gegen deine Antworten spielen. Du kannst jedes Deck auf Freunde oder Nur ich stellen."
+      ],
+      [
+        "Gibt es eine Punktzahl?",
+        "Du siehst, wie viele Antworten gleich sind, zum Beispiel „Bei 6 von 10 gleich“. Kein Gewinner, kein Urteil. Gleiche Antwort, schön. Andere Antwort, noch besser."
+      ]
+    ],
+    "eyebrow": "So funktioniert OnPini"
+  },
+  "story": {
+    "metaTitle": "Unsere Story: warum wir OnPini gebaut haben",
+    "metaDesc": "Alle sind vernetzt. Wirklich kennt sich keiner. Uni-Absolventen aus den Niederlanden und Deutschland bauten das Gegenteil: ein Social Game mit einer Regel.",
+    "why": {
+      "title": "Nicht folgen.",
+      "accent": "Kennenlernen.",
+      "items": [
+        {
+          "t": "Du bekommst die echte Antwort.",
+          "d": "Nichts wird angezeigt, bis ihr beide gewählt habt. Keiner kann abschreiben."
+        },
+        {
+          "t": "Niemand muss damit anfangen.",
+          "d": "Die schwierige Frage war nie das Problem. Das Problem war, sie stellen zu müssen. Jetzt fragt das Spiel."
+        },
+        {
+          "t": "Dein Profil spielt für dich.",
+          "d": "Einmal antworten. Leute spielen deine Decks gegen deine Antworten, während du schläfst. Je mehr du spielst, desto mehr gibt es von dir zu entdecken."
+        },
+        {
+          "t": "Einmal fragen. Antwort behalten.",
+          "d": "Jedes Deck, das ihr zwei spielt, bleibt. Monate später ist es noch da, genau wenn du es brauchst."
+        }
+      ]
+    },
+    "who": {
+      "nl": "Niederlande",
+      "de": "Deutschland",
+      "title": "Alle sind vernetzt.",
+      "line": "Also haben ein paar Uni-Absolventen aus den Niederlanden und Deutschland das Gegenteil gebaut.",
+      "one": "Die meisten Apps wollen mehr von deiner Aufmerksamkeit.",
+      "two": "Wir wollen, dass ihr miteinander redet.",
+      "accent": "Wirklich kennt sich keiner.",
+      "ruleTag": "Eine Regel",
+      "rule": "Erst zeigen. Dann sehen.",
+      "ruleLine": "Kein Stalken. Kein Raten. Du antwortest, dein Gegenüber antwortet, ihr wisst beide Bescheid."
+    },
+    "mission": {
+      "tag": "Unsere Mission",
+      "title": "Niemand, den du liebst, bleibt ein Rätsel.",
+      "line": "Dafür sind wir da. Es fängt mit zwei Menschen und einem Deck an. Je mehr du spielst, desto mehr weißt du, und desto mehr gibt es von dir zu entdecken."
+    },
+    "note": "OnPini (ein Wort) ist ein Handelsname der GPM Holding B.V. in Den Haag, Niederlande. Es hat nichts mit PiniOn oder anderen ähnlich benannten Apps zu tun.",
+    "inside": {
+      "title": "Was drin ist.",
+      "stats": [
+        {
+          "n": "61",
+          "l": "Decks"
+        },
+        {
+          "n": "5.660",
+          "l": "Fragen"
+        },
+        {
+          "n": "5",
+          "l": "Sprachen"
+        },
+        {
+          "n": "0 €",
+          "l": "zum Spielen"
+        }
+      ]
+    },
+    "invest": {
+      "tag": "Für Investoren",
+      "title": "Die Tür ist offen.",
+      "line": "Wir bauen das Social Game für Menschen, die sich wirklich kennen. Früh genug, um etwas zu bewegen. Echt genug, um es heute Abend zu spielen.",
+      "cta": "Pitch-Deck anfragen",
+      "more": "Zur Investorenseite"
+    },
+    "credit": "Animierte Emojis: Noto Emoji Animation von Google, CC BY 4.0."
+  },
+  "decks": {
+    "metaTitle": "Fragespiele für Paare, Familie, Freunde und Fans | OnPini",
+    "metaDesc": "61 Frage-Decks zum Spielen mit deinen Leuten: Liebe und Dating, Familie, Freunde und Gruppenchats, Fandoms, Sport und mehr.",
+    "title": "Wähl deine Leute.",
+    "accent": "Wähl deine Obsession.",
+    "line": "61 Decks. Bei Karte eins harmlos. Gefährlich, wenn du weitermachst.",
+    "count": "{n} Decks",
+    "cards": "{n} Karten",
+    "sendTo": "Schick es an",
+    "tryNow": "Jetzt eins testen, ohne Anmeldung",
+    "playFive": "Fünf Karten spielen",
+    "lookingFor": "Suchst du nur gute Fragen?",
+    "endTitle": "Wähl eins. Schick’s ab.",
+    "endLine": "An die erste Person, die dir eingefallen ist.",
+    "eyebrow": "Frage-Decks für alle, die du kennst",
+    "more": {
+      "name": "Und mehr",
+      "title": "Musik, Filme, Geld, Gaming, Reisen.",
+      "line": "Alles drin."
+    }
+  },
+  "genres": {
+    "friends": {
+      "name": "Freunde",
+      "h1": "Die Insider habt ihr schon. Jetzt kommt die Story dahinter.",
+      "intro": "Für beste Freunde, Gruppenchats, WGs und Mitschüler. Sag, was du sonst nie ansprechen würdest, und lach danach drüber.",
+      "seo": "Fragespiel für beste Freunde und Gruppenchats",
+      "sendTo": [
+        "Deine Bestie",
+        "Den Gruppenchat",
+        "Deine WG",
+        "Deinen Sitznachbarn"
+      ],
+      "eyebrow": "Decks für Freunde und Gruppenchats"
+    },
+    "love": {
+      "name": "Liebe",
+      "h1": "Von der letzten Pommes bis zum Für-immer.",
+      "intro": "Paare, Crushes und alles dazwischen. Ihr startet mit der Frage, wer die letzte Pommes kriegt, und landet ganz woanders.",
+      "seo": "Fragespiel für Paare: Decks für Liebe und Dating",
+      "sendTo": [
+        "Deinen Schatz",
+        "Deinen Crush",
+        "Deine Situationship"
+      ],
+      "eyebrow": "Decks für Paare, Crushes und erste Dates"
+    },
+    "fandoms": {
+      "name": "Fans",
+      "h1": "Gleiches Fandom. Ganz andere Meinungen.",
+      "intro": "Swifties, K-Pop-Stans, Marvel-Fans, Potterheads, Anime-Leute. Für Fans geschrieben, nichts Offizielles.",
+      "seo": "Fragen für Fans: Swifties, K-Pop, Marvel, Potter",
+      "sendTo": [
+        "Deine Fan-Freunde",
+        "Deinen Gruppenchat"
+      ],
+      "eyebrow": "Decks für Fans"
+    },
+    "sports": {
+      "name": "Sport",
+      "h1": "Klärt das.",
+      "intro": "Die Diskussionen, die ihr seit Jahren führt. Beide Antworten versiegelt bis zum Ende. Nie wieder „Hab ich doch immer gesagt“.",
+      "seo": "Frage-Decks für Sportfans: Fußball und mehr",
+      "sendTo": [
+        "Dein Team",
+        "Deinen Rivalen",
+        "Deinen Papa"
+      ],
+      "eyebrow": "Decks für Sportfans"
+    },
+    "family": {
+      "name": "Familie",
+      "h1": "Eine Familie. Viele Versionen davon.",
+      "intro": "Eltern, Geschwister, Großeltern, Schwiegereltern. Frag, was du beim Abendessen nie fragen würdest.",
+      "seo": "Fragespiel für die Familie: Eltern und Geschwister",
+      "sendTo": [
+        "Deine Schwester",
+        "Deinen Bruder",
+        "Deine Eltern",
+        "Den Familienchat"
+      ],
+      "eyebrow": "Decks für deine ganze Familie"
+    }
+  },
+  "questions": {
+    "metaTitle": "Fragen an Crush, Partner und beste Freunde | OnPini",
+    "metaDesc": "Echte Fragen an die Menschen, die dir wichtig sind, aus unseren Decks. Am Anfang leicht, am Ende ehrlich.",
+    "title": "Wen musst du",
+    "accent": "mal fragen?",
+    "line": "Wähl deine Person. Beantworte ein paar. Dann lass das Spiel fragen.",
+    "tap": "Tipp deine Antwort an. Wisch zur nächsten.",
+    "nudge": "Du hast {n} beantwortet. Was würde {person} sagen?",
+    "more": "Noch jemand im Kopf?",
+    "endTitle": "Frag nicht laut.",
+    "endLine": "Schick ein Deck an {to} und schieb’s aufs Spiel.",
+    "endLineIndex": "Schick’s ab und schieb’s aufs Spiel.",
+    "toAsk": "Fragen an",
+    "prev": "Vorherige Karte",
+    "next": "Nächste Karte",
+    "eyebrow": "Fragen an deine Leute"
+  },
+  "qp": {
+    "partner": {
+      "h1": "{n} Fragen für Paare",
+      "link": "Fragen für Paare",
+      "person": "dein Schatz",
+      "intro": "Drei Monate oder dreißig Jahre: Eine Karte überrascht dich trotzdem noch.",
+      "desc": "Echte Fragen an deinen Partner oder deine Partnerin, von der letzten Pommes bis zu den großen Themen. Blind antworten, Deck schicken, Unterschiede sehen.",
+      "heading": "deinen Schatz",
+      "to": "deinen Schatz"
+    },
+    "best-friend": {
+      "h1": "{n} Fragen für beste Freunde",
+      "link": "Fragen für beste Freunde",
+      "person": "deine Bestie",
+      "intro": "Deine Bestie kennt deine Geheimnisse. Kennst du ihre?",
+      "desc": "Echte Fragen an deine beste Freundin oder deinen besten Freund, von lustig bis ehrlich. Blind antworten, Deck schicken, Unterschiede sehen.",
+      "heading": "deine Bestie",
+      "to": "deine Bestie"
+    },
+    "group-chat": {
+      "h1": "{n} Fragen für deinen Gruppenchat",
+      "link": "Fragen für den Gruppenchat",
+      "person": "dein Gruppenchat",
+      "intro": "Ein Deck. Der ganze Chat. Besser als noch ein Meme.",
+      "desc": "Echte Fragen für deinen Gruppenchat, von lustig bis ehrlich. Alle antworten blind, dann seht ihr, wer anders tickt.",
+      "heading": "deinen Gruppenchat",
+      "to": "deinen Gruppenchat"
+    },
+    "classmates": {
+      "h1": "{n} Fragen zum Kennenlernen",
+      "link": "Fragen zum Kennenlernen",
+      "person": "dein Sitznachbar",
+      "intro": "Besser als „Und, was studierst du so?“ Am Anfang leicht. Am Ende nah.",
+      "desc": "Echte Fragen zum Kennenlernen für neue Mitschüler, Mitbewohner oder Kollegen. Am Anfang leicht, am Ende nah. Blind antworten und vergleichen.",
+      "heading": "deinen Sitznachbarn",
+      "to": "deinen Sitznachbarn"
+    },
+    "sibling": {
+      "h1": "{n} Fragen an deine Geschwister",
+      "link": "Fragen an deine Geschwister",
+      "person": "dein Bruder oder deine Schwester",
+      "intro": "Gleiches Haus. Komplett andere Kindheit.",
+      "desc": "Echte Fragen an deinen Bruder oder deine Schwester, von der Rückbank bis heute. Blind antworten, Deck schicken, Unterschiede sehen.",
+      "heading": "deine Geschwister",
+      "to": "deine Geschwister"
+    },
+    "mom": {
+      "h1": "{n} Fragen an deine Mama",
+      "link": "Fragen an deine Mama",
+      "person": "deine Mama",
+      "intro": "Sag es, ohne ein Drama draus zu machen. Für deine Mama, oder wer auch immer den Job macht.",
+      "desc": "Echte Fragen an deine Mama, von „Hast du schon gegessen?“ bis zu den großen Themen. Blind antworten, Deck schicken, Unterschiede sehen.",
+      "heading": "deine Mama",
+      "to": "deine Mama"
+    },
+    "dad": {
+      "h1": "{n} Fragen an deinen Papa",
+      "link": "Fragen an deinen Papa",
+      "person": "dein Papa",
+      "intro": "„Mal sehen“ hieß nein, oder? Für deinen Papa, oder wer auch immer den Job macht.",
+      "desc": "Echte Fragen an deinen Papa, von Flachwitzen bis zu den großen Themen. Blind antworten, Deck schicken, Unterschiede sehen.",
+      "heading": "deinen Papa",
+      "to": "deinen Papa"
+    },
+    "crush": {
+      "h1": "{n} Fragen an deinen Crush",
+      "link": "Fragen an deinen Crush",
+      "person": "dein Crush",
+      "intro": "Genug getextet. Schick lieber ein Deck.",
+      "desc": "Echte Fragen an deinen Crush, von der ersten Nachricht bis „Was sind wir?“. Blind antworten, Deck schicken, Unterschiede sehen.",
+      "heading": "deinen Crush",
+      "to": "deinen Crush"
+    }
+  },
+  "investors": {
+    "metaTitle": "Investoren | OnPini",
+    "tag": "Für Investoren",
+    "one": "Jedes soziale Netzwerk baut auf Publikum.",
+    "two": "Unseres baut auf Duos.",
+    "line": "Die Leute sind es leid, für alle zu performen. Aber sie wollen, dass jemand sie kennt. Bei OnPini lernst du deine Leute kennen, beim Spielen.",
+    "who": "Uni-Absolventen aus den Niederlanden und Deutschland. GPM Holding B.V., Den Haag.",
+    "cta": "Pitch-Deck anfragen",
+    "playFirst": "Erst mal spielen",
+    "close": "Früh genug, um etwas zu bewegen. Echt genug, um es heute Abend zu spielen."
+  },
+  "support": {
+    "metaTitle": "Support | OnPini",
+    "metaDesc": "Brauchst du Hilfe mit OnPini? Finde schnell eine Antwort oder schick uns ein Ticket.",
+    "title": "Stimmt was nicht?",
+    "line": "Sag uns Bescheid. Jedes Ticket liest ein echter Mensch.",
+    "category": "Worum geht’s?",
+    "categories": {
+      "account": "Mein Konto",
+      "bug": "Etwas ist kaputt",
+      "safety": "Sicherheit & Meldung",
+      "privacy": "Datenschutz & Daten",
+      "feedback": "Eine Idee",
+      "other": "Was anderes"
+    },
+    "name": "Dein Name (optional)",
+    "email": "Deine E-Mail",
+    "message": "Was ist passiert?",
+    "messageHint": "Mindestens 10 Zeichen.",
+    "send": "Ticket senden",
+    "sending": "Wird gesendet…",
+    "doneTitle": "Angekommen.",
+    "doneLine": "Deine Ticketnummer ist",
+    "doneKeep": "Heb sie auf, dann kannst du dein Ticket später prüfen.",
+    "another": "Noch eins senden",
+    "errEmail": "Bitte prüf deine E-Mail-Adresse.",
+    "errMessage": "Erzähl uns etwas mehr: mindestens 10 Zeichen.",
+    "errLimit": "Das sind ganz schön viele Tickets in kurzer Zeit. Versuch es später noch mal.",
+    "errServer": "Das hat nicht geklappt. Versuch es noch mal oder schreib an hello@onpini.app.",
+    "checkTitle": "Ticket prüfen",
+    "ticket": "Ticketnummer",
+    "check": "Prüfen",
+    "checking": "Wird geprüft…",
+    "notFound": "Dieses Ticket finden wir nicht. Prüf Nummer und E-Mail.",
+    "statusLabel": "Status:",
+    "status": {
+      "open": "Offen",
+      "pending": "Wir sind dran",
+      "closed": "Geschlossen"
+    },
+    "mailedTitle": "Fast geschafft.",
+    "mailedLine": "Deine Mail-App öffnet sich gleich mit deiner Nachricht. Passiert nichts? Schreib uns an"
+  },
+  "cases": {
+    "title": "Alle haben jemanden.",
+    "accent": "Wer ist es bei dir?",
+    "items": [
+      {
+        "who": "Deine Mama",
+        "pain": "Jeden Sonntag am Telefon: erst das Wetter, dann deine Cousine.",
+        "win": "Jetzt habt ihr endlich was zu bereden."
+      },
+      {
+        "who": "Dein Papa",
+        "pain": "Er sagt „alles gut“ und reicht das Handy an deine Mama weiter.",
+        "win": "Eine Karte beantwortet er."
+      },
+      {
+        "who": "Dein Schatz",
+        "pain": "Ihr beendet gegenseitig eure Sätze. Eure Antworten nicht.",
+        "win": "Date Night? Läuft."
+      },
+      {
+        "who": "Dein Crush",
+        "pain": "Drei Wochen „haha“. Niemand weiß, was das hier ist.",
+        "win": "Flirte mit einem Deck. Schieb’s aufs Spiel."
+      },
+      {
+        "who": "Ein erstes Date",
+        "pain": "Der Small Talk ist schon durch, bevor die Drinks kommen.",
+        "win": "Spiel vorher eine Runde. Dann gehst du mit Vorsprung rein."
+      },
+      {
+        "who": "Fernbeziehung",
+        "pain": "Verschiedene Zeitzonen. Dasselbe „Wie war dein Tag?“",
+        "win": "Schick heute Abend ein Deck. Morgens sind die Antworten da."
+      },
+      {
+        "who": "Deine Bestie",
+        "pain": "Du hast jede Story schon gehört. Zweimal.",
+        "win": "Jetzt hol dir eine, die du noch nicht kennst."
+      },
+      {
+        "who": "Der Gruppenchat",
+        "pain": "Den ganzen Tag Memes. Seit Monaten hat niemand was Echtes gesagt.",
+        "win": "Ein Deck. Alle dabei."
+      },
+      {
+        "who": "Deine Geschwister",
+        "pain": "Gleiches Haus. Komplett andere Kindheit.",
+        "win": "Vergleicht eure Versionen. Endlich."
+      },
+      {
+        "who": "Dein neuer Sitznachbar",
+        "pain": "Ein Raum voller Fremder und eine Frage: Und, was studierst du so?",
+        "win": "Spring gleich zum spannenden Teil."
+      },
+      {
+        "who": "Deine WG",
+        "pain": "Der Kuchen ist weg. Keiner war’s.",
+        "win": "Klärt die WG-Regeln vor dem nächsten Kuchen."
+      },
+      {
+        "who": "Dein Team",
+        "pain": "Darüber streitet ihr seit Jahren.",
+        "win": "Beide Antworten versiegelt. Kein Zurück."
+      }
+    ]
+  }
+}

@@ -1,0 +1,623 @@
+{
+  "nav": {
+    "menu": "Menu",
+    "close": "Sluiten",
+    "decks": "Decks",
+    "questions": "Vragen",
+    "how": "Zo werkt het",
+    "story": "Ons verhaal",
+    "join": "Doe mee",
+    "signin": "Inloggen",
+    "investors": "Investeerders",
+    "home": "Home",
+    "support": "Hulp",
+    "language": "Taal",
+    "faq": "FAQ"
+  },
+  "join": {
+    "label": "Doe gratis mee",
+    "app": "Download de app, gratis",
+    "soon": "Binnenkort op",
+    "download": "Download in de",
+    "getIt": "Ontdek het op"
+  },
+  "hero": {
+    "top": "Wat denkt",
+    "who": [
+      "je crush",
+      "je bestie",
+      "je partner",
+      "je broer",
+      "je groepsapp",
+      "je moeder",
+      "je huisgenoot"
+    ],
+    "bottom": "écht?",
+    "punch": "Niet vragen. Spelen.",
+    "sub": "OnPini is de sociale game waarin jullie allebei blind antwoorden en daarna zien waar jullie verschillen.",
+    "ask": "Benieuwd?",
+    "yes": "Ja, ik doe mee",
+    "try": "Eerst even proberen",
+    "metaTitle": "OnPini: het vragenspel voor jou en je mensen"
+  },
+  "pit": {
+    "hero": [
+      "Wat zijn we nou?",
+      "Liefde of respect?",
+      "Word je weleens moe van me?",
+      "Heb je al gegeten?",
+      "Zouden we nu nog vrienden worden?",
+      "Wie is er begonnen?",
+      "‘We zien wel’ betekende nee, toch?",
+      "Een maand op jouw bank?",
+      "Kunnen we vanavond praten?",
+      "Is dit officieel?"
+    ],
+    "genres": [
+      "Liefde & daten",
+      "Fandoms",
+      "Vrienden",
+      "Party & pittig",
+      "Familie",
+      "In het nieuws",
+      "Who’s Who",
+      "Sport",
+      "Muziek",
+      "Film & tv",
+      "Geld",
+      "Gaming",
+      "Reizen"
+    ]
+  },
+  "playBand": {
+    "title": "Speel tegen het OnPini-team.",
+    "sub": "Probeer het voordat je het naar iemand stuurt. Wij hebben al geantwoord, dus kies een deck en zie waar je van ons verschilt. Vijf kaarten, geen account.",
+    "button": "Speel dit deck"
+  },
+  "people": {
+    "title": "Iedereen die je kent heeft een kant die je nog nooit hebt gezien.",
+    "accent": "Hoe meer je speelt, hoe meer je ziet.",
+    "tabs": {
+      "friends": {
+        "id": "Vrienden",
+        "title": "Om 3 uur ’s nachts neem je op. Dit weet je nog steeds niet.",
+        "line": "Loyaliteit, jaloezie, alles wat je nooit hebt gezegd. Stuur het naar je oudste vrienden."
+      },
+      "crushes": {
+        "id": "Crushes",
+        "title": "Flirten zonder een woord te zeggen.",
+        "line": "Scheelt weer drie weken ‘haha’. Hun antwoorden staan er gewoon."
+      },
+      "loves": {
+        "id": "Liefde",
+        "title": "Jaren samen. Nog steeds iets nieuws.",
+        "line": "Van het laatste frietje tot voor altijd. Rondes die zo diep gaan als jullie durven."
+      },
+      "family": {
+        "id": "Familie",
+        "title": "Zeg het zonder dat het een ding wordt.",
+        "line": "Je ouders, je zus, je opa. Eén familie, iedereen zijn eigen versie."
+      },
+      "group": {
+        "id": "Groepsapps",
+        "title": "Eén deck. De hele groep. Iedereen doet mee.",
+        "line": "Iedereen antwoordt, daarna zet de groepsreveal het gesprek op gang."
+      },
+      "communities": {
+        "id": "Community’s",
+        "title": "Je club. Je klas. Je crew.",
+        "line": "Start een groep, deel één link en zie wat je mensen écht denken."
+      },
+      "idols": {
+        "id": "Idolen",
+        "title": "Waar sta jij in je fandom?",
+        "line": "Decks geschreven voor fans: de echte discussies, niets officieels."
+      }
+    },
+    "back": "{same} van de {total} hetzelfde als het OnPini-team. Denk nu eens aan je eigen mensen."
+  },
+  "wipe": {
+    "awkward": "Vragen is ongemakkelijk.",
+    "easy": "Sturen is makkelijk.",
+    "line": "Niemand hoeft erover te beginnen. Dat doet de game."
+  },
+  "footer": {
+    "tagline": "De sociale game voor de mensen die je kent.",
+    "pages": "Pagina’s",
+    "connect": "Contact",
+    "careers": "Werken bij",
+    "rights": "OnPini is een handelsnaam van GPM Holding B.V.",
+    "privacy": "Privacy",
+    "terms": "Voorwaarden",
+    "early": "Early Access",
+    "credits": "Credits"
+  },
+  "end": {
+    "title": "Je dacht net aan iemand.",
+    "line": "Kom op. Stuur het."
+  },
+  "playPage": {
+    "metaTitle": "Speel tegen het OnPini-team | OnPini",
+    "pick": "Kies een deck.",
+    "pickSub": "Het OnPini-team heeft al geantwoord. Onze antwoorden blijven verzegeld tot jij klaar bent.",
+    "close": "Sluiten",
+    "change": "Ander deck",
+    "sealed": "Het OnPini-team heeft geantwoord. Verzegeld.",
+    "bothIn": "Allebei geantwoord.",
+    "notSeen": "Jullie hebben allebei niks gezien. Nog niet.",
+    "open": "Openen",
+    "you": "Jij",
+    "team": "OnPini-team",
+    "teamWhy": "Team:",
+    "same": "Hetzelfde.",
+    "split": "Jullie verschillen.",
+    "next": "Volgende kaart",
+    "seeEnd": "Bekijk hoe het ging",
+    "score": "{same} van de {total} hetzelfde. Zelfde antwoord, leuk. Ander antwoord, nog beter.",
+    "endTitle": "Dat waren wij. Stel je nu iemand voor om wie je geeft.",
+    "who": "Aan wie moest je denken?",
+    "next2": "Bekijk wat er nog meer in zit",
+    "again": "Speel nog een deck",
+    "tags": {
+      "crushes": "Crushes",
+      "friends": "Vrienden",
+      "fans": "Fans",
+      "housemates": "Huisgenoten",
+      "family": "Familie"
+    },
+    "cardOf": "Kaart {n} van {total}"
+  },
+  "chips": {
+    "friend": "Bestie",
+    "crush": "Crush",
+    "partner": "Partner",
+    "group": "Groepsapp",
+    "sibling": "Broer of zus",
+    "mom": "Moeder",
+    "dad": "Vader",
+    "classmate": "Klasgenoot"
+  },
+  "how": {
+    "metaTitle": "Zo werkt OnPini: eerst jij, dan zij",
+    "metaDesc": "Beantwoord een deck met vragen, stuur de link en zie waar jullie matchen en verschillen. Niemand ziet iets tot jullie allebei hebben geantwoord.",
+    "title": "Eerst jij.",
+    "accent": "Dan zij.",
+    "line": "Jij antwoordt. Zij antwoorden. Niets gaat open tot jullie allebei klaar zijn. Dat is de hele truc.",
+    "meet": {
+      "title": "Jullie hebben allebei niks gezien.",
+      "accent": "Nog niet.",
+      "you": "Jij",
+      "them": "Je bestie",
+      "open": "Openen",
+      "end": "Geen winnaar. Geen oordeel. Gewoon een heel goed gesprek. En het blijft staan: kom erop terug wanneer je wilt."
+    },
+    "ways": {
+      "title": "Met z’n tweeën. Met z’n tienen. Het hele feestje.",
+      "accent": "Dezelfde kick.",
+      "items": [
+        {
+          "t": "Alleen jullie twee",
+          "d": "Stuur een link. Zij antwoorden in hun browser, zonder download. Met één gratis account gaat de reveal open."
+        },
+        {
+          "t": "Je hele groepsapp",
+          "d": "Je besties, je klasgenoten, je team. Jullie eigen kamer. Iedereen speelt, daarna gaat de chat los."
+        },
+        {
+          "t": "Het hele feestje",
+          "d": "Iedereen scant. Niemand heeft de app nodig. De host drukt op start."
+        }
+      ]
+    },
+    "profile": {
+      "title": "Je profiel",
+      "accent": "speelt voor je.",
+      "line": "Eén keer antwoorden en het blijft op je pagina staan. Mensen spelen het tegen jouw antwoorden terwijl jij slaapt.",
+      "line2": "Hoe meer je speelt, hoe meer er van jou te ontdekken valt. Openbaar, Vrienden of Alleen ik: jij kiest, per deck."
+    },
+    "poll": {
+      "title": "Maar één vraag?",
+      "accent": "Gooi er een poll in.",
+      "steps": [
+        "Vraag wat je wilt.",
+        "Deel de link waar je maar wilt.",
+        "Iedereen stemt met één tik. Kijk hoe de meningen verdeeld raken."
+      ]
+    },
+    "faqTitle": "Wat je je waarschijnlijk afvraagt.",
+    "faq": [
+      [
+        "Wat is OnPini?",
+        "OnPini is de sociale game die je speelt met de mensen die je kent. Jullie beantwoorden allebei blind hetzelfde deck met vragen en zien daarna waar jullie matchen en waar jullie verschillen. Het is geen datingapp."
+      ],
+      [
+        "Voor wie is het?",
+        "Vrienden, stellen, crushes, familie, klasgenoten, groepsapps en fans. Je moet 16 jaar of ouder zijn."
+      ],
+      [
+        "Is het gratis?",
+        "Ja. Spelen is gratis, gewoon in je browser."
+      ],
+      [
+        "Moet de ander iets downloaden?",
+        "Nee. Je link opent in de browser van de ander, en die kan meteen antwoorden. Met één gratis account gaat de hele reveal open."
+      ],
+      [
+        "Wie ziet mijn antwoorden?",
+        "De mensen met wie je speelt, zodra ze zelf hebben geantwoord. Tot die tijd zien jullie allebei niks. Je decks staan ook op je pagina: vanaf 18 beginnen ze op Openbaar, dus iedereen op OnPini kan tegen jouw antwoorden spelen. Je kunt elk deck op Vrienden of Alleen ik zetten."
+      ],
+      [
+        "Is er een score?",
+        "Je ziet hoeveel antwoorden hetzelfde zijn, bijvoorbeeld “6 van de 10 hetzelfde”. Geen winnaar, geen oordeel. Zelfde antwoord, leuk. Ander antwoord, nog beter."
+      ]
+    ],
+    "eyebrow": "Zo werkt OnPini"
+  },
+  "story": {
+    "metaTitle": "Ons verhaal: waarom we OnPini hebben gebouwd",
+    "metaDesc": "Iedereen is verbonden, niemand kent elkaar. Een paar afgestudeerden uit Nederland en Duitsland bouwden het tegenovergestelde: een game met één regel.",
+    "why": {
+      "title": "Volg ze niet.",
+      "accent": "Leer ze kennen.",
+      "items": [
+        {
+          "t": "Je krijgt het echte antwoord.",
+          "d": "Er is niks te zien tot jullie allebei hebben gekozen. Niemand kan afkijken."
+        },
+        {
+          "t": "Niemand hoeft erover te beginnen.",
+          "d": "De moeilijke vraag was nooit het probleem. Degene zijn die hem stelt wel. Nu vraagt de game het."
+        },
+        {
+          "t": "Je profiel speelt voor je.",
+          "d": "Eén keer antwoorden. Mensen spelen jouw decks tegen jouw antwoorden terwijl jij slaapt. Hoe meer je speelt, hoe meer er van jou te ontdekken valt."
+        },
+        {
+          "t": "Eén keer vragen. Het antwoord blijft.",
+          "d": "Elk deck dat jullie samen spelen blijft staan. Maanden later is het er nog, precies wanneer je het nodig hebt."
+        }
+      ]
+    },
+    "who": {
+      "nl": "Nederland",
+      "de": "Duitsland",
+      "title": "Iedereen is verbonden.",
+      "line": "Dus bouwden een paar afgestudeerden uit Nederland en Duitsland het tegenovergestelde.",
+      "one": "De meeste apps willen meer van je aandacht.",
+      "two": "Wij willen dat jullie met elkaar gaan praten.",
+      "accent": "Niemand kent elkaar.",
+      "ruleTag": "Eén regel",
+      "rule": "Eerst jij. Dan zij.",
+      "ruleLine": "Niet stiekem kijken. Niet gokken. Jij antwoordt, zij antwoorden, jullie weten het allebei."
+    },
+    "mission": {
+      "tag": "Onze missie",
+      "title": "Niemand van wie je houdt blijft een raadsel.",
+      "line": "Daar zijn we voor. Het begint met twee mensen en één deck. Hoe meer je speelt, hoe meer je weet, en hoe meer er van jou te vinden is."
+    },
+    "note": "OnPini (één woord) is een handelsnaam van GPM Holding B.V. in Den Haag, Nederland. Het heeft niets te maken met PiniOn of andere apps met een vergelijkbare naam.",
+    "inside": {
+      "title": "Wat erin zit.",
+      "stats": [
+        {
+          "n": "61",
+          "l": "decks"
+        },
+        {
+          "n": "5.660",
+          "l": "vragen"
+        },
+        {
+          "n": "5",
+          "l": "talen"
+        },
+        {
+          "n": "€0",
+          "l": "om te spelen"
+        }
+      ]
+    },
+    "invest": {
+      "tag": "Voor investeerders",
+      "title": "De deur staat open.",
+      "line": "We bouwen de sociale game voor mensen die elkaar echt kennen. Vroeg genoeg om het verschil te maken. Echt genoeg om vanavond te spelen.",
+      "cta": "Vraag het deck aan",
+      "more": "Naar de investeerderspagina"
+    },
+    "credit": "Geanimeerde emoji: Noto Emoji Animation van Google, CC BY 4.0."
+  },
+  "decks": {
+    "metaTitle": "Vragenspel voor stellen, familie, vrienden en fans | OnPini",
+    "metaDesc": "61 decks met vragen om met je mensen te spelen: liefde en daten, familie, vrienden en groepsapps, fandoms, sport en meer.",
+    "title": "Kies je mensen.",
+    "accent": "Kies je obsessie.",
+    "line": "61 decks. Makkelijk bij kaart één. Gevaarlijk als je doorgaat.",
+    "count": "{n} decks",
+    "cards": "{n} kaarten",
+    "sendTo": "Stuur het naar",
+    "tryNow": "Probeer er nu een, zonder account",
+    "playFive": "Speel vijf kaarten",
+    "lookingFor": "Zoek je gewoon goede vragen?",
+    "endTitle": "Kies er een. Stuur het.",
+    "endLine": "Naar de eerste aan wie je dacht.",
+    "eyebrow": "Vragendecks voor iedereen die je kent",
+    "more": {
+      "name": "En meer",
+      "title": "Muziek, films, geld, gaming, reizen.",
+      "line": "Zit er allemaal in."
+    }
+  },
+  "genres": {
+    "friends": {
+      "name": "Vrienden",
+      "h1": "De inside jokes heb je al. Nu de rest van het verhaal.",
+      "intro": "Voor je oudste vrienden, groepsapps, huisgenoten en klasgenoten. Zeg wat je anders nooit zou zeggen, en lach er later om.",
+      "seo": "Vragenspel voor vrienden en groepsapps",
+      "sendTo": [
+        "Je bestie",
+        "De groepsapp",
+        "Je huisgenoot",
+        "Een nieuwe klasgenoot"
+      ],
+      "eyebrow": "Decks voor vrienden en groepsapps"
+    },
+    "love": {
+      "name": "Liefde",
+      "h1": "Van het laatste frietje tot voor altijd.",
+      "intro": "Stellen, crushes en alles daartussenin. Begin met wie het laatste frietje krijgt. Beland ergens waar je niet op rekende.",
+      "seo": "Vragenspel voor stellen: liefde en daten",
+      "sendTo": [
+        "Je partner",
+        "Je crush",
+        "Je situationship"
+      ],
+      "eyebrow": "Decks voor stellen, crushes en eerste dates"
+    },
+    "fandoms": {
+      "name": "Fans",
+      "h1": "Zelfde fandom. Totaal andere meningen.",
+      "intro": "Swifties, K-pop-stans, Marvelfans, Potterheads, animefans. Geschreven voor fans, niets officieels.",
+      "seo": "Vragen voor fans: Swifties, K-pop, Marvel, Potter",
+      "sendTo": [
+        "Je medefans",
+        "Je groepsapp"
+      ],
+      "eyebrow": "Decks voor fans"
+    },
+    "sports": {
+      "name": "Sport",
+      "h1": "Vecht het uit.",
+      "intro": "De discussies die je al jaren voert. Beide antwoorden blijven verzegeld tot het eind. Nooit meer “dat zei ik toch”.",
+      "seo": "Vragenspel over sport: voetbal en meer",
+      "sendTo": [
+        "Je teamgenoten",
+        "Je rivaal",
+        "Je vader"
+      ],
+      "eyebrow": "Decks voor sportfans"
+    },
+    "family": {
+      "name": "Familie",
+      "h1": "Eén familie. Iedereen zijn eigen versie.",
+      "intro": "Ouders, broers, zussen, opa’s en oma’s, schoonfamilie. Vraag wat je aan tafel nooit zou vragen.",
+      "seo": "Vragenspel voor familie: ouders, broers en zussen",
+      "sendTo": [
+        "Je zus",
+        "Je broer",
+        "Je ouders",
+        "De familieapp"
+      ],
+      "eyebrow": "Decks voor je hele familie"
+    }
+  },
+  "questions": {
+    "metaTitle": "Vragen voor je crush, partner of vrienden | OnPini",
+    "metaDesc": "Echte vragen voor de mensen om wie je geeft, uit onze decks. Licht aan het begin, eerlijk aan het eind.",
+    "title": "Wie moet jij",
+    "accent": "iets vragen?",
+    "line": "Kies je persoon. Beantwoord er een paar. Laat de game daarna de vragen stellen.",
+    "tap": "Tik je antwoord aan. Swipe voor de volgende.",
+    "nudge": "Je hebt er {n} beantwoord. Wat zou {person} zeggen?",
+    "more": "Denk je nog aan iemand anders?",
+    "endTitle": "Vraag het niet hardop.",
+    "endLine": "Stuur een deck naar {to} en geef de game de schuld.",
+    "endLineIndex": "Stuur het en geef de game de schuld.",
+    "toAsk": "Vragen voor",
+    "prev": "Vorige kaart",
+    "next": "Volgende kaart",
+    "eyebrow": "Vragen voor je mensen"
+  },
+  "qp": {
+    "partner": {
+      "h1": "{n} vragen om aan je partner te stellen",
+      "link": "Vragen om aan je partner te stellen",
+      "person": "je partner",
+      "intro": "Drie maanden of dertig jaar: er zit altijd nog een kaart tussen die je verrast.",
+      "desc": "Echte vragen om aan je partner te stellen, van het laatste frietje tot de grote dingen. Antwoord blind, stuur het deck en zie waar jullie verschillen.",
+      "heading": "je partner",
+      "to": "je partner"
+    },
+    "best-friend": {
+      "h1": "{n} vragen om aan je beste vriend of vriendin te stellen",
+      "link": "Vragen voor je beste vriend of vriendin",
+      "person": "je bestie",
+      "intro": "Jouw geheimen kent je bestie al. En andersom?",
+      "desc": "Echte vragen voor je beste vriend of vriendin, van grappig tot eerlijk. Antwoord blind, stuur het deck en zie waar jullie verschillen.",
+      "heading": "je bestie",
+      "to": "je bestie"
+    },
+    "group-chat": {
+      "h1": "{n} vragen voor je groepsapp",
+      "link": "Vragen voor je groepsapp",
+      "person": "je groepsapp",
+      "intro": "Eén deck. De hele groep. Beter dan nog een meme.",
+      "desc": "Echte vragen voor je groepsapp, van grappig tot eerlijk. Iedereen antwoordt blind, daarna zie je wie van wie verschilt.",
+      "heading": "je groepsapp",
+      "to": "je groepsapp"
+    },
+    "classmates": {
+      "h1": "{n} vragen om aan een nieuwe klasgenoot te stellen",
+      "link": "Vragen voor een nieuwe klasgenoot",
+      "person": "je klasgenoot",
+      "intro": "Beter dan “en, hoe vind je het hier?” Makkelijk in het begin. Aan het eind zijn jullie close.",
+      "desc": "Echte vragen voor een nieuwe klasgenoot, huisgenoot of collega. Eerst makkelijk, aan het eind zijn jullie close. Antwoord blind en vergelijk.",
+      "heading": "je klasgenoot",
+      "to": "je klasgenoot"
+    },
+    "sibling": {
+      "h1": "{n} vragen om aan je broer of zus te stellen",
+      "link": "Vragen om aan je broer of zus te stellen",
+      "person": "je broer of zus",
+      "intro": "Zelfde huis. Totaal andere jeugd.",
+      "desc": "Echte vragen om aan je broer of zus te stellen, van de achterbank tot nu. Antwoord blind, stuur het deck en zie waar jullie verschillen.",
+      "heading": "je broer of zus",
+      "to": "je broer of zus"
+    },
+    "mom": {
+      "h1": "{n} vragen om aan je moeder te stellen",
+      "link": "Vragen om aan je moeder te stellen",
+      "person": "je moeder",
+      "intro": "Zeg het zonder dat het een ding wordt. Voor je moeder, of wie dat voor jou is.",
+      "desc": "Echte vragen om aan je moeder te stellen, van ‘heb je al gegeten?’ tot de grote dingen. Antwoord blind, stuur het deck en zie waar jullie verschillen.",
+      "heading": "je moeder",
+      "to": "je moeder"
+    },
+    "dad": {
+      "h1": "{n} vragen om aan je vader te stellen",
+      "link": "Vragen om aan je vader te stellen",
+      "person": "je vader",
+      "intro": "‘We zien wel’ betekende nee, toch? Voor je vader, of wie dat voor jou is.",
+      "desc": "Echte vragen om aan je vader te stellen, van vadergrappen tot de grote dingen. Antwoord blind, stuur het deck en zie waar jullie verschillen.",
+      "heading": "je vader",
+      "to": "je vader"
+    },
+    "crush": {
+      "h1": "{n} vragen om aan je crush te stellen",
+      "link": "Vragen om aan je crush te stellen",
+      "person": "je crush",
+      "intro": "Er is nu wel genoeg geappt. Stuur liever een deck.",
+      "desc": "Echte vragen om aan je crush te stellen, van de eerste appjes tot ‘wat zijn we?’. Antwoord blind, stuur het deck en zie waar jullie verschillen.",
+      "heading": "je crush",
+      "to": "je crush"
+    }
+  },
+  "investors": {
+    "metaTitle": "Investeerders | OnPini",
+    "tag": "Voor investeerders",
+    "one": "Elk sociaal netwerk draait om publiek.",
+    "two": "Het onze draait om duo’s.",
+    "line": "Mensen zijn het zat om voor iedereen op te treden. Ze willen nog steeds dat iemand ze kent. Op OnPini leer je je mensen kennen, door te spelen.",
+    "who": "Universitair afgestudeerden uit Nederland en Duitsland. GPM Holding B.V., Den Haag.",
+    "cta": "Vraag het deck aan",
+    "playFirst": "Speel het eerst",
+    "close": "Vroeg genoeg om het verschil te maken. Echt genoeg om vanavond te spelen."
+  },
+  "support": {
+    "metaTitle": "Hulp | OnPini",
+    "metaDesc": "Hulp nodig met OnPini? Vind snel een antwoord of stuur ons een ticket.",
+    "title": "Klopt er iets niet?",
+    "line": "Laat het weten. Elk ticket wordt door een echt mens gelezen.",
+    "category": "Waar gaat het over?",
+    "categories": {
+      "account": "Mijn account",
+      "bug": "Iets werkt niet",
+      "safety": "Veiligheid of melding",
+      "privacy": "Privacy of mijn data",
+      "feedback": "Een idee",
+      "other": "Iets anders"
+    },
+    "name": "Je naam (optioneel)",
+    "email": "Je e-mailadres",
+    "message": "Wat is er gebeurd?",
+    "messageHint": "Minimaal 10 tekens.",
+    "send": "Verstuur ticket",
+    "sending": "Versturen…",
+    "doneTitle": "Is binnen.",
+    "doneLine": "Je ticketnummer is",
+    "doneKeep": "Bewaar het om je ticket later te checken.",
+    "another": "Nog een sturen",
+    "errEmail": "Check je e-mailadres even.",
+    "errMessage": "Vertel ons iets meer: minimaal 10 tekens.",
+    "errLimit": "Dat zijn veel tickets in korte tijd. Probeer het straks nog eens.",
+    "errServer": "Dat lukte niet. Probeer het nog eens, of mail naar hello@onpini.app.",
+    "checkTitle": "Check een ticket",
+    "ticket": "Ticketnummer",
+    "check": "Check",
+    "checking": "Checken…",
+    "notFound": "We kunnen dat ticket niet vinden. Check het nummer en je e-mailadres.",
+    "statusLabel": "Status:",
+    "status": {
+      "open": "Open",
+      "pending": "We zijn ermee bezig",
+      "closed": "Gesloten"
+    },
+    "mailedTitle": "Bijna klaar.",
+    "mailedLine": "Je mailapp opent nu met je bericht. Gebeurt er niks? Mail ons op"
+  },
+  "cases": {
+    "title": "Iedereen heeft wel iemand.",
+    "accent": "Wie is het bij jou?",
+    "items": [
+      {
+        "who": "Je moeder",
+        "pain": "Elke zondag aan de telefoon: eerst het weer, dan je nicht.",
+        "win": "Eindelijk iets om echt over te praten."
+      },
+      {
+        "who": "Je vader",
+        "pain": "Hij zegt ‘goed hoor’ en geeft de telefoon aan je moeder.",
+        "win": "Op een kaart geeft hij wel antwoord."
+      },
+      {
+        "who": "Je partner",
+        "pain": "Jullie maken elkaars zinnen af. Elkaars antwoorden niet.",
+        "win": "Date night? Geregeld."
+      },
+      {
+        "who": "Je crush",
+        "pain": "Drie weken ‘haha’. Niemand weet wat dit is.",
+        "win": "Flirt met een deck. Geef de game de schuld."
+      },
+      {
+        "who": "Een eerste date",
+        "pain": "De smalltalk is op voordat de drankjes er zijn.",
+        "win": "Speel eerst een ronde. Dan loop je binnen met een voorsprong."
+      },
+      {
+        "who": "Liefde op afstand",
+        "pain": "Andere tijdzones. Dezelfde ‘hoe was je dag’.",
+        "win": "Stuur vanavond een deck. Word wakker met de antwoorden."
+      },
+      {
+        "who": "Je bestie",
+        "pain": "Je hebt elk verhaal al gehoord. Twee keer.",
+        "win": "Tijd voor eentje dat je nog niet kent."
+      },
+      {
+        "who": "De groepsapp",
+        "pain": "De hele dag memes. Al maanden zegt niemand iets echts.",
+        "win": "Eén deck. Iedereen doet mee."
+      },
+      {
+        "who": "Je broer of zus",
+        "pain": "Zelfde huis. Totaal andere jeugd.",
+        "win": "Vergelijk jullie versies. Eindelijk."
+      },
+      {
+        "who": "Een nieuwe klasgenoot",
+        "pain": "Een lokaal vol onbekenden en één vraag: en, hoe vind je het hier?",
+        "win": "Meteen door naar het leuke stuk."
+      },
+      {
+        "who": "Je huisgenoten",
+        "pain": "Iemand heeft de taart opgegeten. Niemand zegt iets.",
+        "win": "Spreek de huisregels af vóór de volgende taart."
+      },
+      {
+        "who": "Je teamgenoten",
+        "pain": "Hier discussiëren jullie al jaren over.",
+        "win": "Beide antwoorden verzegeld. Geen weg terug."
+      }
+    ]
+  }
+}

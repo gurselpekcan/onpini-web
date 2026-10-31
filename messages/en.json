@@ -1,0 +1,623 @@
+{
+  "nav": {
+    "menu": "Menu",
+    "close": "Close",
+    "decks": "Decks",
+    "questions": "Questions",
+    "how": "How it works",
+    "story": "Our story",
+    "join": "Join",
+    "signin": "Sign in",
+    "investors": "Investors",
+    "home": "Home",
+    "support": "Support",
+    "language": "Language",
+    "faq": "FAQ"
+  },
+  "join": {
+    "label": "Join OnPini, free",
+    "app": "Get the app, free",
+    "soon": "Coming soon on",
+    "download": "Download on the",
+    "getIt": "Get it on"
+  },
+  "hero": {
+    "top": "What does",
+    "who": [
+      "your crush",
+      "your best friend",
+      "your partner",
+      "your brother",
+      "your group chat",
+      "your mom",
+      "your roommate"
+    ],
+    "bottom": "really think?",
+    "punch": "Don’t ask. Play.",
+    "sub": "OnPini is the social game where you both answer blind, then see where you split.",
+    "ask": "Ready to find out?",
+    "yes": "Yes, let me in",
+    "try": "Let me try first",
+    "metaTitle": "OnPini: the social game you play with your people"
+  },
+  "pit": {
+    "hero": [
+      "What are we?",
+      "Love or respect?",
+      "Do I ever wear you out?",
+      "Did you eat?",
+      "Still friends if we met today?",
+      "Who started it?",
+      "‘We’ll see’ meant no, right?",
+      "Your sofa, for a month?",
+      "Can we talk tonight?",
+      "Is this official?"
+    ],
+    "genres": [
+      "Love & dating",
+      "Fandoms",
+      "Friends",
+      "Party & spicy",
+      "Family",
+      "In the news",
+      "Who’s Who",
+      "Sports",
+      "Music",
+      "Movies & TV",
+      "Money",
+      "Gaming",
+      "Travel"
+    ]
+  },
+  "playBand": {
+    "title": "Play the OnPini team.",
+    "sub": "Try it before you send it to anyone. We already answered, so pick a deck and see where you split with us. Five cards, no sign-up.",
+    "button": "Play this deck"
+  },
+  "people": {
+    "title": "Everyone you know has a side you’ve never seen.",
+    "accent": "The more you play, the more you see.",
+    "tabs": {
+      "friends": {
+        "id": "Friends",
+        "title": "You’d pick up at 3AM. You still don’t know this.",
+        "line": "Loyalty, envy, the things you’ve never said. Send it to your day-ones."
+      },
+      "crushes": {
+        "id": "Crushes",
+        "title": "Flirt without saying a word.",
+        "line": "Skip three more weeks of ‘haha’. Their answers are right there."
+      },
+      "loves": {
+        "id": "Loves",
+        "title": "Years together. Still something new.",
+        "line": "From the last fry to forever. Rounds that go as deep as you two dare."
+      },
+      "family": {
+        "id": "Family",
+        "title": "Say it without making it a thing.",
+        "line": "Your parents, your sister, your grandad. One family, many versions of it."
+      },
+      "group": {
+        "id": "Group chats",
+        "title": "One deck. The whole chat. Everyone’s in.",
+        "line": "Everybody answers, then the group reveal starts the conversation."
+      },
+      "communities": {
+        "id": "Communities",
+        "title": "Your club. Your class. Your crew.",
+        "line": "Start a group, drop one link, and see what your people really think."
+      },
+      "idols": {
+        "id": "Idols",
+        "title": "Where do you stand in your fandom?",
+        "line": "Decks written for fans: the real debates, nothing official."
+      }
+    },
+    "back": "Same on {same} of {total} with the OnPini team. Now think about your people."
+  },
+  "wipe": {
+    "awkward": "Asking is awkward.",
+    "easy": "Sending is easy.",
+    "line": "Nobody has to bring it up. The game did."
+  },
+  "footer": {
+    "tagline": "The social game for the people you know.",
+    "pages": "Pages",
+    "connect": "Connect",
+    "careers": "Careers",
+    "rights": "OnPini is a trade name of GPM Holding B.V.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "early": "Early Access",
+    "credits": "Credits"
+  },
+  "end": {
+    "title": "Someone came to mind.",
+    "line": "Go on. Send it."
+  },
+  "playPage": {
+    "metaTitle": "Play the OnPini team | OnPini",
+    "pick": "Pick a deck.",
+    "pickSub": "The OnPini team already answered. Our side stays sealed until you’re done.",
+    "close": "Close",
+    "change": "Change deck",
+    "sealed": "OnPini team has answered. Sealed.",
+    "bothIn": "Both sides are in.",
+    "notSeen": "Neither of you has seen a thing. Yet.",
+    "open": "Open it",
+    "you": "You",
+    "team": "OnPini team",
+    "teamWhy": "Team:",
+    "same": "Same.",
+    "split": "You split.",
+    "next": "Next card",
+    "seeEnd": "See how it went",
+    "score": "Same on {same} of {total}. Same answer, nice. Different answer, better.",
+    "endTitle": "That was us. Imagine someone who matters.",
+    "who": "Who came to mind?",
+    "next2": "See what else is inside",
+    "again": "Play another deck",
+    "tags": {
+      "crushes": "Crushes",
+      "friends": "Friends",
+      "fans": "Fans",
+      "housemates": "Housemates",
+      "family": "Family"
+    },
+    "cardOf": "Card {n} of {total}"
+  },
+  "chips": {
+    "friend": "Best friend",
+    "crush": "Crush",
+    "partner": "Partner",
+    "group": "Group chat",
+    "sibling": "Sibling",
+    "mom": "Mom",
+    "dad": "Dad",
+    "classmate": "Classmate"
+  },
+  "how": {
+    "metaTitle": "How OnPini works: show yours, see theirs",
+    "metaDesc": "Answer a deck of questions, send the link, and see where you match and where you split. Neither of you sees a thing until you’ve both answered.",
+    "title": "Show yours.",
+    "accent": "See theirs.",
+    "line": "You answer. They answer. Nothing opens until you both have. That’s the whole trick.",
+    "meet": {
+      "title": "Neither of you has seen a thing.",
+      "accent": "Yet.",
+      "you": "You",
+      "them": "Your best friend",
+      "open": "Open it",
+      "end": "No winner. No verdict. Just a very good conversation. And it stays: come back to it whenever you want."
+    },
+    "ways": {
+      "title": "Two of you. Ten of you. The whole party.",
+      "accent": "Same rush.",
+      "items": [
+        {
+          "t": "Just you two",
+          "d": "Send a link. They answer in their browser, no download. One free account opens the reveal."
+        },
+        {
+          "t": "Your whole chat",
+          "d": "Your besties, your classmates, your team. Your own room. Everyone plays, then the chat lights up."
+        },
+        {
+          "t": "The whole party",
+          "d": "Everyone scans. Nobody needs the app. The host hits start."
+        }
+      ]
+    },
+    "profile": {
+      "title": "Your profile",
+      "accent": "plays for you.",
+      "line": "Answer once and it stays on your page. People play it against your answers while you sleep.",
+      "line2": "The more you play, the more of you there is to discover. Public, Friends or Only me: you pick, deck by deck."
+    },
+    "poll": {
+      "title": "Just one question?",
+      "accent": "Drop a poll.",
+      "steps": [
+        "Ask anything.",
+        "Share the link anywhere.",
+        "Anyone votes in one tap. Watch it split."
+      ]
+    },
+    "faqTitle": "What you’re probably wondering.",
+    "faq": [
+      [
+        "What is OnPini?",
+        "OnPini is the social game you play with the people you know. You each answer the same deck of questions blind, then see where you match and where you split. It’s not a dating app."
+      ],
+      [
+        "Who is it for?",
+        "Friends, couples, crushes, family, classmates, group chats and fans. You need to be 16 or older."
+      ],
+      [
+        "Is it free?",
+        "Yes. It’s free to play, right in your browser."
+      ],
+      [
+        "Does the other person need to download anything?",
+        "No. Your link opens in their browser and they can answer right away. One free account opens the whole reveal."
+      ],
+      [
+        "Who sees my answers?",
+        "The people you play with, once they’ve answered. Until then, neither of you sees a thing. Your decks also show on your page: from 18 they start on Public, so anyone on OnPini can play against your answers. You can switch any deck to Friends or Only me."
+      ],
+      [
+        "Is there a score?",
+        "You’ll see how many answers match, like “Same on 6 of 10”. No winner, no verdict. Same answer, nice. Different answer, better."
+      ]
+    ],
+    "eyebrow": "How OnPini works"
+  },
+  "story": {
+    "metaTitle": "Our story: why we built OnPini",
+    "metaDesc": "Everyone’s connected. Nobody knows anybody. A few university grads from the Netherlands and Germany built the opposite: a social game with one rule.",
+    "why": {
+      "title": "Don’t follow them.",
+      "accent": "Know them.",
+      "items": [
+        {
+          "t": "You get the real answer.",
+          "d": "Nothing shows until you’ve both picked. Nobody can copy you."
+        },
+        {
+          "t": "Nobody has to bring it up.",
+          "d": "The hard question was never the problem. Being the one who asks it was. Now the game asks."
+        },
+        {
+          "t": "Your profile plays for you.",
+          "d": "Answer once. People play your decks against your answers while you sleep. The more you play, the more of you there is to discover."
+        },
+        {
+          "t": "Ask once. Keep the answer.",
+          "d": "Every deck you two play stays. Months later it’s still there, right when you need it."
+        }
+      ]
+    },
+    "who": {
+      "nl": "Netherlands",
+      "de": "Germany",
+      "title": "Everyone’s connected.",
+      "line": "So a few university grads from the Netherlands and Germany built the opposite.",
+      "one": "Most apps want more of your attention.",
+      "two": "We want you to go talk to each other.",
+      "accent": "Nobody knows anybody.",
+      "ruleTag": "One rule",
+      "rule": "Show yours. See theirs.",
+      "ruleLine": "No lurking. No guessing. You answer, they answer, you both know."
+    },
+    "mission": {
+      "tag": "Our mission",
+      "title": "Nobody you love gets to stay a mystery.",
+      "line": "That’s what we’re here for. It starts with two people and one deck. The more you play, the more you know, and the more of you there is to find."
+    },
+    "note": "OnPini (one word) is a trade name of GPM Holding B.V. in The Hague, the Netherlands. It is not related to PiniOn or other similarly named apps.",
+    "inside": {
+      "title": "What’s inside.",
+      "stats": [
+        {
+          "n": "61",
+          "l": "decks"
+        },
+        {
+          "n": "5,660",
+          "l": "questions"
+        },
+        {
+          "n": "5",
+          "l": "languages"
+        },
+        {
+          "n": "€0",
+          "l": "to play"
+        }
+      ]
+    },
+    "invest": {
+      "tag": "For investors",
+      "title": "The door’s open.",
+      "line": "We’re building the social game for people who actually know each other. Early enough to matter. Real enough to play tonight.",
+      "cta": "Ask for the deck",
+      "more": "See the investor page"
+    },
+    "credit": "Animated emoji: Noto Emoji Animation by Google, CC BY 4.0."
+  },
+  "decks": {
+    "metaTitle": "Question decks for love, family, friends and fans | OnPini",
+    "metaDesc": "61 question decks to play with your people: love and dating, family, friends and group chats, fandoms, sports and more.",
+    "title": "Pick your people.",
+    "accent": "Pick your obsession.",
+    "line": "61 decks. Easy at card one. Dangerous if you keep going.",
+    "count": "{n} decks",
+    "cards": "{n} cards",
+    "sendTo": "Send it to",
+    "tryNow": "Try one now, no sign-up",
+    "playFive": "Play five cards",
+    "lookingFor": "Just looking for good questions?",
+    "endTitle": "Pick one. Send it.",
+    "endLine": "To the first person who came to mind.",
+    "eyebrow": "Question decks for everyone you know",
+    "more": {
+      "name": "And more",
+      "title": "Music, movies, money, gaming, travel.",
+      "line": "All inside."
+    }
+  },
+  "genres": {
+    "friends": {
+      "name": "Friends",
+      "h1": "You’ve got the inside jokes. Now get the inside story.",
+      "intro": "For day-ones, group chats, roommates and classmates. Say what you’d never bring up, and laugh about it after.",
+      "seo": "Friend question game: best friends and group chats",
+      "sendTo": [
+        "Your best friend",
+        "The group chat",
+        "Your roommate",
+        "A new classmate"
+      ],
+      "eyebrow": "Decks for friends and group chats"
+    },
+    "love": {
+      "name": "Love",
+      "h1": "From the last fry to forever.",
+      "intro": "Couples, crushes and everything in between. Start with who gets the last fry. End somewhere you didn’t plan.",
+      "seo": "Couple question game: decks for love and dating",
+      "sendTo": [
+        "Your partner",
+        "Your crush",
+        "Your situationship"
+      ],
+      "eyebrow": "Decks for couples, crushes and first dates"
+    },
+    "fandoms": {
+      "name": "Fans",
+      "h1": "Same fandom. Very different takes.",
+      "intro": "Swifties, K-pop stans, Marvel fans, Potterheads, anime people. Written for fans, nothing official.",
+      "seo": "Fan question decks: Swifties, K-pop, Marvel, Potter",
+      "sendTo": [
+        "Your fan friends",
+        "Your group chat"
+      ],
+      "eyebrow": "Decks for fans"
+    },
+    "sports": {
+      "name": "Sports",
+      "h1": "Settle it.",
+      "intro": "The arguments you’ve been having for years. Both answers sealed until the end. No more “I always said that”.",
+      "seo": "Sports question decks: football and more",
+      "sendTo": [
+        "Your teammates",
+        "Your rival",
+        "Your dad"
+      ],
+      "eyebrow": "Decks for sports fans"
+    },
+    "family": {
+      "name": "Family",
+      "h1": "One family. Many versions of it.",
+      "intro": "Parents, siblings, grandparents, in-laws. Ask what you’d never ask at dinner.",
+      "seo": "Family question game for parents and siblings",
+      "sendTo": [
+        "Your sister",
+        "Your brother",
+        "Your parents",
+        "The family chat"
+      ],
+      "eyebrow": "Decks for your whole family"
+    }
+  },
+  "questions": {
+    "metaTitle": "Questions to ask your crush, partner or friends | OnPini",
+    "metaDesc": "Real questions to ask the people you care about, from our decks. Light at the start, honest by the end.",
+    "title": "Who do you need",
+    "accent": "to ask?",
+    "line": "Pick your person. Answer a few. Then let the game do the asking.",
+    "tap": "Tap your answer. Swipe for the next one.",
+    "nudge": "You’ve answered {n}. What would {person} say?",
+    "more": "Someone else on your mind?",
+    "endTitle": "Don’t ask out loud.",
+    "endLine": "Send a deck to {to}, and blame the game.",
+    "endLineIndex": "Send it, and blame the game.",
+    "toAsk": "Questions to ask",
+    "prev": "Previous card",
+    "next": "Next card",
+    "eyebrow": "Questions to ask your people"
+  },
+  "qp": {
+    "partner": {
+      "h1": "{n} questions to ask your partner",
+      "link": "Questions to ask your partner",
+      "person": "your partner",
+      "intro": "Three months in or thirty years: there’s still a card that’ll surprise you.",
+      "desc": "Real questions to ask your partner, from the last fry to the big stuff. Answer blind, send the deck, and see where you two split.",
+      "heading": "your partner",
+      "to": "your partner"
+    },
+    "best-friend": {
+      "h1": "{n} questions to ask your best friend",
+      "link": "Questions to ask your best friend",
+      "person": "your best friend",
+      "intro": "They’ve got your secrets. Do you have theirs?",
+      "desc": "Real questions to ask your best friend, from funny to honest. Answer blind, send the deck, and see where you two split.",
+      "heading": "your best friend",
+      "to": "your best friend"
+    },
+    "group-chat": {
+      "h1": "{n} questions for your group chat",
+      "link": "Questions for your group chat",
+      "person": "your group chat",
+      "intro": "One deck. The whole chat. This beats another meme.",
+      "desc": "Real questions for your group chat, from funny to honest. Everyone answers blind, then see who splits from who.",
+      "heading": "your group chat",
+      "to": "your group chat"
+    },
+    "classmates": {
+      "h1": "{n} questions to ask a new classmate",
+      "link": "Questions to ask a new classmate",
+      "person": "your classmate",
+      "intro": "Better than “so, what are you studying?” Easy at first. Close by the end.",
+      "desc": "Real questions to ask a new classmate, roommate or colleague. Easy at first, close by the end. Answer blind and compare.",
+      "heading": "your classmate",
+      "to": "your classmate"
+    },
+    "sibling": {
+      "h1": "{n} questions to ask your sibling",
+      "link": "Questions to ask your sibling",
+      "person": "your sibling",
+      "intro": "Same house. Completely different childhood.",
+      "desc": "Real questions to ask your brother or sister, from the back seat to now. Answer blind, send the deck, and see where you split.",
+      "heading": "your sibling",
+      "to": "your sibling"
+    },
+    "mom": {
+      "h1": "{n} questions to ask your mom",
+      "link": "Questions to ask your mom",
+      "person": "your mom",
+      "intro": "Say it without making it a thing. For your mom, or whoever does the job.",
+      "desc": "Real questions to ask your mom, from ‘did you eat?’ to the big stuff. Answer blind, send the deck, and see where you two split.",
+      "heading": "your mom",
+      "to": "your mom"
+    },
+    "dad": {
+      "h1": "{n} questions to ask your dad",
+      "link": "Questions to ask your dad",
+      "person": "your dad",
+      "intro": "‘We’ll see’ meant no, right? For your dad, or whoever does the job.",
+      "desc": "Real questions to ask your dad, from dad jokes to the big stuff. Answer blind, send the deck, and see where you two split.",
+      "heading": "your dad",
+      "to": "your dad"
+    },
+    "crush": {
+      "h1": "{n} questions to ask your crush",
+      "link": "Questions to ask your crush",
+      "person": "your crush",
+      "intro": "The texting has gone on long enough. Send a deck instead.",
+      "desc": "Real questions to ask your crush, from first texts to what are we. Answer blind, send the deck, and see where you two split.",
+      "heading": "your crush",
+      "to": "your crush"
+    }
+  },
+  "investors": {
+    "metaTitle": "Investors | OnPini",
+    "tag": "For investors",
+    "one": "Every social network is built on audiences.",
+    "two": "Ours is built on pairs.",
+    "line": "People are tired of performing for everyone. They still want to be known by someone. OnPini is where you get to know your people, by playing.",
+    "who": "University grads from the Netherlands and Germany. GPM Holding B.V., The Hague.",
+    "cta": "Ask for the deck",
+    "playFirst": "Play it first",
+    "close": "Early enough to matter. Real enough to play tonight."
+  },
+  "support": {
+    "metaTitle": "Support | OnPini",
+    "metaDesc": "Need a hand with OnPini? Find a quick answer or send us a ticket.",
+    "title": "Something off?",
+    "line": "Tell us. A real person reads every ticket.",
+    "category": "What’s it about?",
+    "categories": {
+      "account": "My account",
+      "bug": "Something’s broken",
+      "safety": "Safety or a report",
+      "privacy": "Privacy or my data",
+      "feedback": "An idea",
+      "other": "Something else"
+    },
+    "name": "Your name (optional)",
+    "email": "Your email",
+    "message": "What happened?",
+    "messageHint": "At least 10 characters.",
+    "send": "Send ticket",
+    "sending": "Sending…",
+    "doneTitle": "Got it.",
+    "doneLine": "Your ticket number is",
+    "doneKeep": "Keep it to check your ticket later.",
+    "another": "Send another",
+    "errEmail": "Please check your email address.",
+    "errMessage": "Tell us a little more: at least 10 characters.",
+    "errLimit": "That’s a lot of tickets in a short time. Please try again in a while.",
+    "errServer": "That didn’t go through. Please try again, or email hello@onpini.app.",
+    "checkTitle": "Check a ticket",
+    "ticket": "Ticket number",
+    "check": "Check",
+    "checking": "Checking…",
+    "notFound": "We can’t find that ticket. Check the number and email.",
+    "statusLabel": "Status:",
+    "status": {
+      "open": "Open",
+      "pending": "We’re on it",
+      "closed": "Closed"
+    },
+    "mailedTitle": "Almost there.",
+    "mailedLine": "Your email app should open with your message. Nothing opened? Mail us at"
+  },
+  "cases": {
+    "title": "Everyone’s got someone.",
+    "accent": "Who’s yours?",
+    "items": [
+      {
+        "who": "Your mom",
+        "pain": "Every Sunday call: the weather, then your cousin.",
+        "win": "Now there’s something to actually talk about."
+      },
+      {
+        "who": "Your dad",
+        "pain": "He says ‘fine’ and passes the phone to your mom.",
+        "win": "He’ll answer a card."
+      },
+      {
+        "who": "Your partner",
+        "pain": "You finish each other’s sentences. Not each other’s answers.",
+        "win": "Date night, sorted."
+      },
+      {
+        "who": "Your crush",
+        "pain": "Three weeks of ‘haha’. Nobody knows what this is.",
+        "win": "Flirt with a deck. Blame the game."
+      },
+      {
+        "who": "A first date",
+        "pain": "Small talk runs out before the drinks arrive.",
+        "win": "Play a round first. Walk in with a head start."
+      },
+      {
+        "who": "Long distance",
+        "pain": "Different time zones. The same ‘how was your day’.",
+        "win": "Send a deck tonight. Wake up to the answers."
+      },
+      {
+        "who": "Your best friend",
+        "pain": "You’ve heard every story. Twice.",
+        "win": "Now get one you haven’t."
+      },
+      {
+        "who": "The group chat",
+        "pain": "Memes all day. Nobody’s said anything real in months.",
+        "win": "One deck. Everyone’s in."
+      },
+      {
+        "who": "Your sibling",
+        "pain": "Same house. Completely different childhood.",
+        "win": "Compare notes. Finally."
+      },
+      {
+        "who": "A new classmate",
+        "pain": "A room of strangers and one question: so, what are you studying?",
+        "win": "Skip to the good part."
+      },
+      {
+        "who": "Your roommates",
+        "pain": "Someone ate the cake. Nobody’s talking.",
+        "win": "Settle the house rules before the next one."
+      },
+      {
+        "who": "Your teammates",
+        "pain": "You’ve argued about this for years.",
+        "win": "Both answers sealed. No backing down."
+      }
+    ]
+  }
+}

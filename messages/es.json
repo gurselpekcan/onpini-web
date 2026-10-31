@@ -1,0 +1,623 @@
+{
+  "nav": {
+    "menu": "Menú",
+    "close": "Cerrar",
+    "decks": "Mazos",
+    "questions": "Preguntas",
+    "how": "Cómo funciona",
+    "story": "Nuestra historia",
+    "join": "Únete",
+    "signin": "Entrar",
+    "investors": "Inversores",
+    "home": "Inicio",
+    "support": "Soporte",
+    "language": "Idioma",
+    "faq": "Dudas"
+  },
+  "join": {
+    "label": "Únete gratis",
+    "app": "Descarga la app gratis",
+    "soon": "Próximamente en",
+    "download": "Descárgalo en el",
+    "getIt": "Disponible en"
+  },
+  "hero": {
+    "top": "¿Qué piensa",
+    "who": [
+      "tu crush",
+      "tu mejor amigo",
+      "tu pareja",
+      "tu hermano",
+      "tu chat de grupo",
+      "tu mamá",
+      "tu roomie"
+    ],
+    "bottom": "de verdad?",
+    "punch": "No preguntes. Juega.",
+    "sub": "OnPini es el juego social: respondes a ciegas, la otra persona también, y luego ves en qué no coincidís.",
+    "ask": "¿Quieres saberlo?",
+    "yes": "Sí, déjame entrar",
+    "try": "Primero quiero probar",
+    "metaTitle": "OnPini: el juego social de preguntas con tu gente"
+  },
+  "pit": {
+    "hero": [
+      "¿Qué somos?",
+      "¿Amor o respeto?",
+      "¿Te canso alguna vez?",
+      "¿Has comido?",
+      "¿Amigos si nos conociéramos hoy?",
+      "¿Quién empezó?",
+      "«Ya veremos» era un no, ¿verdad?",
+      "¿Tu sofá, durante un mes?",
+      "¿Hablamos esta noche?",
+      "¿Esto es oficial?"
+    ],
+    "genres": [
+      "Amor y citas",
+      "Fandoms",
+      "Amigos",
+      "Fiesta y picante",
+      "Familia",
+      "Actualidad",
+      "Who’s Who",
+      "Deportes",
+      "Música",
+      "Cine y series",
+      "Dinero",
+      "Gaming",
+      "Viajes"
+    ]
+  },
+  "playBand": {
+    "title": "Juega contra el equipo de OnPini.",
+    "sub": "Pruébalo antes de enviárselo a nadie. Nosotros ya respondimos: elige un mazo y mira en qué no coincides con nosotros. Cinco cartas, sin registro.",
+    "button": "Jugar este mazo"
+  },
+  "people": {
+    "title": "Todos los que conoces tienen un lado que nunca has visto.",
+    "accent": "Cuanto más juegas, más ves.",
+    "tabs": {
+      "friends": {
+        "id": "Amigos",
+        "title": "Le contestas a las 3 de la madrugada. Y aún no sabes esto.",
+        "line": "Lealtad, envidia, lo que nunca se dijo. Envíaselo a tus amigos de siempre."
+      },
+      "crushes": {
+        "id": "Crushes",
+        "title": "Liga sin decir ni una palabra.",
+        "line": "Sáltate otras tres semanas de «jaja». Sus respuestas están ahí mismo."
+      },
+      "loves": {
+        "id": "Amores",
+        "title": "Años juntos. Y aún hay algo nuevo.",
+        "line": "Del último bocado al para siempre. Rondas que llegan tan hondo como te atrevas."
+      },
+      "family": {
+        "id": "Familia",
+        "title": "Dilo sin hacer un drama.",
+        "line": "Tus padres, tu hermana, tu abuelo. Una familia, muchas versiones."
+      },
+      "group": {
+        "id": "Chats de grupo",
+        "title": "Un mazo. Todo el chat. Todos dentro.",
+        "line": "Todos responden y luego la revelación de grupo arranca la conversación."
+      },
+      "communities": {
+        "id": "Comunidades",
+        "title": "Tu club. Tu clase. Tu gente.",
+        "line": "Crea un grupo, suelta un enlace y mira qué piensa de verdad tu gente."
+      },
+      "idols": {
+        "id": "Ídolos",
+        "title": "¿De qué lado estás en tu fandom?",
+        "line": "Mazos escritos para fans: los debates de verdad, nada oficial."
+      }
+    },
+    "back": "Iguales en {same} de {total} con el equipo de OnPini. Ahora piensa en tu gente."
+  },
+  "wipe": {
+    "awkward": "Preguntar incomoda.",
+    "easy": "Enviar es fácil.",
+    "line": "Nadie tiene que sacar el tema. Lo sacó el juego."
+  },
+  "footer": {
+    "tagline": "El juego social para la gente que conoces.",
+    "pages": "Páginas",
+    "connect": "Contacto",
+    "careers": "Empleo",
+    "rights": "OnPini es un nombre comercial de GPM Holding B.V.",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "early": "Acceso anticipado",
+    "credits": "Créditos"
+  },
+  "end": {
+    "title": "Ya tienes a alguien en mente.",
+    "line": "Anda. Envíalo."
+  },
+  "playPage": {
+    "metaTitle": "Juega contra el equipo de OnPini | OnPini",
+    "pick": "Elige un mazo.",
+    "pickSub": "El equipo de OnPini ya respondió. Nuestras respuestas siguen selladas hasta que termines.",
+    "close": "Cerrar",
+    "change": "Cambiar de mazo",
+    "sealed": "El equipo de OnPini ya respondió. Sellado.",
+    "bothIn": "Ya han respondido los dos.",
+    "notSeen": "Ninguno de los dos ha visto nada. Todavía.",
+    "open": "Ábrelo",
+    "you": "Tú",
+    "team": "Equipo de OnPini",
+    "teamWhy": "Equipo:",
+    "same": "Iguales.",
+    "split": "No coincidís.",
+    "next": "Siguiente carta",
+    "seeEnd": "Ver cómo fue",
+    "score": "Iguales en {same} de {total}. Misma respuesta, bien. Respuesta distinta, mejor.",
+    "endTitle": "Y solo éramos nosotros. Imagina con alguien que te importa.",
+    "who": "¿En quién has pensado?",
+    "next2": "Mira qué más hay dentro",
+    "again": "Jugar otro mazo",
+    "tags": {
+      "crushes": "Crushes",
+      "friends": "Amigos",
+      "fans": "Fans",
+      "housemates": "Roomies",
+      "family": "Familia"
+    },
+    "cardOf": "Carta {n} de {total}"
+  },
+  "chips": {
+    "friend": "Mejor amigo",
+    "crush": "Crush",
+    "partner": "Pareja",
+    "group": "Chat de grupo",
+    "sibling": "Hermano",
+    "mom": "Mamá",
+    "dad": "Papá",
+    "classmate": "Alguien de clase"
+  },
+  "how": {
+    "metaTitle": "Cómo funciona OnPini: muestra tus cartas, mira las suyas",
+    "metaDesc": "Responde un mazo de preguntas, envía el enlace y mira en qué coincidís y en qué no. Nadie ve nada hasta que respondan los dos.",
+    "title": "Muestra tus cartas.",
+    "accent": "Mira las suyas.",
+    "line": "Respondes tú. Responde la otra persona. Hasta entonces no se abre nada. Ese es todo el truco.",
+    "meet": {
+      "title": "Ninguno de los dos ha visto nada.",
+      "accent": "Todavía.",
+      "you": "Tú",
+      "them": "Tu mejor amigo",
+      "open": "Ábrelo",
+      "end": "Sin ganador. Sin veredicto. Solo una conversación muy buena. Y se queda: vuelve a ella cuando quieras."
+    },
+    "ways": {
+      "title": "Dos. Diez. Toda la fiesta.",
+      "accent": "La misma adrenalina.",
+      "items": [
+        {
+          "t": "Solo dos",
+          "d": "Envía un enlace. La otra persona responde en su navegador, sin descargar nada. Una cuenta gratis abre la revelación."
+        },
+        {
+          "t": "Todo tu chat",
+          "d": "Tus besties, tu clase, tu equipo. Tu propia sala. Todos juegan y luego el chat se enciende."
+        },
+        {
+          "t": "Toda la fiesta",
+          "d": "Todos escanean. Nadie necesita la app. El anfitrión le da a empezar."
+        }
+      ]
+    },
+    "profile": {
+      "title": "Tu perfil",
+      "accent": "juega por ti.",
+      "line": "Responde una vez y se queda en tu página. La gente juega contra tus respuestas mientras duermes.",
+      "line2": "Cuanto más juegas, más hay de ti por descubrir. Público, Amigos o Solo yo: tú eliges, mazo a mazo."
+    },
+    "poll": {
+      "title": "¿Solo una pregunta?",
+      "accent": "Lanza una encuesta.",
+      "steps": [
+        "Pregunta lo que quieras.",
+        "Comparte el enlace donde sea.",
+        "Cualquiera vota con un toque. Mira cómo se reparten los votos."
+      ]
+    },
+    "faqTitle": "Lo que seguro te estás preguntando.",
+    "faq": [
+      [
+        "¿Qué es OnPini?",
+        "OnPini es el juego social para jugar con la gente que conoces. Cada uno responde a ciegas el mismo mazo de preguntas y luego ves en qué coincidís y en qué no. No es una app de citas."
+      ],
+      [
+        "¿Para quién es?",
+        "Amigos, parejas, crushes, familia, compañeros de clase, chats de grupo y fans. Hay que tener 16 años o más."
+      ],
+      [
+        "¿Es gratis?",
+        "Sí. Jugar es gratis, desde tu navegador."
+      ],
+      [
+        "¿La otra persona tiene que descargar algo?",
+        "No. Tu enlace se abre en su navegador y puede responder al momento. Una cuenta gratis abre la revelación entera."
+      ],
+      [
+        "¿Quién ve mis respuestas?",
+        "La gente con la que juegas, cuando ya haya respondido. Hasta entonces, ninguno de los dos ve nada. Tus mazos también salen en tu página: desde los 18 empiezan en Público, así que cualquiera en OnPini puede jugar contra tus respuestas. Puedes cambiar cualquier mazo a Amigos o Solo yo."
+      ],
+      [
+        "¿Hay puntuación?",
+        "Verás cuántas respuestas coinciden, tipo «Iguales en 6 de 10». Sin ganador, sin veredicto. Misma respuesta, bien. Respuesta distinta, mejor."
+      ]
+    ],
+    "eyebrow": "Cómo funciona OnPini"
+  },
+  "story": {
+    "metaTitle": "Nuestra historia: por qué creamos OnPini",
+    "metaDesc": "Todos conectados. Nadie conoce a nadie. Unos graduados universitarios de Países Bajos y Alemania crearon lo contrario: un juego social con una regla.",
+    "why": {
+      "title": "No los sigas.",
+      "accent": "Conócelos.",
+      "items": [
+        {
+          "t": "Te llevas la respuesta real.",
+          "d": "No se ve nada hasta que eligen los dos. Nadie te puede copiar."
+        },
+        {
+          "t": "Nadie tiene que sacar el tema.",
+          "d": "La pregunta difícil nunca fue el problema. El problema era ser quien la hace. Ahora la hace el juego."
+        },
+        {
+          "t": "Tu perfil juega por ti.",
+          "d": "Responde una vez. La gente juega tus mazos contra tus respuestas mientras duermes. Cuanto más juegas, más hay de ti por descubrir."
+        },
+        {
+          "t": "Pregunta una vez. Quédate con la respuesta.",
+          "d": "Cada mazo que juegas con alguien se queda. Meses después sigue ahí, justo cuando lo necesitas."
+        }
+      ]
+    },
+    "who": {
+      "nl": "Países Bajos",
+      "de": "Alemania",
+      "title": "Todos conectados.",
+      "line": "Así que unos graduados universitarios de Países Bajos y Alemania crearon lo contrario.",
+      "one": "Casi todas las apps quieren más de tu atención.",
+      "two": "Nosotros queremos que vayas a hablar con tu gente.",
+      "accent": "Nadie conoce a nadie.",
+      "ruleTag": "Una regla",
+      "rule": "Muestra tus cartas. Mira las suyas.",
+      "ruleLine": "Sin espiar. Sin adivinar. Tú respondes, la otra persona también, y ya lo sabéis los dos."
+    },
+    "mission": {
+      "tag": "Nuestra misión",
+      "title": "Nadie a quien quieras debería seguir siendo un misterio.",
+      "line": "Para eso estamos aquí. Empieza con dos personas y un mazo. Cuanto más juegas, más sabes, y más hay de ti por encontrar."
+    },
+    "note": "OnPini (una sola palabra) es un nombre comercial de GPM Holding B.V. en La Haya, Países Bajos. No tiene relación con PiniOn ni con otras apps de nombre parecido.",
+    "inside": {
+      "title": "Qué hay dentro.",
+      "stats": [
+        {
+          "n": "61",
+          "l": "mazos"
+        },
+        {
+          "n": "5.660",
+          "l": "preguntas"
+        },
+        {
+          "n": "5",
+          "l": "idiomas"
+        },
+        {
+          "n": "0 €",
+          "l": "por jugar"
+        }
+      ]
+    },
+    "invest": {
+      "tag": "Para inversores",
+      "title": "La puerta está abierta.",
+      "line": "Estamos creando el juego social para gente que se conoce de verdad. Lo bastante pronto para marcar la diferencia. Lo bastante real para jugar esta noche.",
+      "cta": "Pide el pitch deck",
+      "more": "Ver la página de inversores"
+    },
+    "credit": "Emojis animados: Noto Emoji Animation de Google, CC BY 4.0."
+  },
+  "decks": {
+    "metaTitle": "Juegos de preguntas para pareja, familia y amigos | OnPini",
+    "metaDesc": "61 mazos de preguntas para jugar con tu gente: amor y citas, familia, amigos y chats de grupo, fandoms, deportes y más.",
+    "title": "Elige a tu gente.",
+    "accent": "Elige tu obsesión.",
+    "line": "61 mazos. Fáciles en la carta uno. Peligrosos si sigues.",
+    "count": "{n} mazos",
+    "cards": "{n} cartas",
+    "sendTo": "Envíaselo a",
+    "tryNow": "Prueba uno ya, sin registro",
+    "playFive": "Juega cinco cartas",
+    "lookingFor": "¿Solo buscas buenas preguntas?",
+    "endTitle": "Elige uno. Envíalo.",
+    "endLine": "A la primera persona en la que pensaste.",
+    "eyebrow": "Mazos de preguntas para toda la gente que conoces",
+    "more": {
+      "name": "Y más",
+      "title": "Música, cine, dinero, gaming, viajes.",
+      "line": "Todo dentro."
+    }
+  },
+  "genres": {
+    "friends": {
+      "name": "Amigos",
+      "h1": "Ya tienes las bromas internas. Ahora, la historia de verdad.",
+      "intro": "Para amigos de siempre, chats de grupo, roomies y compañeros de clase. Di lo que nunca dirías, y ríete después.",
+      "seo": "Juego de preguntas para amigos y chats de grupo",
+      "sendTo": [
+        "Tu mejor amigo",
+        "El chat de grupo",
+        "Tu roomie",
+        "Alguien nuevo en clase"
+      ],
+      "eyebrow": "Mazos para amigos y chats de grupo"
+    },
+    "love": {
+      "name": "Amor",
+      "h1": "Del último bocado al para siempre.",
+      "intro": "Parejas, crushes y todo lo que hay entre medias. Empieza por quién se queda con el último bocado. Termina donde no tenías pensado.",
+      "seo": "Juego de preguntas para parejas: amor y citas",
+      "sendTo": [
+        "Tu pareja",
+        "Tu crush",
+        "Tu casi algo"
+      ],
+      "eyebrow": "Mazos para parejas, crushes y primeras citas"
+    },
+    "fandoms": {
+      "name": "Fans",
+      "h1": "Mismo fandom. Opiniones muy distintas.",
+      "intro": "Swifties, stans del K-pop, fans de Marvel, potterheads, gente del anime. Escrito para fans, nada oficial.",
+      "seo": "Preguntas de fans: Swifties, K-pop, Marvel, Potter",
+      "sendTo": [
+        "Tus amigos fans",
+        "Tu chat de grupo"
+      ],
+      "eyebrow": "Mazos para fans"
+    },
+    "sports": {
+      "name": "Deportes",
+      "h1": "Zánjalo.",
+      "intro": "Las discusiones que llevas años teniendo. Las dos respuestas selladas hasta el final. Se acabó el «yo siempre lo dije».",
+      "seo": "Mazos de preguntas de deporte: fútbol y más",
+      "sendTo": [
+        "Tu equipo",
+        "Tu rival",
+        "Tu papá"
+      ],
+      "eyebrow": "Mazos para fans del deporte"
+    },
+    "family": {
+      "name": "Familia",
+      "h1": "Una familia. Muchas versiones.",
+      "intro": "Padres, hermanos, abuelos, suegros. Pregunta lo que nunca preguntarías en la cena.",
+      "seo": "Juego de preguntas en familia: padres y hermanos",
+      "sendTo": [
+        "Tu hermana",
+        "Tu hermano",
+        "Tus padres",
+        "El chat familiar"
+      ],
+      "eyebrow": "Mazos para toda tu familia"
+    }
+  },
+  "questions": {
+    "metaTitle": "Preguntas para hacerle a tu crush, pareja o amigos | OnPini",
+    "metaDesc": "Preguntas de verdad para hacerle a la gente que te importa, sacadas de nuestros mazos. Ligeras al principio, sinceras al final.",
+    "title": "¿A quién tienes",
+    "accent": "que preguntarle?",
+    "line": "Elige a tu persona. Responde unas cuantas. Luego deja que pregunte el juego.",
+    "tap": "Toca tu respuesta. Desliza para la siguiente.",
+    "nudge": "Llevas {n} respondidas. ¿Qué diría {person}?",
+    "more": "¿Tienes a otra persona en mente?",
+    "endTitle": "No lo preguntes en voz alta.",
+    "endLine": "Envíale un mazo {to} y échale la culpa al juego.",
+    "endLineIndex": "Envíalo y échale la culpa al juego.",
+    "toAsk": "Preguntas para hacerle",
+    "prev": "Carta anterior",
+    "next": "Siguiente carta",
+    "eyebrow": "Preguntas para hacerle a tu gente"
+  },
+  "qp": {
+    "partner": {
+      "h1": "{n} preguntas para hacerle a tu pareja",
+      "link": "Preguntas para hacerle a tu pareja",
+      "person": "tu pareja",
+      "intro": "Tres meses o treinta años: siempre hay una carta que te va a sorprender.",
+      "desc": "Preguntas de verdad para tu pareja, del último bocado a lo importante. Responde a ciegas, envía el mazo y mira en qué no coincidís.",
+      "heading": "a tu pareja",
+      "to": "a tu pareja"
+    },
+    "best-friend": {
+      "h1": "{n} preguntas para hacerle a tu mejor amigo",
+      "link": "Preguntas para hacerle a tu mejor amigo",
+      "person": "tu mejor amigo",
+      "intro": "Tiene tus secretos. ¿Tú tienes los suyos?",
+      "desc": "Preguntas de verdad para tu mejor amigo o amiga, de las divertidas a las sinceras. Responde a ciegas, envía el mazo y mira en qué no coincidís.",
+      "heading": "a tu mejor amigo",
+      "to": "a tu mejor amigo"
+    },
+    "group-chat": {
+      "h1": "{n} preguntas para tu chat de grupo",
+      "link": "Preguntas para tu chat de grupo",
+      "person": "tu chat de grupo",
+      "intro": "Un mazo. Todo el chat. Mejor que otro meme.",
+      "desc": "Preguntas de verdad para tu chat de grupo, de las divertidas a las sinceras. Todos responden a ciegas y luego se ve quién no coincide con quién.",
+      "heading": "a tu chat de grupo",
+      "to": "a tu chat de grupo"
+    },
+    "classmates": {
+      "h1": "{n} preguntas para un nuevo compañero de clase",
+      "link": "Preguntas para un nuevo compañero de clase",
+      "person": "tu compañero de clase",
+      "intro": "Mejor que «¿y tú qué estudias?». Empieza fácil. Termina en confianza.",
+      "desc": "Preguntas de verdad para un nuevo compañero de clase, de casa o de trabajo. Empieza fácil, termina en confianza. Responde a ciegas y compara.",
+      "heading": "a tu compañero de clase",
+      "to": "a tu compañero de clase"
+    },
+    "sibling": {
+      "h1": "{n} preguntas para hacerle a tu hermano o hermana",
+      "link": "Preguntas para hacerle a tu hermano o hermana",
+      "person": "tu hermano o hermana",
+      "intro": "La misma casa. Una infancia totalmente distinta.",
+      "desc": "Preguntas de verdad para tu hermano o hermana, del asiento de atrás a hoy. Responde a ciegas, envía el mazo y mira en qué no coincidís.",
+      "heading": "a tu hermano o hermana",
+      "to": "a tu hermano o hermana"
+    },
+    "mom": {
+      "h1": "{n} preguntas para hacerle a tu mamá",
+      "link": "Preguntas para hacerle a tu mamá",
+      "person": "tu mamá",
+      "intro": "Dilo sin hacer un drama. Para tu mamá, o para quien haga ese papel.",
+      "desc": "Preguntas de verdad para tu mamá, del «¿has comido?» a lo importante. Responde a ciegas, envía el mazo y mira en qué no coincidís.",
+      "heading": "a tu mamá",
+      "to": "a tu mamá"
+    },
+    "dad": {
+      "h1": "{n} preguntas para hacerle a tu papá",
+      "link": "Preguntas para hacerle a tu papá",
+      "person": "tu papá",
+      "intro": "«Ya veremos» era un no, ¿verdad? Para tu papá, o para quien haga ese papel.",
+      "desc": "Preguntas de verdad para tu papá, de sus chistes malos a lo importante. Responde a ciegas, envía el mazo y mira en qué no coincidís.",
+      "heading": "a tu papá",
+      "to": "a tu papá"
+    },
+    "crush": {
+      "h1": "{n} preguntas para hacerle a tu crush",
+      "link": "Preguntas para hacerle a tu crush",
+      "person": "tu crush",
+      "intro": "Ya van demasiados mensajes. Mejor envía un mazo.",
+      "desc": "Preguntas de verdad para tu crush, de los primeros mensajes al «¿qué somos?». Responde a ciegas, envía el mazo y mira en qué no coincidís.",
+      "heading": "a tu crush",
+      "to": "a tu crush"
+    }
+  },
+  "investors": {
+    "metaTitle": "Inversores | OnPini",
+    "tag": "Para inversores",
+    "one": "Todas las redes sociales se construyen sobre audiencias.",
+    "two": "La nuestra, sobre dúos.",
+    "line": "La gente está cansada de actuar para todo el mundo. Aún quiere que alguien la conozca. OnPini es donde llegas a conocer a tu gente, jugando.",
+    "who": "Graduados universitarios de Países Bajos y Alemania. GPM Holding B.V., La Haya.",
+    "cta": "Pide el pitch deck",
+    "playFirst": "Juega primero",
+    "close": "Lo bastante pronto para marcar la diferencia. Lo bastante real para jugar esta noche."
+  },
+  "support": {
+    "metaTitle": "Soporte | OnPini",
+    "metaDesc": "¿Necesitas ayuda con OnPini? Encuentra una respuesta rápida o envíanos un ticket.",
+    "title": "¿Algo va mal?",
+    "line": "Cuéntanoslo. Cada ticket lo lee una persona de verdad.",
+    "category": "¿De qué se trata?",
+    "categories": {
+      "account": "Mi cuenta",
+      "bug": "Algo no funciona",
+      "safety": "Seguridad o denuncia",
+      "privacy": "Privacidad o datos",
+      "feedback": "Una idea",
+      "other": "Otra cosa"
+    },
+    "name": "Tu nombre (opcional)",
+    "email": "Tu email",
+    "message": "¿Qué pasó?",
+    "messageHint": "Mínimo 10 caracteres.",
+    "send": "Enviar ticket",
+    "sending": "Enviando…",
+    "doneTitle": "Recibido.",
+    "doneLine": "Tu número de ticket es",
+    "doneKeep": "Guárdalo para consultar tu ticket más tarde.",
+    "another": "Enviar otro",
+    "errEmail": "Revisa tu dirección de email.",
+    "errMessage": "Cuéntanos un poco más: mínimo 10 caracteres.",
+    "errLimit": "Son muchos tickets en poco tiempo. Inténtalo de nuevo dentro de un rato.",
+    "errServer": "No se ha enviado. Inténtalo de nuevo o escribe a hello@onpini.app.",
+    "checkTitle": "Consultar un ticket",
+    "ticket": "Número de ticket",
+    "check": "Consultar",
+    "checking": "Consultando…",
+    "notFound": "No encontramos ese ticket. Revisa el número y el email.",
+    "statusLabel": "Estado:",
+    "status": {
+      "open": "Abierto",
+      "pending": "Estamos en ello",
+      "closed": "Cerrado"
+    },
+    "mailedTitle": "Casi listo.",
+    "mailedLine": "Tu app de correo se abrirá con tu mensaje. ¿No se abre? Escríbenos a"
+  },
+  "cases": {
+    "title": "Todos tenemos a alguien.",
+    "accent": "¿A quién tienes tú?",
+    "items": [
+      {
+        "who": "Tu mamá",
+        "pain": "Cada domingo, la misma llamada: el clima y luego tu prima.",
+        "win": "Ahora sí hay de qué hablar."
+      },
+      {
+        "who": "Tu papá",
+        "pain": "Dice «bien» y le pasa el teléfono a tu mamá.",
+        "win": "A una carta sí te contesta."
+      },
+      {
+        "who": "Tu pareja",
+        "pain": "Le terminas las frases. Sus respuestas, ni idea.",
+        "win": "Plan de esta noche: resuelto."
+      },
+      {
+        "who": "Tu crush",
+        "pain": "Tres semanas de «jaja». Nadie sabe qué es esto.",
+        "win": "Liga con un mazo. Échale la culpa al juego."
+      },
+      {
+        "who": "Una primera cita",
+        "pain": "Te quedas sin tema antes de que lleguen las bebidas.",
+        "win": "Juega una ronda antes. Llega con ventaja."
+      },
+      {
+        "who": "Amor a distancia",
+        "pain": "Distintas zonas horarias. El mismo «¿qué tal tu día?».",
+        "win": "Envía un mazo esta noche. Despierta con las respuestas."
+      },
+      {
+        "who": "Tu mejor amigo",
+        "pain": "Ya le has oído todas sus historias. Dos veces.",
+        "win": "Ahora sácale una que no conozcas."
+      },
+      {
+        "who": "El chat de grupo",
+        "pain": "Memes todo el día. Hace meses que nadie dice nada de verdad.",
+        "win": "Un mazo. Todos dentro."
+      },
+      {
+        "who": "Tu hermano o hermana",
+        "pain": "La misma casa. Una infancia totalmente distinta.",
+        "win": "Compara versiones. Por fin."
+      },
+      {
+        "who": "Alguien nuevo en clase",
+        "pain": "Una sala llena de desconocidos y una pregunta: ¿y tú qué estudias?",
+        "win": "Ve directo a lo bueno."
+      },
+      {
+        "who": "Tus roomies",
+        "pain": "Alguien se comió la tarta. Nadie dice ni pío.",
+        "win": "Deja claras las reglas de la casa antes de la próxima."
+      },
+      {
+        "who": "Tu equipo",
+        "pain": "Llevas años discutiendo esto.",
+        "win": "Las dos respuestas selladas. Sin vuelta atrás."
+      }
+    ]
+  }
+}
