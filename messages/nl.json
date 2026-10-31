@@ -448,10 +448,13 @@
   },
   "support": {
     "metaTitle": "Hulp | OnPini",
-    "metaDesc": "Hulp nodig met OnPini? Vind snel een antwoord of stuur ons een ticket.",
+    "metaDesc": "Hulp nodig met OnPini? Vertel wat er is. Een echt mens leest elk bericht.",
     "title": "Klopt er iets niet?",
-    "line": "Laat het weten. Elk ticket wordt door een echt mens gelezen.",
-    "category": "Waar gaat het over?",
+    "line": "Geen tickets. Geen bots. Kies wat er speelt en je mail gaat open, klaar om te versturen.",
+    "who": "Een echt mens leest ze allemaal.",
+    "hi": "Hoi OnPini, dit is er aan de hand:",
+    "dm": "Liever Instagram? DM ons.",
+    "noMail": "Gaat er niks open? Ons adres is",
     "categories": {
       "account": "Mijn account",
       "bug": "Iets werkt niet",
@@ -459,34 +462,7 @@
       "privacy": "Privacy of mijn data",
       "feedback": "Een idee",
       "other": "Iets anders"
-    },
-    "name": "Je naam (optioneel)",
-    "email": "Je e-mailadres",
-    "message": "Wat is er gebeurd?",
-    "messageHint": "Minimaal 10 tekens.",
-    "send": "Verstuur ticket",
-    "sending": "Versturen…",
-    "doneTitle": "Is binnen.",
-    "doneLine": "Je ticketnummer is",
-    "doneKeep": "Bewaar het om je ticket later te checken.",
-    "another": "Nog een sturen",
-    "errEmail": "Check je e-mailadres even.",
-    "errMessage": "Vertel ons iets meer: minimaal 10 tekens.",
-    "errLimit": "Dat zijn veel tickets in korte tijd. Probeer het straks nog eens.",
-    "errServer": "Dat lukte niet. Probeer het nog eens, of mail naar hello@onpini.app.",
-    "checkTitle": "Check een ticket",
-    "ticket": "Ticketnummer",
-    "check": "Check",
-    "checking": "Checken…",
-    "notFound": "We kunnen dat ticket niet vinden. Check het nummer en je e-mailadres.",
-    "statusLabel": "Status:",
-    "status": {
-      "open": "Open",
-      "pending": "We zijn ermee bezig",
-      "closed": "Gesloten"
-    },
-    "mailedTitle": "Bijna klaar.",
-    "mailedLine": "Je mailapp opent nu met je bericht. Gebeurt er niks? Mail ons op"
+    }
   },
   "cases": {
     "title": "Iedereen heeft wel iemand.",
@@ -561,7 +537,7 @@
     "title": "Ze hebben alles al gezien.",
     "accent": "Nu mogen ze tegen jou spelen.",
     "line": "Beantwoord één deck. Elke fan krijgt een één-op-één met jou en ontdekt waar die echt staat. Dat kunnen comments niet.",
-    "cta": "Claim je deck",
+    "cta": "DM ons STAR",
     "door": {
       "title": "Jouw naam op de deur.",
       "ask": "Van wie is dit deck?",
@@ -608,27 +584,6 @@
       "title": "Eén ster per niche.",
       "accent": "Per land.",
       "line": "We nemen één founding creator per niche, in elk land. Weg is weg. Founding stars krijgen de eerste decks en praten als eerste mee over wat we hierna bouwen: reveal-video's, live gaan, jouw dashboard.",
-      "countryAsk": "Waar zitten je fans?",
-      "countryPick": "Kies je land",
-      "countries": [
-        "Nederland",
-        "België",
-        "Duitsland",
-        "Oostenrijk",
-        "Zwitserland",
-        "Verenigd Koninkrijk",
-        "Ierland",
-        "Verenigde Staten",
-        "Spanje",
-        "Mexico",
-        "Marokko",
-        "Egypte",
-        "Saoedi-Arabië",
-        "Verenigde Arabische Emiraten",
-        "Ander land"
-      ],
-      "nicheAsk": "Wat is je niche?",
-      "open": "Vrij",
       "niches": [
         "Koppels",
         "Vrienden en comedy",
@@ -641,31 +596,22 @@
         "Dating",
         "Gaming"
       ],
-      "claimBoth": "Claim {niche}, {country}",
-      "first": "Iemand in jouw niche wordt de eerste. Zorg dat jij het bent.",
-      "taken": "Bezet"
+      "more": "Staat jouw niche er niet bij? DM ons toch.",
+      "first": "Iemand in jouw niche wordt de eerste. Zorg dat jij het bent."
     },
     "close": {
       "title": "Je ster staat klaar.",
-      "line": "Eén mail. Daarna nemen wij het over.",
+      "line": "Eén DM. Wij doen de rest.",
       "note": "Gratis voor jou en je fans. OnPini is voor mensen van 16 jaar en ouder."
     },
-    "form": {
-      "name": "Je naam of @handle",
-      "email": "Je e-mailadres",
-      "link": "Waar zitten je fans? (optioneel)",
-      "linkHint": "instagram.com/jouwnaam",
-      "sending": "Versturen…",
-      "note": "We gebruiken dit om je te mailen over je plek. Een plek is pas van jou als we die bevestigen.",
-      "doneTitle": "Je plek is aangevraagd.",
-      "doneLine": "We mailen naar {email} om je plek te bevestigen.",
-      "errCountry": "Kies eerst je land.",
-      "errNiche": "Kies je niche.",
-      "errName": "Vul je naam of handle in.",
-      "errEmail": "Check je e-mailadres even.",
-      "errTaken": "Iemand heeft die plek net geclaimd. Kies een andere niche.",
-      "errLimit": "Dat zijn veel pogingen. Probeer het straks nog eens.",
-      "errServer": "Dat lukte niet. Probeer het nog eens, of mail naar hello@onpini.app."
+    "dm": {
+      "title": "Geen formulier. Geen pitch.",
+      "accent": "Eén woord.",
+      "line": "Stuur STAR naar onze Instagram, met je naam, je niche en je land. Wij doen de rest.",
+      "sample": "{name}. Mijn niche. Mijn land.",
+      "me": "Mijn naam",
+      "mail": "Geen Instagram? Mail ons.",
+      "confirm": "Een plek is pas van jou als we die bevestigen."
     }
   }
 }

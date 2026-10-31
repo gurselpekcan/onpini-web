@@ -448,10 +448,13 @@
   },
   "support": {
     "metaTitle": "Support | OnPini",
-    "metaDesc": "Brauchst du Hilfe mit OnPini? Finde schnell eine Antwort oder schick uns ein Ticket.",
+    "metaDesc": "Brauchst du Hilfe mit OnPini? Sag uns, was los ist. Jede Nachricht liest ein echter Mensch.",
     "title": "Stimmt was nicht?",
-    "line": "Sag uns Bescheid. Jedes Ticket liest ein echter Mensch.",
-    "category": "Worum geht’s?",
+    "line": "Keine Tickets. Keine Bots. Wähl aus, worum es geht, und deine Mail öffnet sich, fertig zum Senden.",
+    "who": "Jede Nachricht liest ein echter Mensch.",
+    "hi": "Hi OnPini, es geht um Folgendes:",
+    "dm": "Lieber Instagram? DM uns.",
+    "noMail": "Nichts geht auf? Unsere Adresse:",
     "categories": {
       "account": "Mein Konto",
       "bug": "Etwas ist kaputt",
@@ -459,34 +462,7 @@
       "privacy": "Datenschutz & Daten",
       "feedback": "Eine Idee",
       "other": "Was anderes"
-    },
-    "name": "Dein Name (optional)",
-    "email": "Deine E-Mail",
-    "message": "Was ist passiert?",
-    "messageHint": "Mindestens 10 Zeichen.",
-    "send": "Ticket senden",
-    "sending": "Wird gesendet…",
-    "doneTitle": "Angekommen.",
-    "doneLine": "Deine Ticketnummer ist",
-    "doneKeep": "Heb sie auf, dann kannst du dein Ticket später prüfen.",
-    "another": "Noch eins senden",
-    "errEmail": "Bitte prüf deine E-Mail-Adresse.",
-    "errMessage": "Erzähl uns etwas mehr: mindestens 10 Zeichen.",
-    "errLimit": "Das sind ganz schön viele Tickets in kurzer Zeit. Versuch es später noch mal.",
-    "errServer": "Das hat nicht geklappt. Versuch es noch mal oder schreib an hello@onpini.app.",
-    "checkTitle": "Ticket prüfen",
-    "ticket": "Ticketnummer",
-    "check": "Prüfen",
-    "checking": "Wird geprüft…",
-    "notFound": "Dieses Ticket finden wir nicht. Prüf Nummer und E-Mail.",
-    "statusLabel": "Status:",
-    "status": {
-      "open": "Offen",
-      "pending": "Wir sind dran",
-      "closed": "Geschlossen"
-    },
-    "mailedTitle": "Fast geschafft.",
-    "mailedLine": "Deine Mail-App öffnet sich gleich mit deiner Nachricht. Passiert nichts? Schreib uns an"
+    }
   },
   "cases": {
     "title": "Alle haben jemanden.",
@@ -561,7 +537,7 @@
     "title": "Sie haben alles gesehen.",
     "accent": "Jetzt lass sie mitspielen.",
     "line": "Beantworte ein Deck. Jeder Fan bekommt ein Eins-zu-eins mit dir und sieht, wo er bei dir wirklich steht. Das kann kein Kommentar.",
-    "cta": "Hol dir dein Deck",
+    "cta": "DM uns STAR",
     "door": {
       "title": "Dein Name an der Tür.",
       "ask": "Wem gehört dieses Deck?",
@@ -608,27 +584,6 @@
       "title": "Ein Star pro Nische.",
       "accent": "Pro Land.",
       "line": "Wir nehmen einen Gründungs-Creator pro Nische, in jedem Land. Ist ein Platz weg, ist er weg. Gründungs-Stars bekommen die ersten Decks und reden als Erste mit bei dem, was wir als Nächstes bauen: Reveal-Videos, live gehen, dein Dashboard.",
-      "countryAsk": "Wo sind deine Fans?",
-      "countryPick": "Wähl dein Land",
-      "countries": [
-        "Niederlande",
-        "Belgien",
-        "Deutschland",
-        "Österreich",
-        "Schweiz",
-        "Vereinigtes Königreich",
-        "Irland",
-        "USA",
-        "Spanien",
-        "Mexiko",
-        "Marokko",
-        "Ägypten",
-        "Saudi-Arabien",
-        "Vereinigte Arabische Emirate",
-        "Anderes Land"
-      ],
-      "nicheAsk": "Was ist deine Nische?",
-      "open": "Frei",
       "niches": [
         "Paare",
         "Freunde und Comedy",
@@ -641,31 +596,22 @@
         "Dating",
         "Gaming"
       ],
-      "claimBoth": "{niche}, {country}: Platz sichern",
-      "first": "Irgendwer aus deiner Nische ist zuerst da. Warum nicht du?",
-      "taken": "Vergeben"
+      "more": "Deine Nische fehlt? Schreib uns trotzdem.",
+      "first": "Irgendwer aus deiner Nische ist zuerst da. Warum nicht du?"
     },
     "close": {
       "title": "Dein Stern wartet.",
-      "line": "Eine E-Mail. Den Rest machen wir.",
+      "line": "Eine DM. Den Rest machen wir.",
       "note": "Für dich und deine Fans kostenlos. OnPini ist für Menschen ab 16."
     },
-    "form": {
-      "name": "Dein Name oder @handle",
-      "email": "Deine E-Mail",
-      "link": "Wo sind deine Fans? (optional)",
-      "linkHint": "instagram.com/deinname",
-      "sending": "Wird gesendet…",
-      "note": "Damit wir uns wegen deines Platzes bei dir melden können. Er gehört dir, sobald wir ihn bestätigen.",
-      "doneTitle": "Deine Anfrage ist raus.",
-      "doneLine": "Zur Bestätigung schreiben wir dir an {email}.",
-      "errCountry": "Wähl zuerst dein Land.",
-      "errNiche": "Wähl deine Nische.",
-      "errName": "Sag uns deinen Namen oder dein Handle.",
-      "errEmail": "Bitte prüf deine E-Mail-Adresse.",
-      "errTaken": "Den Platz hat sich gerade jemand geschnappt. Wähl eine andere Nische.",
-      "errLimit": "Das waren ganz schön viele Versuche. Probier es später noch mal.",
-      "errServer": "Das hat nicht geklappt. Versuch es noch mal oder schreib an hello@onpini.app."
+    "dm": {
+      "title": "Kein Formular. Kein Pitch.",
+      "accent": "Ein Wort.",
+      "line": "Schick uns STAR auf Instagram, mit deinem Namen, deiner Nische und deinem Land. Den Rest machen wir.",
+      "sample": "{name}. Meine Nische. Mein Land.",
+      "me": "Mein Name",
+      "mail": "Kein Instagram? Schreib uns eine Mail.",
+      "confirm": "Ein Platz gehört dir, sobald wir ihn bestätigen."
     }
   }
 }

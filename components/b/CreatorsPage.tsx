@@ -1,13 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { motion } from "motion/react";
 import { useI18n } from "@/lib/i18n";
-import { Arrow, Pop } from "./Bits";
+import { Pop } from "./Bits";
 import Shell, { Footer } from "./Chrome";
-import { goldBurst } from "./burst";
 import Emoji from "./Emoji";
-import { haptic } from "./haptic";
 
 const SPRING = { type: "spring", stiffness: 240, damping: 24 } as const;
 const rise = { initial: { opacity: 0, y: 32 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: 0.25 }, transition: SPRING } as const;
@@ -19,14 +17,18 @@ const Star = ({ className = "", on = true }: { className?: string; on?: boolean 
   </svg>
 );
 
-const NICHES = ["couples", "friends", "podcasts", "students", "sports", "family", "reality", "film", "dating", "gaming"];
-const COUNTRIES = ["NL", "BE", "DE", "AT", "CH", "GB", "IE", "US", "ES", "MX", "MA", "EG", "SA", "AE", "OTHER"];
-const EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-const FIELD = "w-full min-h-[60px] rounded-2xl bg-white text-[#111] px-4 text-[1.1rem] font-bold outline-none shadow-[inset_0_0_0_2px_#fde047] placeholder:text-[#737373] placeholder:font-semibold";
+// No forms and nothing to run: creators apply where they already live, in the DMs.
+const INSTAGRAM_DM = "https://ig.me/m/onpini.app";
+const MAIL = "mailto:hello@onpini.app?subject=STAR";
 
-const scrollToClaim = (e: React.MouseEvent) => {
-  e.preventDefault();
-  document.getElementById("claim")?.scrollIntoView({ behavior: "smooth", block: "start" });
+const InstagramGlyph = () => (
+  <svg viewBox="0 0 24 24" aria-hidden="true" className="w-6 h-6 shrink-0" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg>
+);
+
+/** Every button on this page does the same one thing. */
+const DmButton = ({ className }: { className: string }) => {
+  const { t } = useI18n();
+  return <a href={INSTAGRAM_DM} target="_blank" rel="noopener noreferrer" className={`inline-flex items-center gap-2.5 rounded-full font-bold ${className}`}><InstagramGlyph /> {t("creators.cta")}</a>;
 };
 
 function Hero() {
@@ -40,7 +42,7 @@ function Hero() {
         <h1 className="b-h b-rise text-[clamp(3.3rem,12.4vw,9rem)] leading-[.93]">{t("creators.title")}<span className="block text-[#fde047]">{t("creators.accent")}</span></h1>
         <p className="b-rise text-[1.2rem] sm:text-2xl leading-snug mt-6 max-w-2xl" style={{ animationDelay: ".12s" }}>{t("creators.line")}</p>
         <div className="b-rise flex flex-wrap items-center gap-x-6 gap-y-2 mt-7" style={{ animationDelay: ".22s" }}>
-          <a href="#claim" onClick={scrollToClaim} className="inline-flex items-center gap-2 min-h-[64px] rounded-full bg-[#fde047] text-[#111] font-bold text-[1.1rem] px-8">{t("creators.cta")} <Arrow /></a>
+          <DmButton className="min-h-[64px] bg-[#fde047] text-[#111] text-[1.1rem] px-8" />
         </div>
       </div>
     </section>
@@ -65,7 +67,7 @@ function Door({ name, setName }: { name: string; setName: (v: string) => void })
             <Star className="w-16 h-16 sm:w-20 sm:h-20 mx-auto" />
             <p className="b-tag text-[#fde047] mt-4">{t("creators.door.reserved")}</p>
             <p dir="auto" className="b-h text-[clamp(2.4rem,10vw,4.2rem)] leading-[1.02] mt-2 break-words">{who ? t("creators.door.deck", { name: who }) : t("creators.door.yours")}</p>
-            <a href="#claim" onClick={scrollToClaim} className="inline-flex items-center gap-2 min-h-[58px] rounded-full bg-[#fde047] text-[#111] font-bold px-7 mt-6">{t("creators.cta")} <Arrow /></a>
+            <DmButton className="min-h-[58px] bg-[#fde047] text-[#111] px-7 mt-6" />
           </div>
         </motion.div>
       </div>
@@ -124,122 +126,45 @@ function Numbers() {
             </motion.li>
           ))}
         </ul>
-        <a href="#claim" onClick={scrollToClaim} className="inline-flex items-center gap-2 min-h-[64px] rounded-full bg-[#111] text-white font-bold text-[1.1rem] px-8 mt-10 mx-1">{t("creators.cta")} <Arrow /></a>
+        <DmButton className="min-h-[64px] bg-[#111] text-white text-[1.1rem] px-8 mt-10 mx-1" />
       </div>
     </section>
   );
 }
 
-/** The real claim: it lands in the staff queue, and only staff confirming it takes the spot. */
-function Claim({ name, setName }: { name: string; setName: (v: string) => void }) {
-  const { t, raw, lang } = useI18n();
-  const [niche, setNiche] = useState("");
-  const [country, setCountry] = useState("");
-  const [email, setEmail] = useState("");
-  const [link, setLink] = useState("");
-  const [website, setWebsite] = useState(""); // Hidden: only a bot fills it in.
-  const [taken, setTaken] = useState<string[]>([]);
-  const [busy, setBusy] = useState(false);
-  const [error, setError] = useState("");
-  const [reference, setReference] = useState("");
-  const nicheNames = raw<string[]>("creators.wall.niches");
-  const countryNames = raw<string[]>("creators.wall.countries");
-  const isTaken = (id: string) => taken.includes(`${id}:${country}`);
-
-  useEffect(() => {
-    fetch("/api/creators/spots").then((r) => (r.ok ? r.json() : null)).then((d) => {
-      if (d?.taken) setTaken(d.taken.map((s: { niche: string; country: string }) => `${s.niche}:${s.country}`));
-    }).catch(() => {});
-  }, []);
-  useEffect(() => {
-    if (niche && taken.includes(`${niche}:${country}`)) setNiche("");
-  }, [country, niche, taken]);
-
-  // The form collapses into the confirmation: bring that into view, or they'd be left far below it.
-  useEffect(() => {
-    if (reference) document.getElementById("claim-done")?.scrollIntoView({ block: "center" });
-  }, [reference]);
-
-  const nicheName = nicheNames[NICHES.indexOf(niche)] ?? "";
-  const countryName = countryNames[COUNTRIES.indexOf(country)] ?? "";
-  const label = niche && country ? t("creators.wall.claimBoth", { niche: nicheName, country: countryName }) : t("creators.cta");
-
-  const send = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (busy) return;
-    if (!country) return setError(t("creators.form.errCountry"));
-    if (!niche) return setError(t("creators.form.errNiche"));
-    if (!name.trim()) return setError(t("creators.form.errName"));
-    if (!EMAIL.test(email.trim())) return setError(t("creators.form.errEmail"));
-    setBusy(true);
-    setError("");
-    try {
-      const res = await fetch("/api/creators/claim", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name: name.trim(), email: email.trim(), niche, country, language: lang, link: link.trim() || undefined, website: website || undefined }) });
-      if (res.status === 409) {
-        setTaken((list) => [...list, `${niche}:${country}`]);
-        return setError(t("creators.form.errTaken"));
-      }
-      if (res.status === 429) return setError(t("creators.form.errLimit"));
-      if (!res.ok) return setError(t("creators.form.errServer"));
-      setReference((await res.json()).reference);
-      haptic(20);
-      goldBurst(0.5, 0.45);
-    } catch {
-      setError(t("creators.form.errServer"));
-    } finally {
-      setBusy(false);
-    }
-  };
-
+/** One star per niche, and the whole application is one word in their DMs. */
+function OneWord({ name }: { name: string }) {
+  const { t, raw } = useI18n();
+  const who = name.trim() || t("creators.dm.me");
   return (
-    <section id="claim" className="relative bg-[#0a0a0a] text-white px-5 sm:px-10 py-16 sm:py-28 overflow-hidden scroll-mt-16">
+    <section id="star" className="relative bg-[#0a0a0a] text-white px-5 sm:px-10 py-16 sm:py-28 overflow-hidden scroll-mt-16">
       <span aria-hidden="true" className="b-beam b-beam-a" />
       <div className="relative max-w-6xl mx-auto">
         <h2 className="b-h text-[clamp(3rem,11vw,7.4rem)] leading-[.94]"><Pop text={t("creators.wall.title")} /><Pop text={t("creators.wall.accent")} className="text-[#fde047]" /></h2>
         <motion.p {...rise} className="text-[1.2rem] sm:text-2xl font-medium leading-snug mt-5 max-w-3xl">{t("creators.wall.line")}</motion.p>
-        {reference ? (
-          <motion.div initial={{ opacity: 0, scale: 0.94, y: 18 }} animate={{ opacity: 1, scale: 1, y: 0 }} transition={SPRING} id="claim-done" aria-live="polite" className="b-bulbs mt-9 max-w-2xl">
-            <div className="rounded-[18px] bg-[#171717] p-6 sm:p-9 text-center">
-              <Star className="w-16 h-16 mx-auto" />
-              <p className="b-h text-[clamp(2.4rem,9vw,3.8rem)] leading-[1] mt-3">{t("creators.form.doneTitle")}</p>
-              <p className="b-h text-[#fde047] text-[clamp(1.4rem,5vw,2rem)] leading-[1.1] mt-2">{nicheName}, {countryName}</p>
-              <p className="text-[1.1rem] leading-snug mt-4">{t("creators.form.doneLine", { email: email.trim() })}</p>
-              <p className="text-sm text-white/70 mt-3" dir="ltr">{reference}</p>
+        <ul className="flex flex-wrap gap-2 mt-8">
+          {raw<string[]>("creators.wall.niches").map((n) => <li key={n} className="rounded-full bg-white/[.09] font-bold px-4 py-2.5 flex items-center gap-2"><Star className="w-4 h-4" /> {n}</li>)}
+        </ul>
+        <p className="font-medium text-white/80 mt-4">{t("creators.wall.more")}</p>
+
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mt-14 sm:mt-24">
+          <div>
+            <h3 className="b-h text-[clamp(2.8rem,10vw,6rem)] leading-[.96]"><Pop text={t("creators.dm.title")} /><Pop text={t("creators.dm.accent")} className="text-[#fde047]" /></h3>
+            <motion.p {...rise} className="text-[1.2rem] sm:text-2xl font-medium leading-snug mt-5">{t("creators.dm.line")}</motion.p>
+          </div>
+          <motion.div {...rise} className="b-bulbs">
+            <div className="rounded-[18px] bg-[#171717] p-5 sm:p-8 flex flex-col items-end gap-2" aria-hidden="true">
+              <motion.p initial={{ opacity: 0, scale: 0.6, y: 14 }} whileInView={{ opacity: 1, scale: 1, y: 0 }} viewport={{ once: true }} transition={SPRING} className="rounded-[22px] rounded-ee-md bg-[#fde047] text-[#111] b-h text-[clamp(2.6rem,10vw,3.8rem)] leading-none px-6 py-4 origin-bottom-right rtl:origin-bottom-left" dir="ltr">STAR</motion.p>
+              <motion.p initial={{ opacity: 0, scale: 0.6, y: 14 }} whileInView={{ opacity: 1, scale: 1, y: 0 }} viewport={{ once: true }} transition={{ ...SPRING, delay: 0.25 }} className="rounded-[22px] rounded-ee-md bg-white text-[#111] font-bold text-[1.1rem] leading-snug px-5 py-3 max-w-full break-words origin-bottom-right rtl:origin-bottom-left">{t("creators.dm.sample", { name: who })}</motion.p>
             </div>
           </motion.div>
-        ) : (
-          <form onSubmit={send} noValidate className="mt-9">
-            <label className="block font-bold mb-2" htmlFor="spot-country">{t("creators.wall.countryAsk")}</label>
-            <select id="spot-country" value={country} onChange={(e) => setCountry(e.target.value)} className={`${FIELD} sm:max-w-sm`}>
-              <option value="">{t("creators.wall.countryPick")}</option>
-              {COUNTRIES.map((c, i) => <option key={c} value={c}>{countryNames[i]}</option>)}
-            </select>
-            <p className="font-bold mt-7 mb-2">{t("creators.wall.nicheAsk")}</p>
-            <ul className="grid grid-cols-2 lg:grid-cols-5 gap-1.5 sm:gap-2.5">
-              {NICHES.map((id, i) => {
-                const on = id === niche;
-                const gone = isTaken(id);
-                return (
-                  <li key={id}>
-                    <button type="button" disabled={gone} aria-pressed={on} onClick={() => setNiche(on ? "" : id)} className={`w-full h-full min-h-[104px] rounded-2xl p-3 flex flex-col justify-between gap-2 text-start transition-colors ${on ? "bg-[#fde047] text-[#111]" : gone ? "bg-white/[.03] text-white/40" : "bg-white/[.07] text-white"}`}>
-                      <span className="flex items-center justify-between gap-1"><svg viewBox="0 0 24 24" aria-hidden="true" className="w-7 h-7"><path d={STAR} fill={on ? "#111" : gone ? "rgb(255 255 255 / .4)" : "none"} stroke={on ? "#111" : gone ? "rgb(255 255 255 / .4)" : "#fde047"} strokeWidth="1.3" strokeLinejoin="round" /></svg><span className={`text-xs font-bold ${on || gone ? "" : "text-[#fde047]"}`}>{gone ? t("creators.wall.taken") : t("creators.wall.open")}</span></span>
-                      <span className="b-h text-[1.3rem] sm:text-[1.45rem] leading-[1.05]">{nicheNames[i]}</span>
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
-            <div className="grid sm:grid-cols-2 gap-3 mt-7">
-              <label className="grid gap-2 font-bold">{t("creators.form.name")}<input value={name} onChange={(e) => setName(e.target.value)} maxLength={120} dir="auto" autoComplete="name" className={FIELD} /></label>
-              <label className="grid gap-2 font-bold">{t("creators.form.email")}<input type="email" inputMode="email" autoComplete="email" dir="ltr" value={email} onChange={(e) => setEmail(e.target.value)} className={`${FIELD} text-start`} /></label>
-              <label className="grid gap-2 font-bold sm:col-span-2">{t("creators.form.link")}<input value={link} onChange={(e) => setLink(e.target.value)} maxLength={300} dir="ltr" inputMode="url" placeholder={t("creators.form.linkHint")} className={`${FIELD} text-start`} /></label>
-            </div>
-            <label className="absolute w-px h-px overflow-hidden opacity-0" aria-hidden="true" tabIndex={-1}>Website<input type="text" tabIndex={-1} autoComplete="off" value={website} onChange={(e) => setWebsite(e.target.value)} /></label>
-            {error && <p role="alert" className="rounded-2xl bg-[#fee2e2] text-[#111] px-4 py-3 font-semibold mt-5">{error}</p>}
-            <motion.button type="submit" disabled={busy} whileTap={{ scale: 0.97 }} className="inline-flex items-center justify-center gap-2 w-full sm:w-auto min-h-[68px] rounded-full bg-[#fde047] text-[#111] font-bold text-[1.1rem] px-8 mt-6 disabled:opacity-60">{busy ? t("creators.form.sending") : label} {!busy && <Arrow />}</motion.button>
-            <p className="text-sm text-white/70 mt-3 max-w-xl">{t("creators.form.note")} <a href={`https://web.onpini.com/privacy?lang=${lang}`} className="underline underline-offset-2">{t("footer.privacy")}</a></p>
-          </form>
-        )}
+        </div>
+
+        <div className="flex flex-wrap items-center gap-x-6 gap-y-3 mt-10">
+          <DmButton className="min-h-[68px] bg-[#fde047] text-[#111] text-[1.1rem] px-8" />
+          <a href={MAIL} className="inline-flex items-center min-h-11 font-semibold underline underline-offset-4">{t("creators.dm.mail")}</a>
+        </div>
+        <p className="text-sm text-white/70 mt-4">{t("creators.dm.confirm")}</p>
         <motion.p {...rise} className="b-h text-[clamp(2rem,6vw,3.6rem)] leading-[1.03] mt-10 text-[#fb923c]">{t("creators.wall.first")}</motion.p>
       </div>
     </section>
@@ -252,7 +177,7 @@ function Close() {
     <section className="bg-[#f97316] text-[#111] px-5 sm:px-10 py-16 sm:py-28 text-center">
       <h2 className="b-h text-[clamp(3.4rem,14vw,10rem)] leading-[.92] max-w-5xl mx-auto"><Pop text={t("creators.close.title")} /></h2>
       <p className="text-xl sm:text-3xl font-medium mt-3">{t("creators.close.line")}</p>
-      <a href="#claim" onClick={scrollToClaim} className="inline-flex items-center gap-2 min-h-[72px] rounded-full bg-[#111] text-white font-bold text-[1.2rem] px-9 mt-7">{t("creators.cta")} <Arrow /></a>
+      <DmButton className="min-h-[72px] bg-[#111] text-white text-[1.2rem] px-9 mt-7" />
       <p className="text-sm font-medium mt-6">{t("creators.close.note")}</p>
     </section>
   );
@@ -267,7 +192,7 @@ export default function CreatorsPage() {
         <Door name={name} setName={setName} />
         <Effort />
         <Numbers />
-        <Claim name={name} setName={setName} />
+        <OneWord name={name} />
         <Close />
       </main>
       <Footer />
