@@ -8,7 +8,6 @@
     "story": "Our story",
     "join": "Join",
     "signin": "Sign in",
-    "investors": "Investors",
     "home": "Home",
     "support": "Support",
     "language": "Language",
@@ -321,8 +320,7 @@
       "tag": "For investors",
       "title": "The door’s open.",
       "line": "We’re building the social game for people who actually know each other. Early enough to matter. Real enough to play tonight.",
-      "cta": "Ask for the deck",
-      "more": "See the investor page"
+      "cta": "Ask for the deck"
     },
     "credit": "Animated emoji: Noto Emoji Animation by Google, CC BY 4.0."
   },
@@ -500,17 +498,6 @@
       "heading": "your crush",
       "to": "your crush"
     }
-  },
-  "investors": {
-    "metaTitle": "Investors | OnPini",
-    "tag": "For investors",
-    "one": "Every social network is built on audiences.",
-    "two": "Ours is built on pairs.",
-    "line": "People are tired of performing for everyone. They still want to be known by someone. OnPini is where you get to know your people, by playing.",
-    "who": "University grads from the Netherlands and Germany. GPM Holding B.V., The Hague.",
-    "cta": "Ask for the deck",
-    "playFirst": "Play it first",
-    "close": "Early enough to matter. Real enough to play tonight."
   },
   "support": {
     "metaTitle": "Support | OnPini",

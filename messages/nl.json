@@ -8,7 +8,6 @@
     "story": "Ons verhaal",
     "join": "Doe mee",
     "signin": "Inloggen",
-    "investors": "Investeerders",
     "home": "Home",
     "support": "Hulp",
     "language": "Taal",
@@ -321,8 +320,7 @@
       "tag": "Voor investeerders",
       "title": "De deur staat open.",
       "line": "We bouwen de sociale game voor mensen die elkaar echt kennen. Vroeg genoeg om het verschil te maken. Echt genoeg om vanavond te spelen.",
-      "cta": "Vraag het deck aan",
-      "more": "Naar de investeerderspagina"
+      "cta": "Vraag het deck aan"
     },
     "credit": "Geanimeerde emoji: Noto Emoji Animation van Google, CC BY 4.0."
   },
@@ -500,17 +498,6 @@
       "heading": "je crush",
       "to": "je crush"
     }
-  },
-  "investors": {
-    "metaTitle": "Investeerders | OnPini",
-    "tag": "Voor investeerders",
-    "one": "Elk sociaal netwerk draait om publiek.",
-    "two": "Het onze draait om duo’s.",
-    "line": "Mensen zijn het zat om voor iedereen op te treden. Ze willen nog steeds dat iemand ze kent. Op OnPini leer je je mensen kennen, door te spelen.",
-    "who": "Universitair afgestudeerden uit Nederland en Duitsland. GPM Holding B.V., Den Haag.",
-    "cta": "Vraag het deck aan",
-    "playFirst": "Speel het eerst",
-    "close": "Vroeg genoeg om het verschil te maken. Echt genoeg om vanavond te spelen."
   },
   "support": {
     "metaTitle": "Hulp | OnPini",

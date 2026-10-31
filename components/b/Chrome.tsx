@@ -98,7 +98,6 @@ function MenuSheet({ onClose }: { onClose: () => void }) {
       <div className="flex flex-wrap justify-center items-center gap-x-5 mt-2 text-sm font-semibold">
         <LangSelect />
         <a href={appLink("login", lang, "b_menu")} className="min-h-11 inline-flex items-center">{t("nav.signin")}</a>
-        <Link href={href("/investors")} onClick={onClose} className="min-h-11 inline-flex items-center">{t("nav.investors")}</Link>
       </div>
     </motion.div>
   );
@@ -224,7 +223,7 @@ export function Footer() {
   const { t, href, lang } = useI18n();
   const [faq, setFaq] = useState(false);
   const closeFaq = useCallback(() => setFaq(false), []);
-  const pages = [["", "nav.home"], ["/decks", "nav.decks"], ["/questions", "nav.questions"], ["/how-it-works", "nav.how"], ["/story", "nav.story"], ["/investors", "nav.investors"]];
+  const pages = [["", "nav.home"], ["/decks", "nav.decks"], ["/questions", "nav.questions"], ["/how-it-works", "nav.how"], ["/story", "nav.story"]];
   return (
     <footer id="footer" className="relative z-10 bg-[#111] text-[#fef3c7]">
       <div className="max-w-6xl mx-auto px-5 sm:px-10 pt-12 pb-8 grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-9">

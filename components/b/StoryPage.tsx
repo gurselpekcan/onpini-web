@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "motion/react";
 import { useI18n } from "@/lib/i18n";
 import { Arrow, JoinBand, Pop } from "./Bits";
@@ -89,7 +88,7 @@ function Inside() {
 }
 
 function Investors() {
-  const { t, href } = useI18n();
+  const { t } = useI18n();
   return (
     <section className="relative z-10 bg-[#111] text-white px-5 sm:px-10 py-12 sm:py-20">
       <div className="max-w-5xl mx-auto">
@@ -98,7 +97,6 @@ function Investors() {
         <motion.p {...rise} className="text-[1.15rem] sm:text-2xl leading-snug mt-4 max-w-3xl">{t("story.invest.line")}</motion.p>
         <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mt-6">
           <a href="mailto:hello@onpini.app?subject=Investing%20in%20OnPini" className="inline-flex items-center gap-2 min-h-[60px] rounded-full bg-[#fde047] text-[#111] font-bold px-7">{t("story.invest.cta")} <Arrow /></a>
-          <Link href={href("/investors")} className="inline-flex items-center min-h-11 font-semibold underline underline-offset-4">{t("story.invest.more")}</Link>
         </div>
       </div>
     </section>

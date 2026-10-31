@@ -8,7 +8,6 @@
     "story": "Nuestra historia",
     "join": "Únete",
     "signin": "Entrar",
-    "investors": "Inversores",
     "home": "Inicio",
     "support": "Soporte",
     "language": "Idioma",
@@ -321,8 +320,7 @@
       "tag": "Para inversores",
       "title": "La puerta está abierta.",
       "line": "Estamos creando el juego social para gente que se conoce de verdad. Lo bastante pronto para marcar la diferencia. Lo bastante real para jugar esta noche.",
-      "cta": "Pide el pitch deck",
-      "more": "Ver la página de inversores"
+      "cta": "Pide el pitch deck"
     },
     "credit": "Emojis animados: Noto Emoji Animation de Google, CC BY 4.0."
   },
@@ -500,17 +498,6 @@
       "heading": "a tu crush",
       "to": "a tu crush"
     }
-  },
-  "investors": {
-    "metaTitle": "Inversores | OnPini",
-    "tag": "Para inversores",
-    "one": "Todas las redes sociales se construyen sobre audiencias.",
-    "two": "La nuestra, sobre dúos.",
-    "line": "La gente está cansada de actuar para todo el mundo. Aún quiere que alguien la conozca. OnPini es donde llegas a conocer a tu gente, jugando.",
-    "who": "Graduados universitarios de Países Bajos y Alemania. GPM Holding B.V., La Haya.",
-    "cta": "Pide el pitch deck",
-    "playFirst": "Juega primero",
-    "close": "Lo bastante pronto para marcar la diferencia. Lo bastante real para jugar esta noche."
   },
   "support": {
     "metaTitle": "Soporte | OnPini",

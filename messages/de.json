@@ -8,7 +8,6 @@
     "story": "Über uns",
     "join": "Mitmachen",
     "signin": "Anmelden",
-    "investors": "Investoren",
     "home": "Start",
     "support": "Support",
     "language": "Sprache",
@@ -321,8 +320,7 @@
       "tag": "Für Investoren",
       "title": "Die Tür ist offen.",
       "line": "Wir bauen das Social Game für Menschen, die sich wirklich kennen. Früh genug, um etwas zu bewegen. Echt genug, um es heute Abend zu spielen.",
-      "cta": "Pitch-Deck anfragen",
-      "more": "Zur Investorenseite"
+      "cta": "Pitch-Deck anfragen"
     },
     "credit": "Animierte Emojis: Noto Emoji Animation von Google, CC BY 4.0."
   },
@@ -500,17 +498,6 @@
       "heading": "deinen Crush",
       "to": "deinen Crush"
     }
-  },
-  "investors": {
-    "metaTitle": "Investoren | OnPini",
-    "tag": "Für Investoren",
-    "one": "Jedes soziale Netzwerk baut auf Publikum.",
-    "two": "Unseres baut auf Duos.",
-    "line": "Die Leute sind es leid, für alle zu performen. Aber sie wollen, dass jemand sie kennt. Bei OnPini lernst du deine Leute kennen, beim Spielen.",
-    "who": "Uni-Absolventen aus den Niederlanden und Deutschland. GPM Holding B.V., Den Haag.",
-    "cta": "Pitch-Deck anfragen",
-    "playFirst": "Erst mal spielen",
-    "close": "Früh genug, um etwas zu bewegen. Echt genug, um es heute Abend zu spielen."
   },
   "support": {
     "metaTitle": "Support | OnPini",
