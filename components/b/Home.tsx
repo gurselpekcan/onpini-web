@@ -255,29 +255,87 @@ function Wipe() {
   );
 }
 
-const CASE_COLORS = ["#fb923c", "#7dd3fc", "#fda4af", "#f9a8d4", "#fde047", "#c4b5fd", "#86efac", "#fde047", "#c4b5fd", "#7dd3fc", "#86efac", "#fb923c"];
+// One person at a time, in their own colour. Every slide stays in the page and links to its own questions or decks.
+const CASES: { color: string; emoji: string; to: string; label: string }[] = [
+  { color: "#fb923c", emoji: "1f979", to: "/questions/mom", label: "qp.mom.link" },
+  { color: "#7dd3fc", emoji: "1f914", to: "/questions/dad", label: "qp.dad.link" },
+  { color: "#fda4af", emoji: "1f60d", to: "/questions/partner", label: "qp.partner.link" },
+  { color: "#f9a8d4", emoji: "1f633", to: "/questions/crush", label: "qp.crush.link" },
+  { color: "#fde047", emoji: "2728", to: "/decks/love", label: "genres.love.eyebrow" },
+  { color: "#c4b5fd", emoji: "1faf6", to: "/decks/love", label: "genres.love.eyebrow" },
+  { color: "#86efac", emoji: "1f602", to: "/questions/best-friend", label: "qp.best-friend.link" },
+  { color: "#fde047", emoji: "1f92f", to: "/questions/group-chat", label: "qp.group-chat.link" },
+  { color: "#c4b5fd", emoji: "1f644", to: "/questions/sibling", label: "qp.sibling.link" },
+  { color: "#7dd3fc", emoji: "1f440", to: "/questions/classmates", label: "qp.classmates.link" },
+  { color: "#86efac", emoji: "1f60f", to: "/decks/friends", label: "genres.friends.eyebrow" },
+  { color: "#fb923c", emoji: "1f525", to: "/decks/sports", label: "genres.sports.eyebrow" },
+];
 
-/** Real situations, each with a real card from the decks. Written as use cases, not as quotes from people. */
 function UseCases({ cards }: { cards: string[] }) {
-  const { t, raw } = useI18n();
+  const { t, raw, href } = useI18n();
+  const items = raw<{ who: string; pain: string; win: string }[]>("cases.items");
+  const [on, setOn] = useState(0);
+  const deck = useRef<HTMLUListElement>(null);
+  const chips = useRef<HTMLDivElement>(null);
+  const go = (i: number) => {
+    const list = deck.current;
+    const slide = list?.children[i] as HTMLElement | undefined;
+    if (!list || !slide) return;
+    haptic();
+    const calm = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    list.scrollTo({ left: slide.offsetLeft, behavior: calm ? "auto" : "smooth" });
+  };
+  useEffect(() => {
+    const list = deck.current;
+    if (!list) return;
+    const seen = new IntersectionObserver((entries) => {
+      entries.forEach((e) => { if (e.isIntersecting) setOn(Number((e.target as HTMLElement).dataset.i)); });
+    }, { root: list, rootMargin: "0px -50% 0px -50%" });
+    Array.from(list.children).forEach((c) => seen.observe(c));
+    return () => seen.disconnect();
+  }, []);
+  useEffect(() => {
+    const row = chips.current;
+    const chip = row?.children[on] as HTMLElement | undefined;
+    if (row && chip) row.scrollTo({ left: chip.offsetLeft - (row.clientWidth - chip.offsetWidth) / 2, behavior: "smooth" });
+  }, [on]);
   return (
-    <section className="relative z-10 bg-[#fff7df] py-14 sm:py-24">
-      <h2 className="b-h text-[clamp(3rem,13vw,6.4rem)] leading-[.96] px-5 sm:px-10 max-w-6xl mx-auto"><Pop text={t("cases.title")} /><Pop text={t("cases.accent")} className="text-[#ea580c]" /></h2>
-      <ul className="b-snap mt-7 sm:mt-10" tabIndex={0}>
-        {raw<{ who: string; pain: string; win: string }[]>("cases.items").map((c, i) => (
-          <li key={c.who} style={{ background: CASE_COLORS[i % CASE_COLORS.length] }} className="snap-center shrink-0 w-[84vw] max-w-[23rem] rounded-[28px] p-5 flex flex-col">
-            <p className="b-tag">{c.who}</p>
-            <p className="b-h text-[clamp(1.75rem,7.4vw,2.2rem)] leading-[1.05] mt-2 mb-4">{c.pain}</p>
-            <div className="mt-auto rounded-[20px] bg-white p-4">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/icon.svg" alt="" width={28} height={28} loading="lazy" className="w-7 h-7 mb-2" />
-              <p className="font-bold text-[1.05rem] leading-snug">{cards[i]}</p>
+    <motion.section animate={{ backgroundColor: CASES[on].color }} initial={false} transition={{ duration: 0.35 }} className="relative z-10 pt-14 sm:pt-24 pb-8 sm:pb-14 overflow-hidden">
+      <h2 className="b-h text-[clamp(1.9rem,8vw,3.6rem)] leading-[1] px-5 sm:px-10 max-w-6xl mx-auto">{t("cases.title")} {t("cases.accent")}</h2>
+      <div ref={chips} className="b-snap b-snap-tight relative !gap-1.5 !px-5 sm:!px-10 mt-5 lg:!justify-start max-w-6xl mx-auto" role="group" aria-label={t("cases.accent")}>
+        {items.map((c, i) => (
+          <button key={c.who} type="button" onClick={() => go(i)} aria-pressed={i === on} className={`shrink-0 min-h-[44px] rounded-full px-4 font-bold text-[15px] whitespace-nowrap transition-colors ${i === on ? "bg-[#111] text-white" : "bg-white/70 text-[#111]"}`}>{c.who}</button>
+        ))}
+      </div>
+      <ul ref={deck} tabIndex={0} className="b-cases relative mt-4 sm:mt-8">
+        {items.map((c, i) => (
+          <li key={c.who} data-i={i} className="b-case">
+            <div className="max-w-6xl mx-auto px-5 sm:px-10 grid lg:grid-cols-[1.35fr_1fr] gap-5 lg:gap-14 items-center h-full">
+              <div className="relative">
+                <Emoji code={CASES[i].emoji} size={84} className="block mb-2 lg:mb-4" />
+                <p className="b-h text-[clamp(2.7rem,11.5vw,5.8rem)] leading-[.98]">{c.pain}</p>
+              </div>
+              <div>
+                <div className={`rounded-[26px] bg-white p-5 sm:p-7 shadow-[0_18px_44px_rgba(0,0,0,.16)] ${i % 2 ? "rotate-[1.5deg]" : "rotate-[-1.5deg]"}`}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/icon.svg" alt="" width={36} height={36} loading="lazy" className="w-9 h-9 mb-3" />
+                  <p className="b-h text-[clamp(1.5rem,6vw,2.1rem)] leading-[1.08]">{cards[i]}</p>
+                </div>
+                <p className="b-h text-[clamp(1.5rem,6.2vw,2.2rem)] leading-[1.05] mt-5">{c.win}</p>
+                <Link href={href(CASES[i].to)} className="inline-flex items-center gap-2 min-h-[52px] mt-3 rounded-full bg-[#111] text-white font-bold px-5 py-2 leading-tight">{t(CASES[i].label)} <Arrow /></Link>
+              </div>
             </div>
-            <p className="font-bold text-[1.08rem] leading-snug mt-3">{c.win}</p>
           </li>
         ))}
       </ul>
-    </section>
+      <div className="flex items-center justify-center gap-3 px-4 mt-3 sm:mt-6">
+        <button type="button" onClick={() => go(Math.max(on - 1, 0))} disabled={on === 0} aria-label={t("questions.prev")} className="w-12 h-12 rounded-full bg-[#111] text-white text-xl disabled:opacity-25"><span aria-hidden="true" className="inline-block rtl:rotate-180">←</span></button>
+        <div className="flex-1 max-w-[16rem] h-2 rounded-full bg-[#111]/15 overflow-hidden" aria-hidden="true">
+          <motion.div className="h-full rounded-full bg-[#111]" initial={false} animate={{ width: `${((on + 1) / items.length) * 100}%` }} transition={{ duration: 0.25 }} />
+        </div>
+        <button type="button" onClick={() => go(Math.min(on + 1, items.length - 1))} disabled={on === items.length - 1} aria-label={t("questions.next")} className="w-12 h-12 rounded-full bg-[#111] text-white text-xl disabled:opacity-25"><span aria-hidden="true" className="inline-block rtl:rotate-180">→</span></button>
+      </div>
+    </motion.section>
   );
 }
 

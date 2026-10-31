@@ -127,3 +127,8 @@ html.lenis, html.lenis body { height: auto; }
 .b-qcard[data-on="true"] { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .b-qcard { transition: none; } }
 @media (max-width: 340px) { .b-nav-play { padding: 0 .8rem; } }
+
+/* Use cases on the home page: one person fills the screen. */
+.b-cases { display: flex; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+.b-cases::-webkit-scrollbar { display: none; }
+.b-case { flex: none; width: 100%; scroll-snap-align: center; scroll-snap-stop: always; }
