@@ -51,11 +51,12 @@ export default function Pit({ items, phoneCount = 9, startInView = false, classN
         const w = piece.offsetWidth;
         const h = piece.offsetHeight;
         const x = w / 2 + Math.random() * Math.max(1, W - w);
-        const y = -90 - i * 92;
+        const y = -60 - i * 58;
         const round = piece.dataset.round === "1";
         const body = round
           ? Bodies.circle(x, y, w / 2, { restitution: 0.62, friction: 0.3, frictionAir: 0.006 })
           : Bodies.rectangle(x, y, w, h, { chamfer: { radius: h / 2 - 1 }, restitution: 0.34, friction: 0.45, frictionAir: 0.008, angle: (Math.random() - 0.5) * 0.9 });
+        Body.setVelocity(body, { x: 0, y: 7 });
         Composite.add(engine.world, body);
         piece.style.visibility = "visible";
         return { piece, body, w, h };
@@ -167,8 +168,8 @@ export default function Pit({ items, phoneCount = 9, startInView = false, classN
       }, { threshold: 0.3 });
       waiting.observe(el);
     } else {
-      // After the headline has painted: the pile is a treat, not the first thing to load.
-      timer = setTimeout(begin, 500);
+      // Right after the headline has painted, so the first pills land within about a second.
+      timer = setTimeout(begin, 120);
     }
 
     return () => {
