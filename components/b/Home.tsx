@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { AnimatePresence, motion, useScroll, useTransform } from "motion/react";
+import { AnimatePresence, motion, useMotionValue, useScroll, useSpring, useTransform } from "motion/react";
 import { appLink, useI18n } from "@/lib/i18n";
 import type { Card, TeamDeck } from "@/lib/siteContent";
 import { Arrow, JoinBig, Pop, StoreBadges, pressJoin } from "./Bits";
@@ -120,84 +120,174 @@ function PlayBand({ decks }: { decks: TeamDeck[] }) {
   );
 }
 
+const band = (px: number) => 110 * (1 - Math.exp(-px / 220));
+
 /**
- * The last screen of the page is the one to land on, and only a second, deliberate scroll reaches
- * the footer. On a phone the screen stays pinned for a stretch of scrolling (Wipe's height) and CSS
- * snapping stops at its end (b.css), because pulling a fling back by script fights the browser.
- * The mouse and trackpad get held here.
+ * The page ends on its last screen, so no fling can run past it: the browser stops by itself. Pushing
+ * on makes the screen give and spring back. It takes two separate pushes after it has come to rest to
+ * open the footer. Search and keyboards still find the footer in the page.
  */
-function useHardStop(ref: React.RefObject<HTMLElement | null>) {
+function useSoftEnd(gate: React.RefObject<HTMLDivElement | null>) {
+  const lift = useMotionValue(0);
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce), (pointer: coarse)").matches) return;
-    const stopAt = () => (ref.current ? ref.current.getBoundingClientRect().bottom + window.scrollY - document.documentElement.clientHeight : Infinity);
-    let armed = window.scrollY < stopAt() - 40;
-    let holding = false;
+    const box = gate.current;
+    const root = document.documentElement;
+    if (!box || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const maxY = () => root.scrollHeight - window.innerHeight;
+    // Came back to a spot further down, the footer stays.
+    if (window.scrollY > maxY() - box.offsetHeight + 2) return;
+    box.setAttribute("data-shut", "");
+    const off = new AbortController();
+    const on = { signal: off.signal, passive: true };
+    const atEnd = () => window.scrollY >= maxY() - 2;
+    // One push counts for a quarter of a screen at most, however hard: opening takes two.
+    const onePush = () => window.innerHeight * 0.25;
+    const need = () => window.innerHeight * 0.45;
+    let arrived = 0;
+    let spent = 0;
+    let lastY = window.scrollY;
+    let lastT = performance.now();
+    let finger = false;
+    let fresh = false;
+    let baseY = 0;
+    let pull = 0;
+    let wheelPull = 0;
     let lastWheel = 0;
-    const hold = () => {
-      holding = true;
-      const from = performance.now();
-      scroller.lenis?.scrollTo(stopAt(), { immediate: true, force: true });
-      scroller.lenis?.stop();
-      window.scrollTo({ top: stopAt(), behavior: "instant" });
-      // Trackpads keep sending momentum: stay still until it has died down, but never for long.
-      const tick = () => {
-        const now = performance.now();
-        if (now - from < 650 || (now - lastWheel < 160 && now - from < 1600)) return void requestAnimationFrame(tick);
-        scroller.lenis?.start();
-        holding = false;
-      };
-      requestAnimationFrame(tick);
+    let given = 0;
+    let settle = 0;
+    const rested = () => arrived > 0 && performance.now() - arrived > 500;
+    const spend = (px: number) => {
+      spent += px;
+      if (spent >= need()) open();
     };
     const onScroll = () => {
-      if (holding) return;
-      const y = window.scrollY;
-      const at = stopAt();
-      if (y < at - 40) armed = true;
-      else if (armed && y >= at - 1) {
-        armed = false;
-        hold();
+      const now = performance.now();
+      const speed = Math.abs(window.scrollY - lastY) / Math.max(now - lastT, 1);
+      lastY = window.scrollY;
+      lastT = now;
+      if (atEnd() && !arrived) {
+        arrived = now;
+        root.style.overscrollBehaviorY = "none";
+        // A fling ends in a thud instead of a dead stop.
+        if (!finger && speed > 0.8) {
+          lift.set(-Math.min(70, speed * 26));
+          window.setTimeout(() => lift.set(0), 90);
+        }
+      } else if (arrived && window.scrollY < maxY() - 40) {
+        arrived = 0;
+        spent = 0;
+        root.style.overscrollBehaviorY = "";
       }
     };
-    const onWheel = () => { lastWheel = performance.now(); };
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("wheel", onWheel, { passive: true });
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("wheel", onWheel);
-      scroller.lenis?.start();
+    const onStart = (e: TouchEvent) => {
+      finger = e.touches.length === 1;
+      fresh = finger && atEnd() && rested();
+      baseY = e.touches[0].clientY;
+      pull = 0;
     };
-  }, [ref]);
+    const onMove = (e: TouchEvent) => {
+      if (!finger || e.touches.length !== 1) return;
+      const y = e.touches[0].clientY;
+      if (!atEnd()) baseY = y;
+      pull = Math.max(baseY - y, 0);
+      lift.set(-band(pull));
+    };
+    const onEnd = () => {
+      if (!finger) return;
+      finger = false;
+      lift.set(0);
+      if (fresh && pull > 0) spend(Math.min(pull, onePush()));
+    };
+    const onWheel = (e: WheelEvent) => {
+      const now = performance.now();
+      const gap = now - lastWheel;
+      lastWheel = now;
+      if (e.deltaY <= 0 || !atEnd()) return;
+      const px = Math.min(e.deltaMode === 1 ? e.deltaY * 16 : e.deltaY, 120);
+      wheelPull += px;
+      lift.set(-band(wheelPull));
+      window.clearTimeout(settle);
+      settle = window.setTimeout(() => { wheelPull = 0; lift.set(0); }, 130);
+      // Trackpad momentum from the scroll that got here does not count, only a new push.
+      if (gap > 220) {
+        fresh = rested();
+        given = 0;
+      }
+      if (fresh && given < onePush()) {
+        const counted = Math.min(px, onePush() - given);
+        given += counted;
+        spend(counted);
+      }
+    };
+    const onKey = (e: KeyboardEvent) => {
+      if ([" ", "PageDown", "ArrowDown", "End"].includes(e.key) && atEnd() && rested()) open();
+    };
+    const reset = () => {
+      off.abort();
+      window.clearTimeout(settle);
+      box.removeAttribute("data-shut");
+      root.style.overscrollBehaviorY = "";
+      lift.set(0);
+      scroller.lenis?.resize();
+    };
+    function open() {
+      reset();
+      requestAnimationFrame(() => {
+        if (scroller.lenis) scroller.lenis.scrollTo(maxY(), { duration: 0.9 });
+        else window.scrollTo({ top: maxY(), behavior: "smooth" });
+      });
+    }
+    window.addEventListener("scroll", onScroll, on);
+    window.addEventListener("touchstart", onStart, on);
+    window.addEventListener("touchmove", onMove, on);
+    window.addEventListener("touchend", onEnd, on);
+    window.addEventListener("touchcancel", onEnd, on);
+    window.addEventListener("wheel", onWheel, on);
+    window.addEventListener("keydown", onKey, on);
+    box.addEventListener("focusin", reset, on);
+    onScroll();
+    return reset;
+  }, [gate, lift]);
+  return useSpring(lift, { stiffness: 380, damping: 26 });
 }
 
 function Wipe() {
   const { t } = useI18n();
   const ref = useRef<HTMLElement>(null);
-  useHardStop(ref);
-  // The reveal takes the first 90vh of scrolling, whatever the section's height after it.
-  const { scrollYProgress: p } = useScroll({ target: ref, offset: ["start start", "start -90vh"] });
+  const gate = useRef<HTMLDivElement>(null);
+  const y = useSoftEnd(gate);
+  const under = useTransform(y, (v) => `${Math.max(-v, 0)}px`);
+  const { scrollYProgress: p } = useScroll({ target: ref, offset: ["start start", "end end"] });
   const clip = useTransform(p, [0.1, 0.72], ["circle(0% at 50% 50%)", "circle(120% at 50% 50%)"]);
   const out = useTransform(p, [0, 0.4], [1, 0.8]);
   const emoji = useTransform(p, [0.66, 0.82], [0, 1]);
   const riseY = useTransform(p, [0.66, 0.82], [18, 0]);
+  // A phone's folded toolbar leaves a strip below the stage: it takes the stage's colour.
+  const strip = useTransform(p, [0.6, 0.72], ["#ffffff", "#f97316"]);
   return (
-    <section ref={ref} className="relative scrolly b-hardstop">
-      <div className="b-stage bg-white">
-        <motion.h2 style={{ scale: out, fontSize: wordFit(t("wipe.awkward"), "clamp(3.6rem,17vw,13rem)") }} className="b-h text-center leading-[.92] px-3">{t("wipe.awkward")}</motion.h2>
-        <motion.div style={{ clipPath: clip }} className="absolute inset-0 grid grid-rows-[minmax(0,1fr)_auto_minmax(auto,1fr)] justify-items-center bg-[#f97316] px-4">
-          <div aria-hidden="true" />
-          <div className="text-center">
-            <motion.div style={{ scale: emoji, opacity: emoji }} className="mb-2"><Emoji code="1f60f" size={92} /></motion.div>
-            <h2 className="b-h leading-[.92]" style={{ fontSize: wordFit(t("wipe.easy"), "clamp(3.6rem,17vw,13rem)") }}>{t("wipe.easy")}</h2>
-            <p className="text-xl sm:text-3xl font-medium mt-4 max-w-2xl mx-auto leading-tight">{t("wipe.line")}</p>
-            <motion.div style={{ opacity: emoji, y: riseY }}><JoinBig medium="b_wipe" /></motion.div>
-          </div>
-          {/* The badges sit halfway between the button and the bottom of the orange. */}
-          <motion.div style={{ opacity: emoji, y: riseY }} className="self-center py-3">
-            <StoreBadges className="justify-center !flex-nowrap" />
+    <>
+      <motion.section ref={ref} className="relative scrolly" style={{ height: "190vh", background: strip }}>
+        <motion.div style={{ y }} className="b-stage bg-white">
+          <motion.h2 style={{ scale: out, fontSize: wordFit(t("wipe.awkward"), "clamp(3.6rem,17vw,13rem)") }} className="b-h text-center leading-[.92] px-3">{t("wipe.awkward")}</motion.h2>
+          <motion.div style={{ clipPath: clip }} className="absolute inset-0 grid grid-rows-[minmax(0,1fr)_auto_minmax(auto,1fr)] justify-items-center bg-[#f97316] px-4">
+            <div aria-hidden="true" />
+            <div className="text-center">
+              <motion.div style={{ scale: emoji, opacity: emoji }} className="mb-2"><Emoji code="1f60f" size={92} /></motion.div>
+              <h2 className="b-h leading-[.92]" style={{ fontSize: wordFit(t("wipe.easy"), "clamp(3.6rem,17vw,13rem)") }}>{t("wipe.easy")}</h2>
+              <p className="text-xl sm:text-3xl font-medium mt-4 max-w-2xl mx-auto leading-tight">{t("wipe.line")}</p>
+              <motion.div style={{ opacity: emoji, y: riseY }}><JoinBig medium="b_wipe" /></motion.div>
+            </div>
+            {/* The badges sit halfway between the button and the bottom of the orange. */}
+            <motion.div style={{ opacity: emoji, y: riseY }} className="self-center py-3">
+              <StoreBadges className="justify-center !flex-nowrap" />
+            </motion.div>
           </motion.div>
         </motion.div>
-      </div>
-    </section>
+        {/* What the screen lifts off: the dark of the footer below it. */}
+        <motion.div aria-hidden="true" style={{ height: under }} className="absolute inset-x-0 bottom-0 bg-[#111]" />
+      </motion.section>
+      <div ref={gate}><Footer /></div>
+    </>
   );
 }
 
@@ -316,7 +406,6 @@ export default function Home({ decks, cases }: { decks: TeamDeck[]; cases: Card[
       <PlayBand decks={decks} />
       <UseCases cards={cases} />
       <Wipe />
-      <Footer />
     </Shell>
   );
 }

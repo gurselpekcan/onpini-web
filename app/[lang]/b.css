@@ -137,11 +137,5 @@ html.lenis, html.lenis body { height: auto; }
 @keyframes b-glow { from { box-shadow: 0 0 34px rgb(253 224 71 / .2); } to { box-shadow: 0 0 74px rgb(253 224 71 / .46); } }
 @media (prefers-reduced-motion: reduce) { .b-beam, .b-bulbs { animation: none; } }
 
-/* The last screen of the home page: the scroll stops here, a second scroll reaches the footer. */
-.b-hardstop { height: 270vh; }
-@media (pointer: coarse) and (prefers-reduced-motion: no-preference) {
-  html:has(.b-hardstop) { scroll-snap-type: y proximity; }
-  .b-hardstop { height: 340vh; }
-  .b-hardstop { scroll-snap-align: end; scroll-snap-stop: always; }
-  .b-hardstop + footer { scroll-snap-align: end; }
-}
+/* The home page ends on its last screen until a deliberate push opens the footer (useSoftEnd). */
+[data-shut] { height: 0; overflow: clip; }

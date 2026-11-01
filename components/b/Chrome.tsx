@@ -9,7 +9,7 @@ import Logo from "@/components/Logo";
 import { LANGS, LANG_NAMES, appLink, useI18n, type Lang } from "@/lib/i18n";
 import { Arrow } from "./Bits";
 
-/** The page's smooth scroller, for the one place that has to hold it still. */
+/** The page's smooth scroller, for the one place that changes the page's length. */
 export const scroller: { lenis: Lenis | null } = { lenis: null };
 
 const STORED = "onpini-site-lang";
