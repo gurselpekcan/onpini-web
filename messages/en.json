@@ -18,6 +18,7 @@
     "label": "Join OnPini, free",
     "app": "Get the app, free",
     "soon": "Coming soon on",
+    "web": "Live now in your browser. The apps are on their way.",
     "download": "Download on the",
     "getIt": "Get it on"
   },
@@ -38,7 +39,9 @@
     "ask": "Ready to find out?",
     "yes": "Yes, let me in",
     "try": "Let me try first",
-    "metaTitle": "OnPini: the social game you play with your people"
+    "tryNote": "No sign-up.",
+    "metaTitle": "What do they really think? OnPini, the social question game",
+    "metaDesc": "Say what you really think. See what they really think. The social platform for your takes and your people: couples, friends, family. Free to play."
   },
   "pit": {
     "hero": [
@@ -117,6 +120,18 @@
     "score": "Same on {same} of {total}. Same answer, nice. Different answer, better.",
     "endTitle": "That was us. Imagine someone who matters.",
     "who": "Who came to mind?",
+    "sendAny": "Send them a deck",
+    "sendNote": "Free account first, then it’s one link.",
+    "send": {
+      "friend": "Send your best friend a deck",
+      "crush": "Send your crush a deck",
+      "partner": "Send your partner a deck",
+      "group": "Send the group chat a deck",
+      "classmate": "Send a classmate a deck",
+      "sibling": "Send your sibling a deck",
+      "mom": "Send your mom a deck",
+      "dad": "Send your dad a deck"
+    },
     "next2": "See what else is inside",
     "again": "Play another deck",
     "tags": {
@@ -460,6 +475,16 @@
       "feedback": "An idea",
       "other": "Something else"
     }
+  },
+  "moment": {
+    "name": "Mila",
+    "sync": "Sync with Mila",
+    "tag": "Example: a Sync on someone’s page",
+    "sealed": "Mila has answered. Sealed.",
+    "land": "You’re scrolling. You land on Mila’s page.",
+    "tap": "She already played this deck. One tap.",
+    "answer": "You answer. Hers stay sealed until you’re done.",
+    "reveal": "You split. Mila answered months ago. She’s asleep."
   },
   "cases": {
     "title": "Everyone’s got someone.",

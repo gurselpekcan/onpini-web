@@ -14,7 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...c.genres.map((g) => `/decks/${g.slug}`),
     "/questions",
     ...c.questions.map((p) => `/questions/${p.slug}`),
-    "/play",
     "/support",
   ];
   return paths.flatMap((path) => LANGS.map((lang) => ({

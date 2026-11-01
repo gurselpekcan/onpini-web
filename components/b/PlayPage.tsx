@@ -17,6 +17,8 @@ import { savePlayed } from "./played";
 
 const SPRING = { type: "spring", stiffness: 320, damping: 26 } as const;
 const WHO = ["friend", "crush", "partner", "group", "classmate", "sibling", "mom", "dad"];
+// Where each person sits in cases.items, for the line that goes with them.
+const WIN: Record<string, number> = { mom: 0, dad: 1, partner: 2, crush: 3, friend: 6, group: 7, sibling: 8, classmate: 9 };
 
 function Picker({ decks, onPick }: { decks: TeamDeck[]; onPick: (deck: TeamDeck) => void }) {
   const { t, href } = useI18n();
@@ -174,24 +176,30 @@ function Reveal({ deck, answers, onDone }: { deck: TeamDeck; answers: ("a" | "b"
 }
 
 function End({ deck, answers, onAgain }: { deck: TeamDeck; answers: ("a" | "b")[]; onAgain: () => void }) {
-  const { t, href, lang } = useI18n();
+  const { t, raw, href, lang } = useI18n();
+  const wins = raw<{ win: string }[]>("cases.items");
   const same = deck.cards.filter((c, i) => c.team === answers[i]).length;
   const [who, setWho] = useState<string | null>(null);
   useEffect(() => { savePlayed({ same, total: deck.cards.length, who }); }, [same, deck, who]);
   return (
     <motion.div key="end" initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="b-play bg-[#f97316] overflow-y-auto">
-      <div className="flex-1 flex flex-col justify-center px-5 pt-6 pb-4 max-w-xl w-full mx-auto">
+      <div className="flex-[1_0_auto] flex flex-col justify-center px-5 pt-5 pb-3 max-w-xl w-full mx-auto">
         <motion.p initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} className="font-bold text-[1.05rem]">{t("playPage.score", { same, total: deck.cards.length })}</motion.p>
-        <motion.h2 initial={{ opacity: 0, y: 26 }} animate={{ opacity: 1, y: 0 }} transition={{ ...SPRING, delay: 0.1 }} className="b-h text-[clamp(3rem,14.5vw,5rem)] leading-[.94] mt-2">{t("playPage.endTitle")}</motion.h2>
-        <p className="font-semibold mt-6 mb-2.5">{t("playPage.who")}</p>
+        <motion.h2 initial={{ opacity: 0, y: 26 }} animate={{ opacity: 1, y: 0 }} transition={{ ...SPRING, delay: 0.1 }} className="b-h text-[clamp(2.3rem,min(14.5vw,7.4svh),5rem)] leading-[.96] mt-2">{t("playPage.endTitle")}</motion.h2>
+        <p className="font-semibold mt-4 mb-2">{t("playPage.who")}</p>
         <div className="flex flex-wrap gap-1.5" role="group" aria-label={t("playPage.who")}>
           {WHO.map((p) => (
-            <motion.button key={p} type="button" whileTap={{ scale: 0.94 }} aria-pressed={who === p} onClick={() => setWho(p)} className={`min-h-[46px] px-4 rounded-full font-semibold text-[15px] ${who === p ? "bg-[#111] text-white" : "bg-white/90 text-[#111]"}`}>{t(`chips.${p}`)}</motion.button>
+            <motion.button key={p} type="button" whileTap={{ scale: 0.94 }} aria-pressed={who === p} onClick={() => setWho(p)} className={`min-h-[42px] px-3.5 rounded-full font-semibold text-[15px] ${who === p ? "bg-[#111] text-white" : "bg-white/90 text-[#111]"}`}>{t(`chips.${p}`)}</motion.button>
           ))}
         </div>
+        <div className="min-h-[2.4rem] mt-3" aria-live="polite">
+          {who && <motion.p key={who} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} className="b-h text-[1.35rem] leading-[1.08]">{wins[WIN[who]].win}</motion.p>}
+        </div>
       </div>
-      <div className="px-3 pb-[max(1rem,env(safe-area-inset-bottom))] grid gap-1 max-w-xl w-full mx-auto">
-        <a href={appLink("signup", lang, "b_play_end")} onClick={(e) => pressJoin(e)} className="b-cta w-full !min-h-[68px] !text-[1.15rem]">{t("join.label")} <Arrow /></a>
+      {/* The ask stays on screen however tall the rest gets on a small phone. */}
+      <div className="sticky bottom-0 bg-[#f97316] pt-2 px-3 pb-[max(.5rem,env(safe-area-inset-bottom))] grid gap-1 max-w-xl w-full mx-auto">
+        <a href={`${appLink("signup", lang, "b_play_end")}${who ? `&utm_content=${who}` : ""}`} onClick={(e) => pressJoin(e)} className="b-cta w-full !min-h-[68px] !text-[1.08rem] text-center">{who ? t(`playPage.send.${who}`) : t("playPage.sendAny")} <Arrow /></a>
+        <p className="text-center text-sm font-semibold">{t("playPage.sendNote")}</p>
         <div className="flex justify-center gap-5">
           <button type="button" onClick={onAgain} className="font-semibold min-h-11 underline underline-offset-4">{t("playPage.again")}</button>
           <Link href={`${href("")}#people`} className="font-semibold min-h-11 inline-flex items-center underline underline-offset-4">{t("playPage.next2")}</Link>

@@ -18,6 +18,7 @@
     "label": "Gratis mitmachen",
     "app": "App holen, gratis",
     "soon": "Demnächst:",
+    "web": "Schon jetzt live im Browser. Die Apps sind unterwegs.",
     "download": "Laden im",
     "getIt": "Jetzt bei"
   },
@@ -38,7 +39,9 @@
     "ask": "Lust, es rauszufinden?",
     "yes": "Ja, lass mich rein",
     "try": "Erst mal testen",
-    "metaTitle": "OnPini: das Fragespiel für dich und deine Leute"
+    "tryNote": "Ohne Anmeldung.",
+    "metaTitle": "Was denken sie wirklich? OnPini, das soziale Fragespiel",
+    "metaDesc": "Sag, was du wirklich denkst. Sieh, was sie wirklich denken. Die soziale Plattform für deine Takes und deine Leute: Paare, Freunde, Familie. Gratis."
   },
   "pit": {
     "hero": [
@@ -117,6 +120,18 @@
     "score": "Bei {same} von {total} gleich. Gleiche Antwort, schön. Andere Antwort, noch besser.",
     "endTitle": "Das waren nur wir. Stell dir jetzt jemanden vor, der dir wichtig ist.",
     "who": "Wer fällt dir ein?",
+    "sendAny": "Schick jemandem ein Deck",
+    "sendNote": "Erst ein kostenloses Konto, dann nur noch ein Link.",
+    "send": {
+      "friend": "Schick deiner Bestie ein Deck",
+      "crush": "Schick deinem Crush ein Deck",
+      "partner": "Schick deinem Schatz ein Deck",
+      "group": "Schick ein Deck in den Gruppenchat",
+      "classmate": "Schick deinem Sitznachbarn ein Deck",
+      "sibling": "Schick deinen Geschwistern ein Deck",
+      "mom": "Schick Mama ein Deck",
+      "dad": "Schick Papa ein Deck"
+    },
     "next2": "Sieh, was sonst noch drin ist",
     "again": "Noch ein Deck spielen",
     "tags": {
@@ -460,6 +475,16 @@
       "feedback": "Eine Idee",
       "other": "Was anderes"
     }
+  },
+  "moment": {
+    "name": "Mila",
+    "sync": "Sync mit Mila",
+    "tag": "Beispiel: ein Sync auf einer Profilseite",
+    "sealed": "Mila hat geantwortet. Versiegelt.",
+    "land": "Du scrollst. Du landest auf Milas Seite.",
+    "tap": "Sie hat dieses Deck schon gespielt. Einmal tippen.",
+    "answer": "Du antwortest. Ihre Antworten bleiben versiegelt, bis du fertig bist.",
+    "reveal": "Hier seid ihr verschieden. Mila hat vor Monaten geantwortet. Sie schläft."
   },
   "cases": {
     "title": "Alle haben jemanden.",

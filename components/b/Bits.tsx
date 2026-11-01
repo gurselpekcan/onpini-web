@@ -79,7 +79,9 @@ function Badge({ href, logo, top, bottom }: { href: string; logo: React.ReactNod
 export function StoreBadges({ className = "" }: { className?: string }) {
   const { t } = useI18n();
   return (
-    <div className={`flex flex-wrap gap-2.5 ${className}`}>
+    <>
+      {!(STORE.ios && STORE.android) && <p className="text-center text-sm font-semibold mb-2">{t("join.web")}</p>}
+      <div className={`flex flex-wrap gap-2.5 ${className}`}>
       <Badge
         href={STORE.ios}
         top={t("join.download")}
@@ -93,6 +95,7 @@ export function StoreBadges({ className = "" }: { className?: string }) {
         logo={<svg viewBox="0 0 24 24" className="w-7 h-7 shrink-0" aria-hidden="true"><path d="M3.6 2.1c-.3.16-.5.46-.5.85v18.1c0 .39.2.69.5.85L13.8 12 3.6 2.1Z" fill="#00C3FF" /><path d="M17 8.9 14.2 7.3 5.2 2.5 13.8 12 17 8.9Z" fill="#00E676" /><path d="M17 15.1 13.8 12l-8.6 9.5 9-4.8 2.8-1.6Z" fill="#FF3D00" /><path d="m20.6 10.9-3.6-2L13.8 12l3.2 3.1 3.6-2c.8-.5.8-1.7 0-2.2Z" fill="#FFD600" /></svg>}
       />
     </div>
+    </>
   );
 }
 

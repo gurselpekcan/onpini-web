@@ -18,6 +18,7 @@
     "label": "Únete gratis",
     "app": "Descarga la app gratis",
     "soon": "Próximamente en",
+    "web": "Ya disponible en tu navegador. Las apps están en camino.",
     "download": "Descárgalo en el",
     "getIt": "Disponible en"
   },
@@ -38,7 +39,9 @@
     "ask": "¿Quieres saberlo?",
     "yes": "Sí, déjame entrar",
     "try": "Primero quiero probar",
-    "metaTitle": "OnPini: el juego social de preguntas con tu gente"
+    "tryNote": "Sin registro.",
+    "metaTitle": "¿Qué piensan de verdad? OnPini, el juego social de preguntas",
+    "metaDesc": "Di lo que piensas de verdad. Mira lo que piensan de verdad. La plataforma social para tus opiniones y tu gente: parejas, amigos, familia. Gratis."
   },
   "pit": {
     "hero": [
@@ -117,6 +120,18 @@
     "score": "Iguales en {same} de {total}. Misma respuesta, bien. Respuesta distinta, mejor.",
     "endTitle": "Y solo éramos nosotros. Imagina con alguien que te importa.",
     "who": "¿En quién has pensado?",
+    "sendAny": "Envíale un mazo",
+    "sendNote": "Primero una cuenta gratis, luego solo un enlace.",
+    "send": {
+      "friend": "Envíale un mazo a tu mejor amigo o amiga",
+      "crush": "Envíale un mazo a tu crush",
+      "partner": "Envíale un mazo a tu pareja",
+      "group": "Envía un mazo al chat de grupo",
+      "classmate": "Envíale un mazo a alguien de clase",
+      "sibling": "Envíale un mazo a tu hermano o hermana",
+      "mom": "Envíale un mazo a tu mamá",
+      "dad": "Envíale un mazo a tu papá"
+    },
     "next2": "Mira qué más hay dentro",
     "again": "Jugar otro mazo",
     "tags": {
@@ -129,11 +144,11 @@
     "cardOf": "Carta {n} de {total}"
   },
   "chips": {
-    "friend": "Mejor amigo",
+    "friend": "Mejor amigo o amiga",
     "crush": "Crush",
     "partner": "Pareja",
     "group": "Chat de grupo",
-    "sibling": "Hermano",
+    "sibling": "Hermano o hermana",
     "mom": "Mamá",
     "dad": "Papá",
     "classmate": "Alguien de clase"
@@ -460,6 +475,16 @@
       "feedback": "Una idea",
       "other": "Otra cosa"
     }
+  },
+  "moment": {
+    "name": "Mila",
+    "sync": "Sync con Mila",
+    "tag": "Ejemplo: un Sync en la página de alguien",
+    "sealed": "Mila ya respondió. Sellado.",
+    "land": "Estás haciendo scroll. Llegas a la página de Mila.",
+    "tap": "Ya jugó este mazo. Un toque.",
+    "answer": "Tú respondes. Sus respuestas siguen selladas hasta que termines.",
+    "reveal": "No coincidís. Mila respondió hace meses. Está dormida."
   },
   "cases": {
     "title": "Todos tenemos a alguien.",

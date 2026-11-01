@@ -7,7 +7,8 @@ import { contentFor, messagesFor } from "@/lib/siteContent";
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   const lang = (await params).lang as Lang;
   const m = messagesFor(lang);
-  return meta(lang, "/play", m.playPage.metaTitle, m.playPage.pickSub);
+  // Nothing to read until you play, so it stays out of search. Links to it still work.
+  return meta(lang, "/play", m.playPage.metaTitle, m.playPage.pickSub, { robots: { index: false, follow: true } });
 }
 
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {

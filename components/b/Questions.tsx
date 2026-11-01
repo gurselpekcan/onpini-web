@@ -120,9 +120,9 @@ export function QuestionsPageView({ page, others }: { page: QuestionPage; others
                   <img src="/icon.svg" alt="" width={32} height={32} loading="lazy" className="w-8 h-8" />
                 </div>
                 <h2 className="b-h text-[clamp(1.75rem,7.4vw,2.35rem)] leading-[1.06] mt-3 mb-5">{c.q}</h2>
-                <div className="grid gap-2 mt-auto">
+                <div className="mt-auto border-t border-[#111]/15 divide-y divide-[#111]/15">
                   {(["a", "b"] as const).map((side) => (
-                    <p key={side} style={{ background: color }} className="flex items-center justify-center text-center min-h-[60px] rounded-[18px] px-4 py-2.5 font-bold text-[1.05rem] leading-tight">{c[side]}</p>
+                    <p key={side} className="text-center px-2 py-3 font-bold text-[1.05rem] leading-tight">{c[side]}</p>
                   ))}
                 </div>
               </li>

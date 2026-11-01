@@ -6,7 +6,10 @@ import { contentFor, messagesFor } from "@/lib/siteContent";
 export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }) {
   const lang = (await params).lang as Lang;
   const m = messagesFor(lang);
-  return meta(lang, "", m.hero.metaTitle, m.how.metaDesc);
+  const base = meta(lang, "", m.hero.metaTitle, m.hero.metaDesc);
+  // Search gets what the page is. A shared link gets the question on the page.
+  const shared = `${m.hero.top} ${m.hero.who[0]} ${m.hero.bottom}`;
+  return { ...base, openGraph: { ...base.openGraph, title: shared }, twitter: { ...base.twitter, title: shared } };
 }
 
 // What the page is, for search engines and AI assistants. Everything here is also on the site.

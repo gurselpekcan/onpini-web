@@ -10,6 +10,7 @@ import Shell, { Footer, scroller } from "./Chrome";
 import Emoji from "./Emoji";
 import { haptic } from "./haptic";
 import Pit, { type PitItem } from "./Pit";
+import SyncMoment from "./SyncMoment";
 import { usePlayed } from "./played";
 
 /** Keeps the longest single word on one line in every language. English stays at the full size. */
@@ -67,22 +68,16 @@ function Headline() {
 /** The hero asks, the way the game does: a question and two answers. */
 function HeroAsk() {
   const { t, lang } = useI18n();
-  const [picked, setPicked] = useState(false);
   return (
     <div className="b-rise pointer-events-auto mt-4 max-w-md mx-auto" style={{ animationDelay: ".66s" }}>
       <p className="font-bold text-[1.05rem]">{t("hero.ask")}</p>
       <div className="grid grid-cols-2 gap-2 mt-2">
-        <motion.a
-          href={appLink("signup", lang, "b_hero")}
-          whileTap={{ scale: 0.95 }}
-          onClick={(e) => pressJoin(e, () => setPicked(true))}
-          animate={{ backgroundColor: picked ? "#f97316" : "#111111", color: picked ? "#111111" : "#ffffff" }}
-          className="flex items-center justify-center min-h-[64px] rounded-[20px] px-3 font-bold text-[1.08rem] leading-tight"
-        >
-          {t("hero.yes")}
-        </motion.a>
-        <motion.a href="#play" whileTap={{ scale: 0.95 }} onClick={() => haptic()} className="flex items-center justify-center min-h-[64px] rounded-[20px] px-3 font-bold text-[1.08rem] leading-tight bg-white shadow-[inset_0_0_0_2px_#111]">
+        <motion.a href="#play" whileTap={{ scale: 0.95 }} onClick={() => haptic()} className="flex flex-col items-center justify-center min-h-[64px] rounded-[20px] px-3 py-1.5 font-bold text-[1.08rem] leading-tight bg-[#111] text-white">
           {t("hero.try")}
+          <span className="text-xs font-semibold opacity-80 mt-0.5">{t("hero.tryNote")}</span>
+        </motion.a>
+        <motion.a href={appLink("signup", lang, "b_hero")} whileTap={{ scale: 0.95 }} onClick={(e) => pressJoin(e)} className="flex items-center justify-center min-h-[64px] rounded-[20px] px-3 font-bold text-[1.08rem] leading-tight bg-white shadow-[inset_0_0_0_2px_#111]">
+          {t("hero.yes")}
         </motion.a>
       </div>
     </div>
@@ -91,6 +86,8 @@ function HeroAsk() {
 
 function PlayBand({ decks }: { decks: TeamDeck[] }) {
   const { t, href } = useI18n();
+  // The Mom Deck leads: its first card explains itself to someone who has never heard of us.
+  const lead = [...decks.filter((d) => d.id === "mom"), ...decks.filter((d) => d.id !== "mom")];
   return (
     <section id="play" className="b-curtain relative z-10 bg-[#111] text-white pt-14 pb-14 sm:py-24 overflow-hidden">
       <div className="px-5 sm:px-10 max-w-6xl mx-auto">
@@ -98,7 +95,7 @@ function PlayBand({ decks }: { decks: TeamDeck[] }) {
         <p className="text-lg sm:text-2xl mt-3 leading-snug">{t("playBand.sub")}</p>
       </div>
       <ul className="b-snap mt-7 sm:mt-10">
-        {decks.map((deck) => (
+        {lead.map((deck) => (
           <li key={deck.id} className="snap-center shrink-0 w-[74vw] max-w-[20rem]">
             <motion.div whileTap={{ scale: 0.97 }} whileHover={{ y: -8 }}>
               <Link href={`${href("/play")}?deck=${deck.id}`} style={{ background: deck.color }} className="flex flex-col justify-between h-[21rem] rounded-[28px] p-5 text-[#111]">
@@ -358,9 +355,9 @@ function UseCases({ cards }: { cards: Card[] }) {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img src="/icon.svg" alt="" width={36} height={36} loading="lazy" className="w-9 h-9 mb-3" />
                   <p className="b-h text-[clamp(1.5rem,6vw,2.1rem)] leading-[1.08]">{cards[i].q}</p>
-                  <div className="grid grid-cols-2 gap-2 mt-4">
+                  <div className="grid grid-cols-2 divide-x rtl:divide-x-reverse divide-[#111]/15 border-t border-[#111]/15 mt-4 pt-3">
                     {(["a", "b"] as const).map((side) => (
-                      <p key={side} style={{ background: CASES[i].color }} className="flex items-center justify-center text-center min-h-[58px] rounded-[16px] text-[#111] px-2.5 py-2 font-bold text-[15px] leading-tight">{cards[i][side]}</p>
+                      <p key={side} className="flex items-center justify-center text-center px-2.5 font-bold text-[15px] leading-tight">{cards[i][side]}</p>
                     ))}
                   </div>
                 </div>
@@ -405,6 +402,7 @@ export default function Home({ decks, cases }: { decks: TeamDeck[]; cases: Card[
       </section>
       <PlayBand decks={decks} />
       <UseCases cards={cases} />
+      <SyncMoment deck={decks.find((d) => d.id === "roommates") ?? decks[0]} decks={decks} />
       <Wipe />
     </Shell>
   );

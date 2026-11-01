@@ -18,6 +18,7 @@
     "label": "Doe gratis mee",
     "app": "Download de app, gratis",
     "soon": "Binnenkort op",
+    "web": "Nu al live in je browser. De apps zijn onderweg.",
     "download": "Download in de",
     "getIt": "Ontdek het op"
   },
@@ -38,7 +39,9 @@
     "ask": "Benieuwd?",
     "yes": "Ja, ik doe mee",
     "try": "Eerst even proberen",
-    "metaTitle": "OnPini: het vragenspel voor jou en je mensen"
+    "tryNote": "Geen account.",
+    "metaTitle": "Wat denken ze écht? OnPini, het sociale vragenspel",
+    "metaDesc": "Zeg wat je écht denkt. Zie wat zij écht denken. Het sociale platform voor je takes en je mensen: koppels, vrienden, familie. Gratis."
   },
   "pit": {
     "hero": [
@@ -117,6 +120,18 @@
     "score": "{same} van de {total} hetzelfde. Zelfde antwoord, leuk. Ander antwoord, nog beter.",
     "endTitle": "Dat waren wij. Stel je nu iemand voor om wie je geeft.",
     "who": "Aan wie moest je denken?",
+    "sendAny": "Stuur ze een deck",
+    "sendNote": "Eerst een gratis account, daarna alleen nog één link.",
+    "send": {
+      "friend": "Stuur je bestie een deck",
+      "crush": "Stuur je crush een deck",
+      "partner": "Stuur je partner een deck",
+      "group": "Gooi een deck in de groepsapp",
+      "classmate": "Stuur je klasgenoot een deck",
+      "sibling": "Stuur je broer of zus een deck",
+      "mom": "Stuur je moeder een deck",
+      "dad": "Stuur je vader een deck"
+    },
     "next2": "Bekijk wat er nog meer in zit",
     "again": "Speel nog een deck",
     "tags": {
@@ -460,6 +475,16 @@
       "feedback": "Een idee",
       "other": "Iets anders"
     }
+  },
+  "moment": {
+    "name": "Mila",
+    "sync": "Sync met Mila",
+    "tag": "Voorbeeld: een Sync op iemands pagina",
+    "sealed": "Mila heeft geantwoord. Verzegeld.",
+    "land": "Je scrolt. Je belandt op Mila's pagina.",
+    "tap": "Ze heeft dit deck al gespeeld. Eén tik.",
+    "answer": "Jij antwoordt. Haar antwoorden blijven verzegeld tot jij klaar bent.",
+    "reveal": "Jullie verschillen. Mila heeft maanden geleden geantwoord. Ze slaapt."
   },
   "cases": {
     "title": "Iedereen heeft wel iemand.",
