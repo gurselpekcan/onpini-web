@@ -41,6 +41,10 @@ const nextConfig: NextConfig = {
       { source: "/roadmap", destination: "/story", permanent: true },
       { source: "/circles", destination: "/decks", permanent: true },
       { source: "/privacy", destination: "https://web.onpini.com/privacy", permanent: true },
+      { source: "/terms", destination: "https://web.onpini.com/terms", permanent: true },
+      { source: "/community-guidelines", destination: "https://web.onpini.com/community-guidelines", permanent: true },
+      { source: "/child-safety", destination: "https://web.onpini.com/child-safety", permanent: true },
+      { source: "/delete-account", destination: "https://web.onpini.com/delete-account", permanent: true },
       // English has no language in the address, so there is only one of each page.
       { source: "/en", destination: "/", permanent: true },
       { source: "/en/:path*", destination: "/:path*", permanent: true },

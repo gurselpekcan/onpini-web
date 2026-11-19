@@ -255,9 +255,11 @@ export function Footer() {
       <div className="border-t border-[#fef3c7]/15">
         <div className="max-w-6xl mx-auto px-5 sm:px-10 py-5 pb-[max(1.25rem,env(safe-area-inset-bottom))] flex flex-col sm:flex-row sm:items-center justify-between gap-2 text-xs text-[#fef3c7]/75 leading-relaxed">
           <span>© {new Date().getFullYear()} OnPini. {t("footer.rights")} · {t("footer.city")} · KVK 89817583</span>
-          <span className="flex items-center gap-4 shrink-0">
+          <span className="flex flex-wrap items-center gap-x-4 sm:shrink-0">
             <a href={`https://web.onpini.com/privacy?lang=${lang}`} className="inline-flex items-center min-h-10 hover:text-white">{t("footer.privacy")}</a>
             <a href={`https://web.onpini.com/terms?lang=${lang}`} className="inline-flex items-center min-h-10 hover:text-white">{t("footer.terms")}</a>
+            <a href={`https://web.onpini.com/community-guidelines?lang=${lang}`} className="inline-flex items-center min-h-10 hover:text-white">{t("footer.guidelines")}</a>
+            <a href={`https://web.onpini.com/child-safety?lang=${lang}`} className="inline-flex items-center min-h-10 hover:text-white">{t("footer.childSafety")}</a>
             <span className="flex items-center gap-1.5"><span className="w-1.5 h-1.5 rounded-full bg-[#f97316]" aria-hidden="true" />{t("footer.early")}</span>
           </span>
         </div>
